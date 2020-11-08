@@ -1,0 +1,36 @@
+unit UrlViewForm;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniButton, uniBitBtn, uniPanel, uniGUIBaseClasses,
+  uniURLFrame;
+
+type
+  TFormUrlView = class(TUniForm)
+    URLFrame: TUniURLFrame;
+    PanelBotton: TUniPanel;
+    BitBtnClose: TUniBitBtn;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function FormUrlView: TFormUrlView;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function FormUrlView: TFormUrlView;
+begin
+  Result := TFormUrlView(UniMainModule.GetFormInstance(TFormUrlView));
+end;
+
+end.

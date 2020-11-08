@@ -1,0 +1,71 @@
+unit SendSMS;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  IdHTTP, uniButton, uniLabel, uniEdit, uniURLFrame, Data.DB, MemDS, DBAccess,
+  Uni, uniBasicGrid, uniDBGrid;
+
+type
+  TSendSMSForm = class(TBaseFormF)
+    pnlHead: TUniContainerPanel;
+    pnlDetail: TUniContainerPanel;
+    UniDBGrid1: TUniDBGrid;
+    PaymentsVQ: TUniQuery;
+    PaymentsVQestNo: TIntegerField;
+    PaymentsVQContractNo: TIntegerField;
+    PaymentsVQName: TWideStringField;
+    PaymentsVQUnit: TWideStringField;
+    PaymentsVQPaymentSN: TIntegerField;
+    PaymentsVQPaymentDate: TDateField;
+    PaymentsVQPaymentValu: TFloatField;
+    PaymentsVQPaid: TBooleanField;
+    PaymentsVQPayDate: TDateField;
+    PaymentsVQPayType: TWideStringField;
+    PaymentsVQtenantID: TIntegerField;
+    PaymentsVQUnitNo: TIntegerField;
+    PaymentsVQID: TIntegerField;
+    PaymentsVQsrc: TUniDataSource;
+    btnRefresh: TUniButton;
+    UniURLFrame1: TUniURLFrame;
+    PaymentsVQPhone1: TWideStringField;
+    procedure btnRefreshClick(Sender: TObject);
+    procedure UniFormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function SendSMSForm: TSendSMSForm;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, G_Funcs;
+
+function SendSMSForm: TSendSMSForm;
+begin
+  Result := TSendSMSForm(UniMainModule.GetFormInstance(TSendSMSForm));
+end;
+
+procedure TSendSMSForm.btnRefreshClick(Sender: TObject);
+begin
+  inherited;
+PaymentsVQ.Close;
+PaymentsVQ.Open;
+AdjustGridView(UniDBGrid1);
+end;
+
+procedure TSendSMSForm.UniFormCreate(Sender: TObject);
+begin
+  inherited;
+btnRefreshClick(Sender);
+end;
+
+end.

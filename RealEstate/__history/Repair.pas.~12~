@@ -1,0 +1,107 @@
+unit Repair;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  uniMultiItem, uniComboBox, uniDBComboBox, uniDBLookupComboBox, Data.DB,
+  DBAccess, Uni, MemDS, uniEdit, uniDBEdit, uniDateTimePicker, uniButton,
+  uniBasicGrid, uniDBGrid;
+
+type
+  TRepairF = class(TBaseFormF)
+    lookUNIT: TUniQuery;
+    lookUNITs: TUniDataSource;
+    lookEST: TUniQuery;
+    lookESTs: TUniDataSource;
+    EstateCB: TUniDBLookupComboBox;
+    UnitCB: TUniDBLookupComboBox;
+    pnlRepair: TUniContainerPanel;
+    SelecttedPnl: TUniContainerPanel;
+    dbeEstNo: TUniDBEdit;
+    UniDBEdit5: TUniDBEdit;
+    UniDBEdit6: TUniDBEdit;
+    UniDBEdit7: TUniDBEdit;
+    UniDBEdit8: TUniDBEdit;
+    UniDBEdit9: TUniDBEdit;
+    UniContainerPanel1: TUniContainerPanel;
+    UniEdit1: TUniEdit;
+    UniNumberEdit1: TUniNumberEdit;
+    dtpMainDate: TUniDateTimePicker;
+    UniButton1: TUniButton;
+    grdUMaint: TUniDBGrid;
+    UnitMaintQ: TUniQuery;
+    UnitMaintQs: TUniDataSource;
+    dbeUnitID: TUniDBEdit;
+    UnitMaintQID: TIntegerField;
+    UnitMaintQEstNo: TIntegerField;
+    UnitMaintQUnitNo: TIntegerField;
+    UnitMaintQMaintValue: TFloatField;
+    UnitMaintQMaintDate: TDateField;
+    UnitMaintQMaintEXP: TWideStringField;
+    procedure UniButton1Click(Sender: TObject);
+    procedure UniFormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function RepairF: TRepairF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, G_Funcs, SwMsg;
+
+function RepairF: TRepairF;
+begin
+  Result := TRepairF(UniMainModule.GetFormInstance(TRepairF));
+end;
+//================================
+
+procedure TRepairF.UniButton1Click(Sender: TObject);
+var tSQL:TUniSQL;
+begin
+  inherited;
+
+   tSQL := TUniSQL.Create(self);
+ tSQL.Connection := UniMainModule.MainDB;
+//`ID`, `EstNo`, `UnitNo`, `Maint`, `MaintValue`, `MaintDate` FROM `unitmaint`
+ tSQL.SQL.Clear;
+tSQL.SQL.Text := ''
++ ' INSERT INTO unitmaint (EstNo,UnitNo,Maint,MaintValue,MaintDate) '
++ ' Values ('''+ dbeEstNo.Text +'''  ,       '
++ '         '''+ dbeUnitID.Text +'''  ,       '
++ '         '''+ UniEdit1.Text +'''  ,       '
++ '         '''+ UniNumberEdit1.Text +'''  ,       '
++ '       '''+ DateToStr(dtpMainDate.DateTime) +'''    ) ' ;
+//   Update units Set isRented = False where ID =     '''+ UnitDetailsQID.AsString +'''   ');
+tSQL.Execute;
+
+UniEdit1.Text := '';  UniNumberEdit1.Text := '0';
+
+
+
+tSQL.Free;
+
+ ShowSwA('Maintenance has been Registered successfully',1);
+
+UnitMaintQ.Refresh;
+end;
+
+procedure TRepairF.UniFormCreate(Sender: TObject);
+begin
+  inherited;
+lookEST.Open;
+lookUNIT.Open;
+
+UnitMaintQ.Open;
+AdjustGridView(grdUMaint);
+end;
+
+end.

@@ -1,0 +1,64 @@
+.DarkButton
+{
+ background:#363636 !important;
+ color:#fff !important;
+ border-color:#363636;
+ -webkit-transition: background 0.5s ease-in-out;
+ transition: background 0.5s ease-in-out;
+  
+}
+
+.RedButton
+{
+ background:#d9534f !important;
+ color:#fff !important;
+ border-color:#d9534f;
+ -webkit-transition: background 0.5s ease-in-out;
+ transition: background 0.5s ease-in-out;
+}
+
+.GreenButton
+{ 
+ background:#5cb85c !important;
+ color:#fff !important;
+ border-color:#5cb85c;
+ -webkit-transition: background 0.5s ease-in-out;
+ transition: background 0.5s ease-in-out;
+}
+
+.BlueButton
+{
+ background:#5bc0de !important;
+ color:#fff !important;
+ border-color:#5bc0de;
+ -webkit-transition: background 0.5s ease-in-out;
+ transition: background 0.5s ease-in-out;
+ border-radius: 12px;
+}
+
+.ButtonBlueDark
+{
+ background:#337ab7 !important;
+ color:#fff !important;
+ border-color:#337ab7;
+ -webkit-transition: background 0.5s ease-in-out;
+ transition: background 0.5s ease-in-out;
+} 
+
+.WhiteButton
+{
+ background:#FFFFFF !important;
+ color:#fff !important;
+ border-color:#FFFFFF;
+ -webkit-transition: background 0.5s ease-in-out;
+ transition: background 0.5s ease-in-out;
+}  
+
+.OrangeButton
+{
+ background:#f0ad4e !important;
+ color:#fff !important;
+ border-color:#f0ad4e;
+ -webkit-transition: background 0.5s ease-in-out;
+ transition: background 0.5s ease-in-out;
+}

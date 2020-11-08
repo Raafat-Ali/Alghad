@@ -1,0 +1,36 @@
+unit ChngePass;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, BaseForm, uniButton, uniEdit, siComp,
+  uniGUIBaseClasses, uniPanel;
+
+type
+  TChngePassF = class(TBaseFormF)
+    UniEdit1: TUniEdit;
+    UniEdit2: TUniEdit;
+    UniButton1: TUniButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function ChngePassF: TChngePassF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function ChngePassF: TChngePassF;
+begin
+  Result := TChngePassF(UniMainModule.GetFormInstance(TChngePassF));
+end;
+
+end.

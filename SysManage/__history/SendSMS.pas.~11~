@@ -1,0 +1,161 @@
+unit SendSMS;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  IdHTTP, uniButton, uniLabel, uniEdit, uniURLFrame, Data.DB, MemDS, DBAccess,
+  Uni, uniBasicGrid, uniDBGrid, uniMultiItem, uniListBox;
+
+type
+  TSendSMSForm = class(TBaseFormF)
+    pnlHead: TUniContainerPanel;
+    pnlDetail: TUniContainerPanel;
+    PaymentsVQ: TUniQuery;
+    PaymentsVQestNo: TIntegerField;
+    PaymentsVQContractNo: TIntegerField;
+    PaymentsVQName: TWideStringField;
+    PaymentsVQUnit: TWideStringField;
+    PaymentsVQPaymentSN: TIntegerField;
+    PaymentsVQPaymentDate: TDateField;
+    PaymentsVQPaymentValu: TFloatField;
+    PaymentsVQPaid: TBooleanField;
+    PaymentsVQPayDate: TDateField;
+    PaymentsVQPayType: TWideStringField;
+    PaymentsVQtenantID: TIntegerField;
+    PaymentsVQUnitNo: TIntegerField;
+    PaymentsVQID: TIntegerField;
+    PaymentsVQsrc: TUniDataSource;
+    btnRefresh: TUniButton;
+    UniURLFrame1: TUniURLFrame;
+    PaymentsVQPhone1: TWideStringField;
+    SendBtn: TUniButton;
+    SendAllBtn: TUniButton;
+    dd: TUniDBGrid;
+    UniListBox1: TUniListBox;
+    procedure btnRefreshClick(Sender: TObject);
+    procedure UniFormCreate(Sender: TObject);
+    procedure SendBtnClick(Sender: TObject);
+    procedure SendAllBtnClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure SendSMSMSG;
+  public
+    { Public declarations }
+  end;
+
+function SendSMSForm: TSendSMSForm;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, G_Funcs;
+
+function SendSMSForm: TSendSMSForm;
+begin
+  Result := TSendSMSForm(UniMainModule.GetFormInstance(TSendSMSForm));
+end;
+//==============================================================================
+
+procedure TSendSMSForm.SendSMSMSG;
+var WebPost,Msg:String;
+begin
+
+Msg:='⁄“Ì“Ì x1,  „ ”œ«œ «·œ›⁄… —ﬁ„ x2 ⁄‰ «·‘ﬁ… x3 »ﬁÌ„… x4 —Ì«· » «—ÌŒ x5';
+{where  EstNo=:Est And UnitNo=:Unt And ContractRef=:ConID
+ And PaymentSN=:PmtSN}
+//SMSqry.Close;
+//SMSqry.ParamByName('Est').AsString := dbeEstNo.Text;
+//SMSqry.ParamByName('Unt').AsString := dbeUnitNo.Text;
+//SMSqry.ParamByName('ConID').AsString := dbeContract.Text;
+//SMSqry.ParamByName('PmtSN').AsString := dbtPaymtSN.Caption;
+//SMSqry.Open;
+//
+//if SMSqry.RecordCount = 1 then begin
+//
+//Msg := StringReplace(Msg, 'x1', SMSqryName.AsString , [rfReplaceAll, rfIgnoreCase]);
+//Msg := StringReplace(Msg, 'x2', SMSqryPaymentSN.AsString , [rfReplaceAll, rfIgnoreCase]);
+//Msg := StringReplace(Msg, 'x3', SMSqryUnit.AsString , [rfReplaceAll, rfIgnoreCase]);
+//Msg := StringReplace(Msg, 'x4', SMSqryRecValue.AsString , [rfReplaceAll, rfIgnoreCase]);
+//Msg := StringReplace(Msg, 'x5', SMSqryRecDate.AsString , [rfReplaceAll, rfIgnoreCase]);
+//
+//
+//WebPost:='https://www.alfa-cell.com/api/msgSend.php?apiKey=a21f6b73ddbd4c15011f60bb2734185f'
+//+'&numbers='+SMSqryphone1.AsString+',966536015848'
+//+'&sender=Aqar Alghad'
+//+'&msg='+Msg
+//+'&lang=3'
+//+'&applicationType=68';
+//
+////ShowMessage(Msg);
+//UniURLFrame1.URL:= WebPost;
+//end;
+//⁄“Ì“Ì „«·ﬂ «·⁄ﬁ«—  „ ”œ«œ «·œ›⁄Â —ﬁ„ <2> †⁄‰ «·⁄ﬁœ —ﬁ„ †<4> »ﬁÌ„… 8000 —Ì«· » «—ÌŒ 2020-06-11
+
+{
+https://www.alfa-cell.com/api/msgSend.php?apiKey=a010a5acb42537e78965fb6a19ea&numbers=966555555555&sender=NEW
+SMS&msg=06450631062D0628062700200628064300200641064A00200041006C00660061002D00430065006C006C002E0063006F0
+06D&applicationType=68 }
+//https://www.alfa-cell.com/api/msgSend.php?apiKey=a21f6b73ddbd4c15011f60bb2734185f&numbers=966536015848&sender=Aqar Alghad&msg=„—Õ»« »ﬂ„ „‰ ⁄ﬁ«— «·€œ&applicationType=68&returnJson=1&lang=3
+
+
+
+
+end;
+//-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
+//-----------------------------------------------------------------------
+procedure TSendSMSForm.btnRefreshClick(Sender: TObject);
+begin
+  inherited;
+PaymentsVQ.Close;
+PaymentsVQ.Open;
+AdjustGridView(dd);
+end;
+
+procedure TSendSMSForm.SendAllBtnClick(Sender: TObject);
+var I:integer;
+DataSet : TDataSet;
+OutPutBuffer : TBytes;
+begin
+  inherited;
+
+  if dd.SelectedRows.Count > 0 then begin
+     DataSet := PaymentsVQ;
+
+     try
+     UniListBox1.Clear;
+       DataSet.DisableControls;
+       for I := 0 to dd.SelectedRows.Count-1 do
+         begin
+           OutPutBuffer := dd.SelectedRows.Items[i];
+           DataSet.GotoBookmark(OutPutBuffer);
+           UniListBox1.Items.Add(DataSet.FieldByName('Phone1').AsString);
+         end;
+     finally
+         DataSet.EnableControls;
+     end;
+
+
+  end;
+
+end;
+
+procedure TSendSMSForm.SendBtnClick(Sender: TObject);
+begin
+  inherited;
+if UniMainModule.gSendSMS ='T' then
+  SendSMSMSG();
+end;
+
+procedure TSendSMSForm.UniFormCreate(Sender: TObject);
+begin
+  inherited;
+btnRefreshClick(Sender);
+end;
+
+end.

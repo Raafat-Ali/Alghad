@@ -1,0 +1,44 @@
+object MainmForm: TMainmForm
+  Left = 0
+  Top = 0
+  ClientHeight = 480
+  ClientWidth = 320
+  Caption = 'MainmForm'
+  AlignmentControl = uniAlignmentClient
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 47
+  PlatformData = {}
+  object UniContainerPanel1: TUniContainerPanel
+    Left = 8
+    Top = 8
+    Width = 304
+    Height = 329
+    Hint = ''
+    ParentColor = False
+    TabOrder = 0
+    Layout = 'table'
+    LayoutConfig.Flex = 1
+    LayoutConfig.Width = '100%'
+    object btnCont: TUniButton
+      Left = 3
+      Top = 3
+      Width = 80
+      Height = 49
+      Hint = ''
+      Caption = 'Contracts'
+      TabOrder = 1
+    end
+    object btnPayments: TUniBitBtn
+      Left = 90
+      Top = 3
+      Width = 80
+      Height = 49
+      Hint = ''
+      Caption = 'btnPayments'
+      TabOrder = 2
+    end
+  end
+end

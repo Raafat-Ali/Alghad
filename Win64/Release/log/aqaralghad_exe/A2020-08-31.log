@@ -1,0 +1,29 @@
+AqarAlghad.exe: 00003444: 13:35:54 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00003444: 13:35:54 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00003444: 13:35:54 [TUniServerModule]:Global Cache Folder Erased. <75> Files deleted.
+AqarAlghad.exe: 00003444: 13:35:54 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00003444: 13:35:54 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001748: 13:36:33 [127.0.0.1]:EUniError : Cannot connect to server on host 'localhost':
+No connection could be made because the target machine actively refused it.
+Socket Error Code: 10061($274D) : Addr: $0000000000BD7B79
+AqarAlghad.exe: 00003A98: 13:36:33 [HandleFileRequest[127.0.0.1]]:File not found: D:\0UniGui\Alghad\Win64\Release\favicon.ico
+AqarAlghad.exe: 00003144: 13:37:08 [127.0.0.1]:EUniError : Cannot connect to server on host 'localhost':
+No connection could be made because the target machine actively refused it.
+Socket Error Code: 10061($274D) : Addr: $0000000000BD7B79
+AqarAlghad.exe: 000029A4: 13:37:56 [127.0.0.1]:EUniError : Cannot connect to server on host 'localhost':
+No connection could be made because the target machine actively refused it.
+Socket Error Code: 10061($274D) : Addr: $0000000000BD7B79
+AqarAlghad.exe: 000032C4: 13:38:10 [127.0.0.1]:EUniError : Cannot connect to server on host 'localhost':
+No connection could be made because the target machine actively refused it.
+Socket Error Code: 10061($274D) : Addr: $0000000000BD7B79
+AqarAlghad.exe: 00003444: 13:40:37 [TUniServerModule]:Shutting Down Server.
+AqarAlghad.exe: 00003444: 13:40:37 [TUniServerModule]:Stopping HTTP Server.
+AqarAlghad.exe: 00003444: 13:40:38 [TUniServerModule]:HTTP Server Stopped.
+AqarAlghad.exe: 00003444: 13:40:38 [TUniGUISessionManager]:Terminating Session manager.
+AqarAlghad.exe: 00003444: 13:40:38 [TUniGUISessionManager]:Stopping Cache Eraser...
+AqarAlghad.exe: 00003444: 13:40:38 [TUniGUISessionManager]:Cache Eraser Stopped.
+AqarAlghad.exe: 00003444: 13:40:38 [TUniGUISessionManager]:Destroying Worker Threads.
+AqarAlghad.exe: 00003444: 13:40:38 [TUniGUISessionManager]:Session manager terminated.
+AqarAlghad.exe: 00003444: 13:40:38 [TUniServerModule]:Server Shutdown Completed.
+AqarAlghad.exe: 00003444: 13:40:38 []:<-------------------------------------------------------------->
+AqarAlghad.exe: 00003444: 13:40:38 [Terminated]:Exit Code: 0

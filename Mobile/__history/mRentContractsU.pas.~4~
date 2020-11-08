@@ -1,0 +1,45 @@
+unit mRentContractsU;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniGUIBaseClasses, uniPanel, uniPageControl, unimTabPanel, uniToolBar,
+  unimToolbar;
+
+type
+  TmRentContracts = class(TUnimForm)
+    UnimContainerPanel1: TUnimContainerPanel;
+    UnimToolBar1: TUnimToolBar;
+    UnimToolButton1: TUnimToolButton;
+    UnimToolButton2: TUnimToolButton;
+    UnimToolButton4: TUnimToolButton;
+    UnimToolButton6: TUnimToolButton;
+    UnimToolButton7: TUnimToolButton;
+    UnimToolButton8: TUnimToolButton;
+    UnimToolButton10: TUnimToolButton;
+    UnimToolButton12: TUnimToolButton;
+    UnimToolButton3: TUnimToolButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function mRentContracts: TmRentContracts;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function mRentContracts: TmRentContracts;
+begin
+  Result := TmRentContracts(UniMainModule.GetFormInstance(TmRentContracts));
+end;
+
+end.

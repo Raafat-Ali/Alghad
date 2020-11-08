@@ -1,0 +1,261 @@
+inherited SettingsF: TSettingsF
+  ClientHeight = 807
+  ClientWidth = 1072
+  Caption = 'SettingsF'
+  ExplicitLeft = -182
+  ExplicitWidth = 1088
+  ExplicitHeight = 846
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlBaseContainer: TUniContainerPanel
+    Left = 8
+    Top = 8
+    Width = 1049
+    Height = 791
+    Layout = 'hbox'
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 1049
+    ExplicitHeight = 791
+    object pnlSections: TUniContainerPanel
+      Left = 16
+      Top = 16
+      Width = 300
+      Height = 401
+      Hint = ''
+      ParentColor = False
+      TabOrder = 1
+      Layout = 'vbox'
+      LayoutConfig.Height = '50%'
+      LayoutConfig.Region = 'west'
+      object UniDBGrid1: TUniDBGrid
+        Left = 3
+        Top = 3
+        Width = 294
+        Height = 160
+        Hint = ''
+        DataSource = SecQryS
+        WebOptions.Paged = False
+        LoadMask.Message = 'Loading data...'
+        ForceFit = True
+        LayoutConfig.Flex = 1
+        TabOrder = 1
+      end
+      object UniDBNavigator1: TUniDBNavigator
+        Left = 27
+        Top = 352
+        Width = 241
+        Height = 25
+        Hint = ''
+        DataSource = SecQryS
+        VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+        TabOrder = 2
+      end
+    end
+    object pnlSubSections: TUniContainerPanel
+      Left = 336
+      Top = 16
+      Width = 300
+      Height = 401
+      Hint = ''
+      ParentColor = False
+      TabOrder = 2
+      Layout = 'vbox'
+      LayoutConfig.Height = '50%'
+      LayoutConfig.Region = 'west'
+      object UniDBGrid2: TUniDBGrid
+        Left = 3
+        Top = 3
+        Width = 294
+        Height = 160
+        Hint = ''
+        DataSource = SubSecQryS
+        WebOptions.Paged = False
+        LoadMask.Message = 'Loading data...'
+        ForceFit = True
+        LayoutConfig.Flex = 1
+        TabOrder = 1
+      end
+      object UniDBNavigator2: TUniDBNavigator
+        Left = 19
+        Top = 352
+        Width = 241
+        Height = 25
+        Hint = ''
+        DataSource = SubSecQryS
+        VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+        TabOrder = 2
+      end
+    end
+    object pnlSettings: TUniContainerPanel
+      Left = 642
+      Top = 19
+      Width = 300
+      Height = 400
+      Hint = ''
+      ParentColor = False
+      TabOrder = 3
+      LayoutConfig.Height = '50%'
+      LayoutConfig.Region = 'west'
+      object UniFSToggle1: TUniFSToggle
+        Left = 11
+        Top = 11
+        Width = 200
+        Height = 25
+        Hint = ''
+        ThemeOn = Success
+        ThemeOff = Gray
+        TitleOn = 'Send SMS'
+        TitleOff = 'Send SMS'
+      end
+      object UniButton1: TUniButton
+        Left = 16
+        Top = 42
+        Width = 129
+        Height = 25
+        Hint = ''
+        Caption = 'Submit'
+        TabOrder = 2
+        OnClick = UniButton1Click
+      end
+    end
+  end
+  inherited siLang1: TsiLang
+    Left = 20
+    Top = 751
+    TranslationData = {
+      73007400430061007000740069006F006E0073005F0055006E00690063006F00
+      640065000D000A005400530065007400740069006E0067007300460001005300
+      65007400740069006E006700730046000100270639062F0627062F0627062A06
+      200027064406460638062706450601000D000A0055006E006900420075007400
+      74006F006E00310001005300750062006D0069007400010001000D000A007300
+      7400480069006E00740073005F0055006E00690063006F00640065000D000A00
+      7300740044006900730070006C00610079004C006100620065006C0073005F00
+      55006E00690063006F00640065000D000A005300650063005100720079004900
+      4400010049004400010001000D000A0053006500630051007200790053006500
+      6300740069006F006E000100530065006300740069006F006E00010001000D00
+      0A005300650063005100720079005000530065006300740069006F006E000100
+      5000530065006300740069006F006E00010001000D000A005300750062005300
+      6500630051007200790049004400010049004400010001000D000A0053007500
+      6200530065006300510072007900530065006300740069006F006E0001005300
+      65006300740069006F006E00010001000D000A00530075006200530065006300
+      5100720079005000530065006300740069006F006E0001005000530065006300
+      740069006F006E00010001000D000A007300740046006F006E00740073005F00
+      55006E00690063006F00640065000D000A00730074004D0075006C0074006900
+      4C0069006E00650073005F0055006E00690063006F00640065000D000A007300
+      740044006C0067007300430061007000740069006F006E0073005F0055006E00
+      690063006F00640065000D000A005700610072006E0069006E00670001005700
+      610072006E0069006E006700010001000D000A004500720072006F0072000100
+      4500720072006F007200010001000D000A0049006E0066006F0072006D006100
+      740069006F006E00010049006E0066006F0072006D006100740069006F006E00
+      010001000D000A0043006F006E006600690072006D00010043006F006E006600
+      690072006D00010001000D000A00590065007300010026005900650073000100
+      01000D000A004E006F00010026004E006F00010001000D000A004F004B000100
+      4F004B00010001000D000A00430061006E00630065006C000100430061006E00
+      630065006C00010001000D000A00410062006F00720074000100260041006200
+      6F0072007400010001000D000A00520065007400720079000100260052006500
+      740072007900010001000D000A00490067006E006F0072006500010026004900
+      67006E006F0072006500010001000D000A0041006C006C000100260041006C00
+      6C00010001000D000A004E006F00200054006F00200041006C006C0001004E00
+      26006F00200074006F00200041006C006C00010001000D000A00590065007300
+      200054006F00200041006C006C000100590065007300200074006F0020002600
+      41006C006C00010001000D000A00480065006C00700001002600480065006C00
+      7000010001000D000A007300740053007400720069006E00670073005F005500
+      6E00690063006F00640065000D000A00730074004F0074006800650072005300
+      7400720069006E00670073005F0055006E00690063006F00640065000D000A00
+      5400530065007400740069006E006700730046002E004C00610079006F007500
+      74000100660069007400010001000D000A0070006E006C004200610073006500
+      43006F006E007400610069006E00650072002E004C00610079006F0075007400
+      0100680062006F007800010001000D000A0070006E006C005300650063007400
+      69006F006E0073002E004C00610079006F00750074000100760062006F007800
+      010001000D000A0070006E006C00530075006200530065006300740069006F00
+      6E0073002E004C00610079006F00750074000100760062006F00780001000100
+      0D000A005300750062005300650063005100720079002E004400650074006100
+      69006C004600690065006C006400730001005000530065006300740069006F00
+      6E00010001000D000A0070006E006C00530065007400740069006E0067007300
+      2E004C00610079006F007500740001006100620073006F006C00750074006500
+      010001000D000A0055006E0069004600530054006F00670067006C0065003100
+      2E005400690074006C0065004F00660066000100530065006E00640020005300
+      4D00530001002A0634063A064A06440620002506310633062706440620002706
+      44063106330627062606440601000D000A0055006E0069004600530054006F00
+      670067006C00650031002E005400690074006C0065004F006E00010053006500
+      6E006400200053004D00530001002A0634063A064A0644062000250631063306
+      270644062000270644063106330627062606440601000D000A00730074004C00
+      6F00630061006C00650073005F0055006E00690063006F00640065000D000A00
+      7300740043006F006C006C0065006300740069006F006E0073005F0055006E00
+      690063006F00640065000D000A00730074004300680061007200530065007400
+      73005F0055006E00690063006F00640065000D000A00}
+  end
+  object SecQry: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'Select * from secid'
+      'WHERE PSection = '#39'0'#39
+      'Order By ID')
+    BeforePost = SecQryBeforePost
+    AfterPost = SecQryAfterPost
+    AfterDelete = SecQryAfterDelete
+    Left = 88
+    Top = 456
+    object SecQryID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+    object SecQrySection: TWideStringField
+      FieldName = 'Section'
+      Required = True
+      Size = 40
+    end
+    object SecQryPSection: TIntegerField
+      FieldName = 'PSection'
+      Required = True
+      Visible = False
+    end
+  end
+  object SubSecQry: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'Select * from secid'
+      'Order By ID')
+    MasterSource = SecQryS
+    MasterFields = 'ID'
+    DetailFields = 'PSection'
+    Left = 472
+    Top = 464
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'ID'
+        ParamType = ptInput
+        Value = 1
+      end>
+    object SubSecQryID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      DisplayWidth = 5
+      FieldName = 'ID'
+      Visible = False
+    end
+    object SubSecQrySection: TWideStringField
+      DisplayWidth = 45
+      FieldName = 'Section'
+      Required = True
+      Size = 40
+    end
+    object SubSecQryPSection: TIntegerField
+      FieldName = 'PSection'
+      Required = True
+      Visible = False
+    end
+  end
+  object SubSecQryS: TUniDataSource
+    DataSet = SubSecQry
+    Left = 528
+    Top = 408
+  end
+  object SecQryS: TUniDataSource
+    DataSet = SecQry
+    Left = 104
+    Top = 392
+  end
+end

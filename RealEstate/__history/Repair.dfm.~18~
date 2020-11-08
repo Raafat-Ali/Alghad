@@ -1,0 +1,563 @@
+inherited RepairF: TRepairF
+  ClientHeight = 466
+  ClientWidth = 687
+  Caption = 'RepairF'
+  BorderStyle = bsNone
+  Font.Charset = ANSI_CHARSET
+  Font.Height = -13
+  Font.Name = 'Tajawal'
+  ExplicitWidth = 687
+  ExplicitHeight = 466
+  PixelsPerInch = 96
+  TextHeight = 18
+  inherited pnlBaseContainer: TUniContainerPanel
+    Left = 24
+    Top = 8
+    Width = 553
+    Height = 450
+    Layout = 'vbox'
+    LayoutAttribs.Align = 'center'
+    ExplicitLeft = 24
+    ExplicitTop = 8
+    ExplicitWidth = 553
+    ExplicitHeight = 450
+    object EstateCB: TUniDBLookupComboBox
+      Left = 72
+      Top = 12
+      Width = 145
+      Hint = ''
+      ListField = 'EstNo;estName;estDistrict'
+      ListSource = lookESTs
+      KeyField = 'EstNo'
+      ListFieldIndex = 0
+      AnyMatch = True
+      EmptyText = 'EstNo;estName;estDistrict'
+      TabOrder = 1
+      Color = clWindow
+      LayoutConfig.Width = '60%'
+      LayoutConfig.Margin = '20 0 0 0'
+      FieldLabel = 'Look For Estate'
+      FieldLabelWidth = 70
+      Style = csDropDown
+    end
+    object UnitCB: TUniDBLookupComboBox
+      Left = 72
+      Top = 56
+      Width = 145
+      Hint = ''
+      ListField = 'Unit;Floor;Rooms'
+      ListSource = lookUNITs
+      KeyField = 'ID'
+      ListFieldIndex = 0
+      AnyMatch = True
+      EmptyText = 'unitNo;Unit;Floor '
+      TabOrder = 2
+      Color = clWindow
+      LayoutConfig.Width = '60%'
+      LayoutConfig.Margin = '5 0 0 0'
+      FieldLabel = 'Look For Unit'
+      FieldLabelWidth = 70
+      Style = csDropDown
+    end
+    object pnlRepair: TUniContainerPanel
+      Left = 24
+      Top = 120
+      Width = 497
+      Height = 241
+      Hint = ''
+      ParentColor = False
+      TabOrder = 3
+      Layout = 'vbox'
+      LayoutAttribs.Align = 'center'
+      LayoutAttribs.Pack = 'start'
+      LayoutAttribs.Padding = '5'
+      LayoutConfig.Width = '80%'
+      object dbeUnitID: TUniDBEdit
+        Left = 287
+        Top = 3
+        Width = 121
+        Height = 22
+        Hint = ''
+        Visible = False
+        DataField = 'ID'
+        DataSource = lookUNITs
+        TabOrder = 4
+      end
+      object SelecttedPnl: TUniContainerPanel
+        Left = 38
+        Top = 30
+        Width = 412
+        Height = 86
+        Hint = ''
+        ParentColor = False
+        TabOrder = 1
+        Layout = 'table'
+        LayoutAttribs.Align = 'middle'
+        LayoutAttribs.Pack = 'center'
+        LayoutAttribs.Padding = '5'
+        LayoutAttribs.Columns = 3
+        LayoutConfig.Width = '80%'
+        LayoutConfig.Margin = '10 0 0 0'
+        object dbeEstNo: TUniDBEdit
+          Left = 7
+          Top = 31
+          Width = 80
+          Height = 22
+          Hint = ''
+          DataField = 'estNo'
+          DataSource = lookESTs
+          Alignment = taCenter
+          ParentFont = False
+          Font.Color = clGray
+          Font.Style = [fsBold]
+          TabOrder = 1
+          UseFieldAlignment = False
+          FieldLabel = 'Estate'
+          FieldLabelWidth = 30
+          BorderStyle = ubsNone
+        end
+        object UniDBEdit5: TUniDBEdit
+          Left = 93
+          Top = 31
+          Width = 150
+          Height = 22
+          Hint = ''
+          DataField = 'estName'
+          DataSource = lookESTs
+          Alignment = taCenter
+          ParentFont = False
+          Font.Color = clGray
+          Font.Style = [fsBold]
+          TabOrder = 2
+          UseFieldAlignment = False
+          LayoutConfig.Flex = 1
+          LayoutConfig.Width = '100%'
+          FieldLabelWidth = 30
+          BorderStyle = ubsNone
+        end
+        object UniDBEdit6: TUniDBEdit
+          Left = 249
+          Top = 31
+          Width = 150
+          Height = 22
+          Hint = ''
+          DataField = 'estDistrict'
+          DataSource = lookESTs
+          Alignment = taCenter
+          ParentFont = False
+          Font.Color = clGray
+          Font.Style = [fsBold]
+          TabOrder = 3
+          UseFieldAlignment = False
+          LayoutConfig.Flex = 1
+          LayoutConfig.Width = '100%'
+          FieldLabelWidth = 30
+          BorderStyle = ubsNone
+        end
+        object UniDBEdit7: TUniDBEdit
+          Left = 7
+          Top = 59
+          Width = 80
+          Height = 22
+          Hint = ''
+          DataField = 'Unit'
+          DataSource = lookUNITs
+          Alignment = taCenter
+          ParentFont = False
+          Font.Color = clTeal
+          Font.Style = [fsBold]
+          TabOrder = 4
+          UseFieldAlignment = False
+          FieldLabel = 'Unit'
+          FieldLabelWidth = 30
+          BorderStyle = ubsNone
+        end
+        object UniDBEdit8: TUniDBEdit
+          Left = 93
+          Top = 59
+          Width = 150
+          Height = 22
+          Hint = ''
+          DataField = 'Floor'
+          DataSource = lookUNITs
+          Alignment = taCenter
+          ParentFont = False
+          Font.Color = clTeal
+          Font.Style = [fsBold]
+          TabOrder = 5
+          UseFieldAlignment = False
+          LayoutConfig.Width = '100%'
+          FieldLabelWidth = 30
+          BorderStyle = ubsNone
+        end
+        object UniDBEdit9: TUniDBEdit
+          Left = 249
+          Top = 59
+          Width = 150
+          Height = 22
+          Hint = ''
+          DataField = 'Rooms'
+          DataSource = lookUNITs
+          Alignment = taCenter
+          ParentFont = False
+          Font.Color = clTeal
+          Font.Style = [fsBold]
+          TabOrder = 6
+          UseFieldAlignment = False
+          LayoutConfig.Width = '100%'
+          FieldLabelWidth = 30
+          BorderStyle = ubsNone
+        end
+      end
+      object UniContainerPanel2: TUniContainerPanel
+        Left = 77
+        Top = 88
+        Width = 256
+        Height = 97
+        Hint = ''
+        ParentColor = False
+        TabOrder = 5
+        Layout = 'hbox'
+        LayoutConfig.Width = '100%'
+        object UniButton3: TUniButton
+          Left = 16
+          Top = 72
+          Width = 75
+          Height = 25
+          Hint = ''
+          Caption = 'UniButton3'
+          TabOrder = 1
+          OnClick = UniButton3Click
+        end
+        object UniButton4: TUniButton
+          Left = 109
+          Top = 72
+          Width = 75
+          Height = 25
+          Hint = ''
+          Caption = 'UniButton4'
+          TabOrder = 2
+          OnClick = UniButton4Click
+        end
+        object UniButton2: TUniButton
+          Left = 181
+          Top = 72
+          Width = 75
+          Height = 25
+          Hint = ''
+          Caption = 'UniButton2'
+          TabOrder = 5
+          OnClick = UniButton2Click
+        end
+        object UniButton5: TUniButton
+          Left = 181
+          Top = 72
+          Width = 75
+          Height = 25
+          Hint = ''
+          Caption = 'UniButton5'
+          TabOrder = 4
+          OnClick = UniButton5Click
+        end
+        object UniButton6: TUniButton
+          Left = 181
+          Top = 72
+          Width = 75
+          Height = 25
+          Hint = ''
+          Caption = 'UniButton6'
+          TabOrder = 3
+          OnClick = UniButton6Click
+        end
+      end
+      object UniContainerPanel1: TUniContainerPanel
+        Left = 38
+        Top = 122
+        Width = 435
+        Height = 63
+        Hint = ''
+        ParentColor = False
+        TabOrder = 2
+        Layout = 'hbox'
+        LayoutAttribs.Align = 'middle'
+        LayoutConfig.Width = '80%'
+        object UniEdit1: TUniEdit
+          Left = 10
+          Top = 24
+          Width = 121
+          Hint = ''
+          Text = ''
+          TabOrder = 1
+          EmptyText = 'Maintenance Exp'
+          FieldLabel = 'Maintenance'
+          FieldLabelWidth = 40
+          LayoutConfig.Flex = 1
+        end
+        object UniNumberEdit1: TUniNumberEdit
+          Left = 152
+          Top = 24
+          Width = 121
+          Hint = ''
+          TabOrder = 2
+          FieldLabel = 'value'
+          FieldLabelWidth = 30
+          DecimalSeparator = '.'
+        end
+        object dtpMainDate: TUniDateTimePicker
+          Left = 288
+          Top = 24
+          Width = 130
+          Hint = ''
+          DateTime = 43942.000000000000000000
+          TabOrder = 3
+          FieldLabel = 'Date'
+          FieldLabelWidth = 30
+          UseSystemFormats = True
+        end
+      end
+      object UniButton1: TUniButton
+        Left = 190
+        Top = 191
+        Width = 75
+        Height = 25
+        Hint = ''
+        Caption = 'Save'
+        TabOrder = 3
+        IconCls = 'add'
+        LayoutConfig.Cls = 'GreenButton'
+        LayoutConfig.Width = '50%'
+        OnClick = UniButton1Click
+      end
+    end
+    object grdUMaint: TUniDBGrid
+      Left = 101
+      Top = 367
+      Width = 320
+      Height = 136
+      Hint = ''
+      DataSource = UnitMaintQs
+      ReadOnly = True
+      LoadMask.Message = 'Loading data...'
+      ForceFit = True
+      LayoutConfig.Flex = 1
+      LayoutConfig.Width = '80%'
+      TabOrder = 4
+    end
+  end
+  inherited siLang1: TsiLang
+    TranslationData = {
+      73007400430061007000740069006F006E0073005F0055006E00690063006F00
+      640065000D000A00540052006500700061006900720046000100520065007000
+      6100690072004600010035064A06270646062906200027064406390642062706
+      310601000D000A0055006E00690042007500740074006F006E00310001005300
+      61007600650001002706360627064106290601000D000A007300740048006900
+      6E00740073005F0055006E00690063006F00640065000D000A00730074004400
+      6900730070006C00610079004C006100620065006C0073005F0055006E006900
+      63006F00640065000D000A0055006E00690074004D00610069006E0074005100
+      49004400010049004400010001000D000A0055006E00690074004D0061006900
+      6E00740051004500730074004E006F0001004500730074004E006F0001003106
+      42064506200027064406390642062706310601000D000A0055006E0069007400
+      4D00610069006E007400510055006E00690074004E006F00010055006E006900
+      74004E006F0001002706440648062D062F06470601000D000A0055006E006900
+      74004D00610069006E00740051004D00610069006E00740001004D0061006900
+      6E00740001002706440635064A06270646064706200027064406450646062C06
+      3206470601000D000A0055006E00690074004D00610069006E00740051004D00
+      610069006E007400560061006C007500650001004D00610069006E0074002000
+      560061006C00750065000100270644062A06430644064106290601000D000A00
+      55006E00690074004D00610069006E00740051004D00610069006E0074004400
+      61007400650001004D00610069006E0074002000440061007400650001002706
+      44062A06270631064A062E0601000D000A007300740046006F006E0074007300
+      5F0055006E00690063006F00640065000D000A00730074004D0075006C007400
+      69004C0069006E00650073005F0055006E00690063006F00640065000D000A00
+      7300740044006C0067007300430061007000740069006F006E0073005F005500
+      6E00690063006F00640065000D000A005700610072006E0069006E0067000100
+      5700610072006E0069006E006700010001000D000A004500720072006F007200
+      01004500720072006F007200010001000D000A0049006E0066006F0072006D00
+      6100740069006F006E00010049006E0066006F0072006D006100740069006F00
+      6E00010001000D000A0043006F006E006600690072006D00010043006F006E00
+      6600690072006D00010001000D000A0059006500730001002600590065007300
+      010001000D000A004E006F00010026004E006F00010001000D000A004F004B00
+      01004F004B00010001000D000A00430061006E00630065006C00010043006100
+      6E00630065006C00010001000D000A00410062006F0072007400010026004100
+      62006F0072007400010001000D000A0052006500740072007900010026005200
+      6500740072007900010001000D000A00490067006E006F007200650001002600
+      490067006E006F0072006500010001000D000A0041006C006C00010026004100
+      6C006C00010001000D000A004E006F00200054006F00200041006C006C000100
+      4E0026006F00200074006F00200041006C006C00010001000D000A0059006500
+      7300200054006F00200041006C006C000100590065007300200074006F002000
+      260041006C006C00010001000D000A00480065006C0070000100260048006500
+      6C007000010001000D000A007300740053007400720069006E00670073005F00
+      55006E00690063006F00640065000D000A00730074004F007400680065007200
+      53007400720069006E00670073005F0055006E00690063006F00640065000D00
+      0A00540052006500700061006900720046002E004C00610079006F0075007400
+      0100660069007400010001000D000A0070006E006C0042006100730065004300
+      6F006E007400610069006E00650072002E004C00610079006F00750074000100
+      760062006F007800010001000D000A0045007300740061007400650043004200
+      2E0045006D00700074007900540065007800740001004500730074004E006F00
+      3B006500730074004E0061006D0065003B006500730074004400690073007400
+      720069006300740001002706440631064206450620002C002000270644062706
+      3306450620002C002000270644062D064A0601000D000A004500730074006100
+      74006500430042002E004600690065006C0064004C006100620065006C000100
+      4C006F006F006B00200046006F00720020004500730074006100740065000100
+      27062E062A064A0627063106200027064406390642062706310601000D000A00
+      450073007400610074006500430042002E004600690065006C0064004C006100
+      620065006C0053006500700061007200610074006F00720001003A0001000100
+      0D000A0055006E0069007400430042002E0045006D0070007400790054006500
+      78007400010075006E00690074004E006F003B0055006E00690074003B004600
+      6C006F006F007200200001002706440631064206450620002C00200027064406
+      48062D062F06470620002C00200027064406370627062806420601000D000A00
+      55006E0069007400430042002E004600690065006C0064004C00610062006500
+      6C0001004C006F006F006B00200046006F007200200055006E00690074000100
+      27062E062A064A062706310620002706440648062D062F06290601000D000A00
+      55006E0069007400430042002E004600690065006C0064004C00610062006500
+      6C0053006500700061007200610074006F00720001003A00010001000D000A00
+      70006E006C005200650070006100690072002E004C00610079006F0075007400
+      0100760062006F007800010001000D000A00530065006C006500630074007400
+      6500640050006E006C002E004C00610079006F00750074000100740061006200
+      6C006500010001000D000A006400620065004500730074004E006F002E004600
+      690065006C0064004C006100620065006C000100450073007400610074006500
+      010027064406390642062706310601000D000A00640062006500450073007400
+      4E006F002E004600690065006C0064004C006100620065006C00530065007000
+      61007200610074006F00720001003A00010001000D000A0055006E0069004400
+      4200450064006900740035002E004600690065006C0064004C00610062006500
+      6C0053006500700061007200610074006F00720001003A00010001000D000A00
+      55006E00690044004200450064006900740036002E004600690065006C006400
+      4C006100620065006C0053006500700061007200610074006F00720001003A00
+      010001000D000A0055006E00690044004200450064006900740037002E004600
+      690065006C0064004C006100620065006C00010055006E006900740001002706
+      440648062D062F06470601000D000A0055006E00690044004200450064006900
+      740037002E004600690065006C0064004C006100620065006C00530065007000
+      61007200610074006F00720001003A00010001000D000A0055006E0069004400
+      4200450064006900740038002E004600690065006C0064004C00610062006500
+      6C0053006500700061007200610074006F00720001003A00010001000D000A00
+      55006E00690044004200450064006900740039002E004600690065006C006400
+      4C006100620065006C0053006500700061007200610074006F00720001003A00
+      010001000D000A0055006E00690043006F006E007400610069006E0065007200
+      500061006E0065006C0031002E004C00610079006F0075007400010068006200
+      6F007800010001000D000A0055006E006900450064006900740031002E004600
+      690065006C0064004C006100620065006C0001004D00610069006E0074006500
+      6E0061006E006300650001002706440635064A0627064606470601000D000A00
+      55006E006900450064006900740031002E004600690065006C0064004C006100
+      620065006C0053006500700061007200610074006F00720001003A0001000100
+      0D000A0055006E0069004E0075006D0062006500720045006400690074003100
+      2E004600690065006C0064004C006100620065006C000100760061006C007500
+      65000100270644062A06430644064106290601000D000A0055006E0069004E00
+      75006D00620065007200450064006900740031002E004600690065006C006400
+      4C006100620065006C0053006500700061007200610074006F00720001003A00
+      010001000D000A006400740070004D00610069006E0044006100740065002E00
+      440061007400650046006F0072006D0061007400010079007900790079002D00
+      4D004D002D0064006400010001000D000A006400740070004D00610069006E00
+      44006100740065002E004600690065006C0064004C006100620065006C000100
+      44006100740065000100270644062A06270631064A062E0601000D000A006400
+      740070004D00610069006E0044006100740065002E004600690065006C006400
+      4C006100620065006C0053006500700061007200610074006F00720001003A00
+      010001000D000A006400740070004D00610069006E0044006100740065002E00
+      540069006D00650046006F0072006D0061007400010048003A006D006D002000
+      41004D0050004D00010001000D000A0055006E00690045006400690074003100
+      2E0045006D00700074007900540065007800740001004D00610069006E007400
+      65006E0061006E00630065002000450078007000010028064A06270646062000
+      2706440635064A0627064606470601000D000A0055006E006900420075007400
+      74006F006E0031002E00490063006F006E0043006C0073000100610064006400
+      010001000D000A006C006F006F006B0055004E00490054002E00440065007400
+      610069006C004600690065006C00640073000100450053005400490044000100
+      01000D000A0064006200650055006E0069007400490044002E00460069006500
+      6C0064004C006100620065006C0053006500700061007200610074006F007200
+      01003A00010001000D000A00730074004C006F00630061006C00650073005F00
+      55006E00690063006F00640065000D000A007300740043006F006C006C006500
+      6300740069006F006E0073005F0055006E00690063006F00640065000D000A00
+      73007400430068006100720053006500740073005F0055006E00690063006F00
+      640065000D000A00}
+  end
+  object lookUNIT: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * From Units'
+      'Order By ID')
+    MasterSource = lookESTs
+    MasterFields = 'estNo'
+    DetailFields = 'ESTID'
+    Active = True
+    Left = 502
+    Top = 74
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'estNo'
+        ParamType = ptInput
+        Value = 1
+      end>
+  end
+  object lookUNITs: TUniDataSource
+    DataSet = lookUNIT
+    Left = 400
+    Top = 72
+  end
+  object lookEST: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT  * from Estates'
+      'Order By ID')
+    Active = True
+    Left = 494
+    Top = 18
+  end
+  object lookESTs: TUniDataSource
+    DataSet = lookEST
+    Left = 408
+    Top = 16
+  end
+  object UnitMaintQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM unitmaint'
+      'Order By ID')
+    MasterSource = lookUNITs
+    MasterFields = 'ID'
+    DetailFields = 'UnitNo'
+    Left = 48
+    Top = 336
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        Value = nil
+      end>
+    object UnitMaintQID: TIntegerField
+      DisplayWidth = 15
+      FieldName = 'ID'
+    end
+    object UnitMaintQEstNo: TIntegerField
+      DisplayWidth = 20
+      FieldName = 'EstNo'
+      Required = True
+    end
+    object UnitMaintQMaint: TWideStringField
+      DisplayWidth = 200
+      FieldName = 'Maint'
+      Required = True
+      Size = 255
+    end
+    object UnitMaintQMaintValue: TFloatField
+      DisplayLabel = 'Maint Value'
+      DisplayWidth = 20
+      FieldName = 'MaintValue'
+      Required = True
+    end
+    object UnitMaintQMaintDate: TDateField
+      DisplayLabel = 'Maint Date'
+      DisplayWidth = 20
+      FieldName = 'MaintDate'
+      Required = True
+    end
+    object UnitMaintQUnitNo: TIntegerField
+      FieldName = 'UnitNo'
+      Required = True
+      Visible = False
+    end
+  end
+  object UnitMaintQs: TUniDataSource
+    DataSet = UnitMaintQ
+    Left = 48
+    Top = 408
+  end
+end

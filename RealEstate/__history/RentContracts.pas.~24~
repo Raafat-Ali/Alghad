@@ -1,0 +1,815 @@
+unit RentContracts;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses, JvJCLUtils, // Date utils for contract
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  uniButton, uniToolBar, uniEdit, uniDBEdit, Data.DB, DBAccess, Uni, MemDS,
+  uniFieldSet, uniDateTimePicker, uniMultiItem, uniComboBox, uniDBComboBox,
+  uniDBLookupComboBox, uniBasicGrid, uniDBGrid, uniGroupBox, uniLabel,
+  uniListBox, uniDBDateTimePicker, Vcl.DBActns, System.Actions, Vcl.ActnList,
+  uniCheckBox, uniDBPivotGrid, uniDBVerticalGrid, Datasnap.DBClient,
+  uniSweetAlert;
+
+type
+  TrRentContracts = class(TBaseFormF)
+    TenantsQry: TUniQuery;
+    TenantsQryID: TIntegerField;
+    TenantsQryName: TWideStringField;
+    TenantsQryphone1: TWideStringField;
+    TenantsQryphone2: TWideStringField;
+    TenantsQryeMail: TWideStringField;
+    TenantsQrypersonType: TWideStringField;
+    TenantsSrc: TUniDataSource;
+    TenantsQryworkPlace: TWideStringField;
+    EstatesQry: TUniQuery;
+    EstatesQryID: TIntegerField;
+    EstatesQryownerID: TIntegerField;
+    EstatesQryestNo: TIntegerField;
+    EstatesQryestName: TWideStringField;
+    EstatesQryestDistrict: TWideStringField;
+    EstatesQryestStreet: TWideStringField;
+    EstatesQryUnitsCount: TIntegerField;
+    EstatesQryUnitsRented: TIntegerField;
+    EstatesSrc: TUniDataSource;
+    UnitsQry: TUniQuery;
+    UnitsQryUnit: TWideStringField;
+    UnitsQryRooms: TWideStringField;
+    UnitsQryFloor: TWideStringField;
+    UnitsQryPrice1: TFloatField;
+    UnitsQryPrice2: TFloatField;
+    UnitsQryPrice3: TFloatField;
+    UnitsQryPrice4: TFloatField;
+    UnitsQryNotes: TWideStringField;
+    UnitsQryElectricity: TBooleanField;
+    UnitsQryKitchen: TBooleanField;
+    UnitsQryConditions: TBooleanField;
+    UnitsQryisRented: TBooleanField;
+    UnitsQryESTID: TIntegerField;
+    UnitsQryownerID: TIntegerField;
+    UnitsQryID: TIntegerField;
+    UnitsSrc: TUniDataSource;
+    UnitDetailsQ: TUniQuery;
+    UnitDetailsQsrc: TUniDataSource;
+    UnitDetailsQID: TIntegerField;
+    UnitDetailsQUnit: TWideStringField;
+    UnitDetailsQRooms: TWideStringField;
+    UnitDetailsQFloor: TWideStringField;
+    UnitDetailsQPrice1: TFloatField;
+    UnitDetailsQPrice2: TFloatField;
+    UnitDetailsQPrice3: TFloatField;
+    UnitDetailsQPrice4: TFloatField;
+    UnitDetailsQNotes: TWideStringField;
+    UnitDetailsQElectricity: TBooleanField;
+    UnitDetailsQKitchen: TBooleanField;
+    UnitDetailsQConditions: TBooleanField;
+    UnitDetailsQESTID: TIntegerField;
+    UnitDetailsQownerID: TIntegerField;
+    UnitDetailsQisRented: TBooleanField;
+    ContractsQ: TUniQuery;
+    ContractsQsrc: TUniDataSource;
+    ActionList1: TActionList;
+    DatasetFirst1: TDataSetFirst;
+    DatasetPrior1: TDataSetPrior;
+    DatasetNext1: TDataSetNext;
+    DatasetLast1: TDataSetLast;
+    DatasetInsert1: TDataSetInsert;
+    DatasetDelete1: TDataSetDelete;
+    DatasetEdit1: TDataSetEdit;
+    DatasetPost1: TDataSetPost;
+    DatasetCancel1: TDataSetCancel;
+    DatasetRefresh1: TDataSetRefresh;
+    ContractsQContractID: TIntegerField;
+    ContractsQestNo: TIntegerField;
+    ContractsQunitNo: TIntegerField;
+    ContractsQconPeriod: TWideStringField;
+    ContractsQcontF: TDateField;
+    ContractsQcontT: TDateField;
+    ContractsQPayments: TIntegerField;
+    ContractsQExpired: TBooleanField;
+    ContractsQInsur: TFloatField;
+    ContractsQWater: TFloatField;
+    ContractsQElec: TFloatField;
+    pnlHead: TUniContainerPanel;
+    UniToolBar1: TUniToolBar;
+    UniToolButton6: TUniToolButton;
+    UniToolButton1: TUniToolButton;
+    UniToolButton2: TUniToolButton;
+    UniToolButton3: TUniToolButton;
+    UniToolButton4: TUniToolButton;
+    UniToolButton5: TUniToolButton;
+    UniToolButton22: TUniToolButton;
+    UniToolButton7: TUniToolButton;
+    UniToolBar2: TUniToolBar;
+    UniToolButton9: TUniToolButton;
+    UniToolButton10: TUniToolButton;
+    UniToolButton11: TUniToolButton;
+    UniToolButton12: TUniToolButton;
+    UniToolButton13: TUniToolButton;
+    UniToolButton23: TUniToolButton;
+    edtEmpNO: TUniDBEdit;
+    UniToolButton24: TUniToolButton;
+    UniToolButton14: TUniToolButton;
+    UniToolButton15: TUniToolButton;
+    UniToolButton25: TUniToolButton;
+    UniToolButton26: TUniToolButton;
+    UniToolButton8: TUniToolButton;
+    UniToolButton17: TUniToolButton;
+    UniToolButton18: TUniToolButton;
+    UniToolButton19: TUniToolButton;
+    UniToolButton16: TUniToolButton;
+    UniToolButton21: TUniToolButton;
+    UniToolButton20: TUniToolButton;
+    PaymensQ: TUniQuery;
+    PaymensQs: TUniDataSource;
+    PaymensQID: TIntegerField;
+    PaymensQContractNo: TIntegerField;
+    PaymensQPaymentSN: TIntegerField;
+    PaymensQPaymentDate: TDateField;
+    PaymensQPaymentValu: TFloatField;
+    PaymensQPaid: TBooleanField;
+    PaymensQPayDate: TDateField;
+    PaymensQPayType: TWideStringField;
+    UniQuery1: TUniQuery;
+    ContractsQtenantID: TIntegerField;
+    TenantsQryIqamaID: TWideStringField;
+    UniContainerPanel2: TUniContainerPanel;
+    UniDBDateTimePicker1: TUniDBDateTimePicker;
+    UniContainerPanel5: TUniContainerPanel;
+    UniDBLookupComboBox1: TUniDBLookupComboBox;
+    ContractsQconDate: TDateField;
+    ContractsQRentAmount: TFloatField;
+    UniContainerPanel8: TUniContainerPanel;
+    UniContainerPanel7: TUniContainerPanel;
+    grdContracts: TUniDBGrid;
+    pnlConData: TUniContainerPanel;
+    UniContainerPanel1: TUniContainerPanel;
+    TenantFieldSet: TUniFieldSet;
+    UniFieldContainer2: TUniFieldContainer;
+    edTname: TUniDBEdit;
+    edTIDNo: TUniDBEdit;
+    UniFieldContainer1: TUniFieldContainer;
+    edTph1: TUniDBEdit;
+    edTph2: TUniDBEdit;
+    edTmail: TUniDBEdit;
+    edTwork: TUniDBEdit;
+    SelectEstatPnl: TUniPanel;
+    DBLookupEstates: TUniDBLookupComboBox;
+    DBLookupUnits: TUniDBLookupComboBox;
+    UniContainerPanel3: TUniContainerPanel;
+    grdUnitDetails: TUniDBGrid;
+    ContractBox: TUniGroupBox;
+    Cont1: TUniContainerPanel;
+    ContractPeriodCB: TUniComboBox;
+    ContractFrom: TUniDateTimePicker;
+    ContractTo: TUniDateTimePicker;
+    PaymentsCB: TUniComboBox;
+    PymtSchPnl: TUniContainerPanel;
+    UniLabel1: TUniLabel;
+    Pmt1: TUniNumberEdit;
+    Pmt2: TUniNumberEdit;
+    Pmt3: TUniNumberEdit;
+    Pmt4: TUniNumberEdit;
+    PaymentsListBox: TUniListBox;
+    UniContainerPanel4: TUniContainerPanel;
+    InsurEdt: TUniNumberEdit;
+    WaterEdt: TUniNumberEdit;
+    ElectEdt: TUniFormattedNumberEdit;
+    PmtVerticalGrid: TUniDBVerticalGrid;
+    ContractsQsTenName: TStringField;
+    procedure UniFormCreate(Sender: TObject);
+    procedure DBLookupUnitsSelect(Sender: TObject);
+    procedure ContractFromChange(Sender: TObject);
+    procedure PaymentsCBCloseUp(Sender: TObject);
+    procedure UnitDetailsQAfterScroll(DataSet: TDataSet);
+    procedure UnitDetailsQAfterOpen(DataSet: TDataSet);
+    procedure ContractsQBeforePost(DataSet: TDataSet);
+    procedure ContractsQAfterScroll(DataSet: TDataSet);
+    procedure ContractsQsrcStateChange(Sender: TObject);
+    procedure ContractsQAfterPost(DataSet: TDataSet);
+    procedure DatasetDelete1Execute(Sender: TObject);
+    procedure ContractsQNewRecord(DataSet: TDataSet);
+    procedure DBLookupEstatesSelect(Sender: TObject);
+    procedure ContractsQBeforeDelete(DataSet: TDataSet);
+    procedure ContractsQBeforeCancel(DataSet: TDataSet);
+    procedure TenantsQryNewRecord(DataSet: TDataSet);
+    procedure UniToolButton21Click(Sender: TObject);
+    procedure ContractsQAfterDelete(DataSet: TDataSet);
+    procedure ContractsQAfterEdit(DataSet: TDataSet);
+  private
+    { Private declarations }
+    procedure PaymentSchdule();
+     procedure AdjustUI();
+         procedure AddPayments();
+          procedure DelPayments();
+          procedure AdjustTables();
+              procedure AdjustTablesDel();
+  public
+    { Public declarations }
+  end;
+
+function rRentContracts: TrRentContracts;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, G_Funcs, ShowReport;
+
+function rRentContracts: TrRentContracts;
+begin
+  Result := TrRentContracts(UniMainModule.GetFormInstance(TrRentContracts));
+end;
+//============================================================================
+procedure TrRentContracts.AdjustTablesDel;
+var tSQL:TUniSQL;
+TempQry:TUniQuery;
+begin
+
+
+  PaymensQ.Close;  PaymensQ.Open;
+
+
+ tSQL := TUniSQL.Create(self);
+tSQL.Connection := UniMainModule.MainDB;
+
+ //Change unit state to Leased  -> Not rented
+tSQL.SQL.Clear;
+tSQL.SQL.Add('Update units Set isRented = False where ID =     '''+ UnitDetailsQID.AsString +'''   ');
+tSQL.Execute;
+
+
+UnitsQry.Close; UnitsQry.Open;
+
+ //Change Count of Rented Units for the ESTATE.
+
+ TempQry := TUniQuery.Create(self);
+ TempQry.Connection := UniMainModule.MainDB;
+TempQry.SQL.Clear;
+
+TempQry.SQL.Text := '  Select Count(*) As CNT from Units  '
++ '  where ESTID =  '''+ ContractsQestNo.AsString+'''   and  isRented = True  ' ;
+TempQry.Open;
+
+tSQL.SQL.Clear;
+ tSQL.SQL.Text := ''
+      + '  Update estates  '
+      + ' Set UnitsRented =   ''' + TempQry.FieldByName('CNT').AsString + '''  '
+
+      + '  where EstNo  =  '''+ContractsQestNo.AsString+''' '  ;
+tSQL.Execute;
+
+TempQry.Free;
+tSQL.Free ;
+end;
+
+
+procedure TrRentContracts.AdjustTables;
+var tSQL:TUniSQL;
+TempQry:TUniQuery;
+begin
+
+
+  PaymensQ.Close;  PaymensQ.Open;
+
+
+ tSQL := TUniSQL.Create(self);
+tSQL.Connection := UniMainModule.MainDB;
+
+ //Change unit state to Leased
+tSQL.SQL.Clear;
+tSQL.SQL.Add('Update units Set isRented = True where ID =     '''+ UnitDetailsQID.AsString +'''   ');
+tSQL.Execute;
+
+
+UnitsQry.Close; UnitsQry.Open;
+
+ //Change Count of Rented Units for the ESTATE.
+
+ TempQry := TUniQuery.Create(self);
+ TempQry.Connection := UniMainModule.MainDB;
+TempQry.SQL.Clear;
+
+TempQry.SQL.Text := '  Select Count(*) As CNT from Units  '
++ '  where ESTID =  '''+ ContractsQestNo.AsString+'''   and  isRented = True  ' ;
+TempQry.Open;
+
+tSQL.SQL.Clear;
+ tSQL.SQL.Text := ''
+      + '  Update estates  '
+      + ' Set UnitsRented =   ''' + TempQry.FieldByName('CNT').AsString + '''  '
+
+      + '  where EstNo  =  '''+ContractsQestNo.AsString+''' '  ;
+tSQL.Execute;
+
+TempQry.Free;
+tSQL.Free ;
+end;
+///------------------------------------------------
+procedure TrRentContracts.DelPayments;
+var tSQL:TUniSQL;
+begin
+tSQL := TUniSQL.Create(self);
+tSQL.Connection := UniMainModule.MainDB;
+tSQL.SQL.Clear;
+tSQL.SQL.Add('Delete from payments where ContractNo =     '''+ ContractsQContractID.AsString +'''   ');
+tSQL.Execute;
+tSQL.Free;
+end;
+
+
+///------------------------------------------------
+procedure TrRentContracts.AddPayments;
+var tSQL:TUniSQL;
+I, PayCounts:Integer;
+begin
+
+ PayCounts := PaymentsCB.ItemIndex +1;
+//
+// qryBarcode.SQL.Text := ''
+//      + ' SELECT * '
+//      + ' FROM   BarcodesVio B '
+//      + ' Where  B.Barcode = ''' + Barcode + ''' ';
+tSQL := TUniSQL.Create(self);
+tSQL.Connection := UniMainModule.MainDB;
+tSQL.SQL.Clear;
+tSQL.SQL.Add('Delete from payments where ContractNo =     '''+ ContractsQContractID.AsString +'''   ');
+tSQL.Execute;
+
+PaymensQ.ReadOnly := False;
+
+ for I := 0 to PayCounts-1 do begin
+ PaymensQ.Append;
+ PaymensQ.FieldByName('ContractNo').AsInteger :=ContractsQContractID.Value;
+
+  PaymensQ.FieldByName('PaymentSN').AsInteger := I +1;
+
+  PaymensQ.FieldByName('PaymentDate').AsDateTime := StrToDate( PaymentsListBox.Items[I]);
+//     FormatDateTime('dd/mm/yyyy',StrToDate( PaymentsListBox.Items[I]))  );
+//   StrToDate( PaymentsListBox.Items[I]);
+
+   if I = 0 then
+    PaymensQ.FieldByName('PaymentValu').AsFloat := Pmt1.Value;
+   if I = 1 then
+    PaymensQ.FieldByName('PaymentValu').AsFloat := Pmt2.Value;
+   if I = 2 then
+    PaymensQ.FieldByName('PaymentValu').AsFloat := Pmt3.Value;
+   if I = 3 then
+    PaymensQ.FieldByName('PaymentValu').AsFloat := Pmt4.Value;
+
+
+     PaymensQ.FieldByName('Paid').AsBoolean :=False;
+
+//  PaymentsListBox.Items.Add(FormatDateTime('dd/mm/yyyy',startDate));
+//  startDate := IncDate(startDate,0,IncMnth ,0) ;
+ PaymensQ.Post;
+end;
+tSQL.Free;
+PaymensQ.ReadOnly := True;
+ PaymensQ.Close;
+
+end;
+
+//------------------------------------------
+
+procedure TrRentContracts.AdjustUI;
+begin
+  case ContractsQ.State of
+  dsBrowse:begin
+
+       ContractBox.Visible := True;
+         TenantsQry.MasterSource := ContractsQsrc;
+
+           SelectEstatPnl.Visible := False;
+
+         //  PymtSchPnl.Visible := False;
+
+
+  ContractPeriodCB.ReadOnly := True; ContractFrom.ReadOnly := True;  PaymentsCB.ReadOnly := True;
+
+           UnitDetailsQ.Close;
+           UnitDetailsQ.MasterSource := ContractsQsrc;
+           UnitDetailsQ.MasterFields:='unitNo;estNo';
+           UnitDetailsQ.DetailFields :='ID;ESTID';
+           UnitDetailsQ.Open;
+
+           PaymensQ.Open;
+           PmtVerticalGrid.Visible := True;
+            end;
+
+  dsInsert:begin   //---------------------------------------------------------
+           pnlConData.Visible := True;
+
+              ContractBox.Visible := false;
+//               TenantsQry.ReadOnly := True;
+  TenantsQry.MasterSource := nil;
+
+           SelectEstatPnl.Visible := true;
+        //   PymtSchPnl.Visible := False;
+
+  ContractPeriodCB.ReadOnly := False; ContractFrom.ReadOnly := False;  PaymentsCB.ReadOnly := False;
+
+
+           UnitDetailsQ.Close;
+           UnitDetailsQ.MasterSource := UnitsSrc;
+           UnitDetailsQ.MasterFields:='ID';
+           UnitDetailsQ.DetailFields :='ID';
+         //  UnitDetailsQ.Open;
+
+           PaymensQ.Close;
+           PmtVerticalGrid.Visible := False;
+           end;
+    dsEdit:begin    //---------------------------------------------------------
+                  ContractBox.Visible := True;
+//               TenantsQry.ReadOnly := True;
+//  TenantsQry.MasterSource := nil;
+
+           SelectEstatPnl.Visible := true;
+        //   PymtSchPnl.Visible := False;
+
+  ContractPeriodCB.ReadOnly := False; ContractFrom.ReadOnly := False;  PaymentsCB.ReadOnly := False;
+
+  EstatesQry.Locate('estNo',ContractsQestNo.AsString,[]);
+  UnitsQry.Locate('ID',ContractsQunitNo.AsString,[]);
+
+        UnitDetailsQ.Close;
+           UnitDetailsQ.MasterSource := ContractsQsrc;
+           UnitDetailsQ.MasterFields:='unitNo;estNo';
+           UnitDetailsQ.DetailFields :='ID;ESTID';
+           UnitDetailsQ.Open;
+
+           PaymensQ.Close;
+           PmtVerticalGrid.Visible := False;
+
+           end;
+  end;
+end;
+//-------------------------------------
+procedure TrRentContracts.PaymentSchdule;
+var  PayCounts, I,  IncMnth: Integer;
+  P, MonthsInContract, UnitPrice :Double;
+   startDate:TDate;
+
+begin
+
+
+
+ PayCounts := PaymentsCB.ItemIndex +1;
+ MonthsInContract := MonthsBetween(ContractFrom.DateTime , ContractTo.DateTime) ;
+
+ P :=     MonthsInContract   /  PayCounts;
+
+ startDate :=   ContractFrom.DateTime;
+ IncMnth   :=    Trunc(P);
+
+UnitPrice:= 0;
+ PaymentsListBox.Clear;
+ //---
+  // --- Dates of payments schedule ---
+ for I := 0 to PayCounts-1 do begin
+  PaymentsListBox.Items.Add(DateToStr(startDate));      //(FormatDateTime('dd/mm/yyyy',startDate));
+  startDate := IncDate(startDate,0,IncMnth ,0) ;
+
+end;
+
+//--
+
+
+case PayCounts of
+  1 : UnitPrice := UnitDetailsQPrice1.Value/1;
+
+  2 :  UnitPrice := UnitDetailsQPrice2.Value/2;
+
+  3 :  UnitPrice := UnitDetailsQPrice3.Value/3;
+
+
+  4 :  UnitPrice := UnitDetailsQPrice4.Value/4;
+
+end;
+
+
+if PayCounts = 1 then begin
+  Pmt1.FieldLabel :=  PaymentsListBox.Items[0];
+  Pmt1.Value :=UnitPrice;
+   Pmt1.Visible:=true;Pmt2.Visible:=False;Pmt3.Visible:=False;Pmt4.Visible:=False;
+end;
+if PayCounts = 2 then begin
+  Pmt1.FieldLabel :=  PaymentsListBox.Items[0];
+  Pmt1.Value :=UnitPrice;
+
+  Pmt2.FieldLabel :=  PaymentsListBox.Items[1];
+  Pmt2.Value :=UnitPrice;
+   Pmt1.Visible:=true;Pmt2.Visible:=true;Pmt3.Visible:=False;Pmt4.Visible:=False;
+end;
+if PayCounts = 3 then begin
+  Pmt1.FieldLabel :=  PaymentsListBox.Items[0];
+  Pmt1.Value :=UnitPrice;
+
+  Pmt2.FieldLabel :=  PaymentsListBox.Items[1];
+  Pmt2.Value :=UnitPrice;
+
+  Pmt3.FieldLabel :=  PaymentsListBox.Items[2];
+  Pmt3.Value :=UnitPrice;
+   Pmt1.Visible:=true;Pmt2.Visible:=true;Pmt3.Visible:=true;Pmt4.Visible:=False;
+end;
+
+if PayCounts = 4 then begin
+  Pmt1.FieldLabel :=  PaymentsListBox.Items[0];
+  Pmt1.Value :=UnitPrice;
+
+  Pmt2.FieldLabel :=  PaymentsListBox.Items[1];
+  Pmt2.Value :=UnitPrice;
+
+  Pmt3.FieldLabel :=  PaymentsListBox.Items[2];
+  Pmt3.Value :=UnitPrice;
+
+  Pmt4.FieldLabel :=  PaymentsListBox.Items[3];
+  Pmt4.Value :=UnitPrice;
+   Pmt1.Visible:=true;Pmt2.Visible:=true;Pmt3.Visible:=true;Pmt4.Visible:=true;
+end;
+
+
+
+
+
+end;
+
+
+procedure TrRentContracts.TenantsQryNewRecord(DataSet: TDataSet);
+begin
+  inherited;
+TenantsQrypersonType.Value := 'tenant';
+end;
+
+//-----------------------------------------
+procedure TrRentContracts.ContractFromChange(Sender: TObject);
+begin
+  inherited;
+if ContractPeriodCB.ItemIndex = 0 then
+ContractTo.DateTime := IncDate(ContractFrom.DateTime,0,0,1);
+if ContractPeriodCB.ItemIndex = 1 then
+ContractTo.DateTime := IncDate(ContractFrom.DateTime,0,1,0);
+
+end;
+
+procedure TrRentContracts.ContractsQAfterDelete(DataSet: TDataSet);
+begin
+  inherited;
+ ShowSwA('Data deleted successfully',2) ;
+ AdjustUI;
+end;
+
+procedure TrRentContracts.ContractsQAfterEdit(DataSet: TDataSet);
+begin
+  inherited;
+  TenantsQry.ReadOnly := false;
+   TenantsQry.Edit;
+end;
+
+procedure TrRentContracts.ContractsQAfterPost(DataSet: TDataSet);
+
+begin
+  inherited;
+ AddPayments  ;
+
+
+  AdjustTables;
+
+PymtSchPnl.Visible := false;
+AdjustUI;
+
+ShowSwA('Data saved successfully',1)
+end;
+
+procedure TrRentContracts.ContractsQAfterScroll(DataSet: TDataSet);
+begin
+  inherited;
+
+//ContractsQconPeriod.Value := ContractPeriodCB.Text;
+ ContractPeriodCB.Text := ContractsQconPeriod.Value;
+
+//ContractsQcontF.Value  := ContractFrom.DateTime;
+ContractFrom.DateTime := ContractsQcontF.Value;
+
+//ContractsQcontT.Value  :=  ContractTo.DateTime;
+ContractTo.DateTime := ContractsQcontT.Value;
+
+//ContractsQPayments.Value :=  PaymentsCB.ItemIndex +1;
+PaymentsCB.ItemIndex := ContractsQPayments.Value -1;
+//
+//ContractsQInsur.Value   := InsurEdt.Value;
+InsurEdt.Value :=  ContractsQInsur.Value ;
+//ContractsQWater.Value  :=  WaterEdt.Value;
+WaterEdt.Value := ContractsQWater.Value;
+//ContractsQElec.Value   :=  ElectEdt.Value;
+ElectEdt.Value  := ContractsQElec.Value ;
+//ContractsQExpired.Value  := false;
+
+
+
+
+end;
+
+procedure TrRentContracts.ContractsQBeforeCancel(DataSet: TDataSet);
+begin
+  inherited;
+TenantsQry.Cancel;
+end;
+
+procedure TrRentContracts.ContractsQBeforeDelete(DataSet: TDataSet);
+ var tSQL:TUniSQL;
+begin
+  inherited;
+
+tSQL := TUniSQL.Create(self);
+tSQL.Connection := UniMainModule.MainDB;
+tSQL.SQL.Clear;
+tSQL.SQL.Add('Delete from  persons where ID ='''+ ContractsQtenantID.AsString +'''   ');
+
+tSQL.Execute;
+tSQL.Free ;
+
+
+  DelPayments  ;
+  AdjustTablesDel;
+end;
+
+procedure TrRentContracts.ContractsQBeforePost(DataSet: TDataSet);
+begin
+  inherited;
+
+ if TenantsQry.State in [dsEdit,dsInsert] then TenantsQry.Post;
+
+ContractsQtenantID.Value :=  TenantsQryID.Value;
+
+  TenantsQry.ReadOnly:=True;
+//ContractsQContractID  :=
+//ContractsQconDate  :=
+
+
+//ContractsQconDate.Value := StrToDate(FormatDateTime('dd/mm/yyyy',UniDateTimePicker1.DateTime) );
+//  PaymensQ.FieldByName('PaymentDate').AsDateTime :=
+
+
+ContractsQestNo.Value    := UnitsQryESTID.Value;
+ContractsQunitNo.Value   := UnitsQryID.Value;
+
+ContractsQconPeriod.Value := ContractPeriodCB.Text;
+ContractsQcontF.Value  := ContractFrom.DateTime;
+ContractsQcontT.Value  :=  ContractTo.DateTime;
+ContractsQPayments.Value :=  PaymentsCB.ItemIndex +1;
+
+ContractsQInsur.Value   := InsurEdt.Value;
+ContractsQWater.Value  :=  WaterEdt.Value;
+ContractsQElec.Value   :=  ElectEdt.Value;
+ContractsQExpired.Value  := false;
+
+
+
+end;
+
+procedure TrRentContracts.ContractsQNewRecord(DataSet: TDataSet);
+begin
+  inherited;
+ContractsQconDate.AsDateTime := Date ;
+
+  TenantsQry.ReadOnly:=False;
+TenantsQry.Insert;
+end;
+
+procedure TrRentContracts.ContractsQsrcStateChange(Sender: TObject);
+begin
+  inherited;
+AdjustUI;
+
+//case ContractsQ.State  of
+//  dsInactive:UniDBDateTimePicker1.FieldLabel := 'dsInactive' ;
+//  dsBrowse: UniDBDateTimePicker1.FieldLabel :='dsBrowse';
+//  dsEdit: UniDBDateTimePicker1.FieldLabel :='dsEdit';
+//  dsInsert: UniDBDateTimePicker1.FieldLabel :='dsInsert';
+//  dsSetKey: UniDBDateTimePicker1.FieldLabel :='dsSetKey';
+//  dsCalcFields:UniDBDateTimePicker1.FieldLabel :='dsCalcFields';
+//  dsFilter: UniDBDateTimePicker1.FieldLabel :='dsFilter';
+//  dsNewValue: UniDBDateTimePicker1.FieldLabel :='dsNewValue';
+//  dsOldValue: UniDBDateTimePicker1.FieldLabel :='dsOldValue';
+//  dsCurValue: UniDBDateTimePicker1.FieldLabel :='dsCurValue';
+//  dsBlockRead: UniDBDateTimePicker1.FieldLabel :='dsBlockRead';
+//  dsInternalCalc: UniDBDateTimePicker1.FieldLabel :='dsInternalCalc';
+//  dsOpening: UniDBDateTimePicker1.FieldLabel :='dsOpening';
+//end;
+
+
+end;
+
+procedure TrRentContracts.DatasetDelete1Execute(Sender: TObject);
+ var tSQL:TUniSQL;
+begin
+  inherited;
+if  ShowSwA('Are you sure you want to delete ?',4) then begin
+ tSQL := TUniSQL.Create(self);
+ tSQL.Connection := UniMainModule.MainDB;
+ tSQL.SQL.Clear;
+ tSQL.SQL.Add('Delete from payments where ContractNo =     '''+ ContractsQContractID.AsString +'''   ');
+ tSQL.Execute;
+
+ ContractsQ.Delete;
+ tSQL.Free;
+end;
+
+
+end;
+
+procedure TrRentContracts.DBLookupEstatesSelect(Sender: TObject);
+begin
+  inherited;
+UnitDetailsQ.Close;
+PymtSchPnl.Visible := False;
+
+
+
+   ContractBox.Visible := UnitDetailsQ.RecordCount > 0;
+end;
+
+procedure TrRentContracts.DBLookupUnitsSelect(Sender: TObject);
+begin
+  inherited;
+UnitDetailsQ.Open;
+PymtSchPnl.Visible := False;
+
+
+end;
+
+procedure TrRentContracts.PaymentsCBCloseUp(Sender: TObject);
+begin
+  inherited;
+  if UnitDetailsQ.RecordCount < 1 then   begin
+  ShowSwA('Select Unit please');
+  exit;
+  end;
+
+
+PaymentSchdule;
+PymtSchPnl.Visible := True;
+
+case PaymentsCB.ItemIndex of  // Rent the unit to add in COntract;
+0 : ContractsQRentAmount.Value :=   UnitDetailsQPrice1.Value;
+1 : ContractsQRentAmount.Value :=   UnitDetailsQPrice2.Value;
+2 : ContractsQRentAmount.Value :=   UnitDetailsQPrice3.Value;
+3 : ContractsQRentAmount.Value :=   UnitDetailsQPrice4.Value;
+end;
+
+
+end;
+
+procedure TrRentContracts.UniFormCreate(Sender: TObject);
+begin
+  inherited;
+
+  ContractsQ.Open;
+  ContractsQ.Last;
+
+
+TenantsQry.Open;
+EstatesQry.Open;
+UnitsQry.Open;
+//UnitDetailsQ.Open;
+//PaymensQ.Open;
+
+
+ AdjustGridView(grdUnitDetails);
+
+
+ AdjustUI;
+end;
+
+procedure TrRentContracts.UnitDetailsQAfterOpen(DataSet: TDataSet);
+begin
+  inherited;
+  ContractBox.Visible := UnitDetailsQ.RecordCount > 0;
+end;
+
+procedure TrRentContracts.UnitDetailsQAfterScroll(DataSet: TDataSet);
+begin
+  inherited;
+
+ElectEdt.Visible := UnitDetailsQElectricity.Value =true;
+end;
+
+procedure TrRentContracts.UniToolButton21Click(Sender: TObject);
+begin
+  inherited;
+
+       ShowReportF.ID := ContractsQContractID.AsString;
+     ShowReportF.ReportName := 'Contract';
+   ShowReportF.Show();
+
+//Reports / SlipSal.fr3    SELECT * FROM `contracts_rv`
+
+//   ShowReportF.ReportName := 'SlipSal';
+//   ShowReportF.Show();
+end;
+
+end.

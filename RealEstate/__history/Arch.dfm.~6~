@@ -1,0 +1,90 @@
+inherited ArchF: TArchF
+  ClientHeight = 755
+  ClientWidth = 992
+  Caption = 'ArchF'
+  BorderStyle = bsNone
+  ExplicitWidth = 992
+  ExplicitHeight = 755
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlBaseContainer: TUniContainerPanel
+    Left = 8
+    Top = 8
+    Width = 913
+    Height = 681
+    Layout = 'vbox'
+    LayoutAttribs.Align = 'center'
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 913
+    ExplicitHeight = 681
+    object UniButton1: TUniButton
+      Left = 328
+      Top = 64
+      Width = 185
+      Height = 25
+      Hint = ''
+      Caption = 'DownLoad Excel'
+      TabOrder = 2
+      LayoutConfig.Margin = '25 10 10 10'
+    end
+    object UniDBGrid1: TUniDBGrid
+      Left = 128
+      Top = 144
+      Width = 577
+      Height = 369
+      Hint = ''
+      DataSource = ArchSrc
+      LoadMask.Message = 'Loading data...'
+      ForceFit = True
+      LayoutConfig.Flex = 1
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object ArchQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'Select * From arch')
+    Left = 48
+    Top = 40
+    object ArchQID: TIntegerField
+      DisplayWidth = 8
+      FieldName = 'ID'
+    end
+    object ArchQArcDate: TDateField
+      FieldName = 'ArcDate'
+      Required = True
+    end
+    object ArchQIncome: TFloatField
+      FieldName = 'Income'
+      Required = True
+      DisplayFormat = '#,##0.##'
+    end
+    object ArchQExpense: TFloatField
+      FieldName = 'Expense'
+      Required = True
+      DisplayFormat = '#,##0.##'
+    end
+    object ArchQContracts: TIntegerField
+      FieldName = 'Contracts'
+      Required = True
+    end
+    object ArchQPaids: TFloatField
+      FieldName = 'Paids'
+      Required = True
+      DisplayFormat = '#,##0.##'
+    end
+    object ArchQMaint: TFloatField
+      FieldName = 'Maint'
+      Required = True
+      DisplayFormat = '#,##0.##'
+    end
+  end
+  object ArchSrc: TUniDataSource
+    DataSet = ArchQ
+    Left = 88
+    Top = 104
+  end
+end

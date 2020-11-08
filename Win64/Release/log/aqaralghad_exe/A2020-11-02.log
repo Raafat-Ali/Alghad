@@ -1,0 +1,385 @@
+AqarAlghad.exe: 000031CC: 14:13:03 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000031CC: 14:13:03 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000031CC: 14:13:03 [TUniServerModule]:Global Cache Folder Erased. <60> Files deleted.
+AqarAlghad.exe: 000031CC: 14:13:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000031CC: 14:13:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000000FC: 14:13:56 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 00001A38: 14:18:40 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001A38: 14:18:40 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001A38: 14:18:40 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00001A38: 14:18:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001A38: 14:18:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001BCC: 14:19:06 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 00000E44: 14:37:58 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000E44: 14:37:58 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000E44: 14:37:58 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00000E44: 14:37:58 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000E44: 14:37:58 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000027A0: 14:38:04 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 1jPb9joKV310714A093 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 000003C0: 14:38:06 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 1jPb9joKV310714A093 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00002428: 14:38:20 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002428: 14:38:20 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002428: 14:38:20 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 00002428: 14:38:20 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002428: 14:38:20 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002F8C: 14:39:18 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 000030E0: 14:42:12 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000030E0: 14:42:12 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000030E0: 14:42:12 [TUniServerModule]:Global Cache Folder Erased. <71> Files deleted.
+AqarAlghad.exe: 000030E0: 14:42:12 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000030E0: 14:42:12 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000024D0: 14:44:13 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000024D0: 14:44:13 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000024D0: 14:44:13 [TUniServerModule]:Global Cache Folder Erased. <60> Files deleted.
+AqarAlghad.exe: 000024D0: 14:44:13 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000024D0: 14:44:13 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00003188: 14:44:29 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: S96QZZnh6f10714A6F2 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00001574: 14:44:31 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: S96QZZnh6f10714A6F2 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00002F20: 14:44:33 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Invalid URI: /%D8%A9 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00001CB0: 14:44:40 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001CB0: 14:44:40 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001CB0: 14:44:40 [TUniServerModule]:Global Cache Folder Erased. <29> Files deleted.
+AqarAlghad.exe: 00001CB0: 14:44:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001CB0: 14:44:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000336C: 14:46:44 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000336C: 14:46:44 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000336C: 14:46:44 [TUniServerModule]:Global Cache Folder Erased. <56> Files deleted.
+AqarAlghad.exe: 0000336C: 14:46:44 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000336C: 14:46:44 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002960: 14:50:57 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002960: 14:50:57 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002960: 14:50:57 [TUniServerModule]:Global Cache Folder Erased. <56> Files deleted.
+AqarAlghad.exe: 00002960: 14:50:57 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002960: 14:50:57 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000030D0: 14:51:13 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000011F0: 14:51:15 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001AA4: 14:51:19 [HandleFileRequest[192.168.100.4]]:File not found: D:\0UniGui\Alghad\Win64\Release\.js
+AqarAlghad.exe: 00000BBC: 14:52:07 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000BBC: 14:52:07 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000BBC: 14:52:07 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00000BBC: 14:52:07 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000BBC: 14:52:08 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002254: 14:52:15 [192.168.100.4]:EUniSessionException : Invalid session or session Timeout. (Session not found: ZL993UWVru10714A963 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00001840: 14:52:16 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001FD8: 14:52:17 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00002E60: 14:53:18 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002E60: 14:53:18 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002E60: 14:53:18 [TUniServerModule]:Global Cache Folder Erased. <60> Files deleted.
+AqarAlghad.exe: 00002E60: 14:53:18 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002E60: 14:53:18 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000BA0: 14:53:22 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000030AC: 14:53:23 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00000398: 14:53:32 [HandleFileRequest[192.168.100.4]]:File not found: D:\0UniGui\Alghad\Win64\Release\.js
+AqarAlghad.exe: 00001CC0: 14:55:35 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001CC0: 14:55:35 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001CC0: 14:55:35 [TUniServerModule]:Global Cache Folder Erased. <58> Files deleted.
+AqarAlghad.exe: 00001CC0: 14:55:35 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001CC0: 14:55:35 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000021BC: 14:55:47 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000004A4: 14:55:48 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00003094: 14:58:29 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00003094: 14:58:29 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00003094: 14:58:29 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00003094: 14:58:29 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00003094: 14:58:29 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00003368: 14:58:41 [192.168.100.4]:EUniSessionException : Invalid session or session Timeout. (Session not found: zzzpU9VyEM10714AA9F ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00002F8C: 14:58:43 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00002D8C: 14:58:44 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00002F84: 15:07:11 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002F84: 15:07:11 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002F84: 15:07:11 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00002F84: 15:07:11 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002F84: 15:07:11 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001D10: 15:07:16 [192.168.100.4]:EUniSessionException : Invalid session or session Timeout. (Session not found: NOzR9jojpI10714AB6B ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00002E70: 15:07:22 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00000178: 15:07:23 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000031E4: 15:08:15 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000031E4: 15:08:15 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000031E4: 15:08:15 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 000031E4: 15:08:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000031E4: 15:08:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000714: 15:08:16 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 0000172C: 15:08:17 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001F10: 15:12:52 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001F10: 15:12:52 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001F10: 15:12:52 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00001F10: 15:12:52 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001F10: 15:12:52 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00003240: 15:12:59 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00003310: 15:13:00 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00000E74: 15:14:58 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000E74: 15:14:58 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000E74: 15:14:58 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00000E74: 15:14:58 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000E74: 15:14:58 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000234: 15:15:04 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000015BC: 15:15:05 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 0000242C: 15:15:09 [HandleFileRequest[192.168.100.4]]:File not found: D:\0UniGui\Alghad\Win64\Release\.js
+AqarAlghad.exe: 00002A44: 15:15:50 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002A44: 15:15:50 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002A44: 15:15:50 [TUniServerModule]:Global Cache Folder Erased. <58> Files deleted.
+AqarAlghad.exe: 00002A44: 15:15:50 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002A44: 15:15:50 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001628: 15:15:56 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001AF0: 15:15:57 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000033FC: 15:16:52 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000033FC: 15:16:52 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000033FC: 15:16:52 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 000033FC: 15:16:52 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000033FC: 15:16:52 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001514: 15:16:54 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001A80: 15:16:55 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000011B4: 15:16:59 [HandleFileRequest[192.168.100.4]]:File not found: D:\0UniGui\Alghad\Win64\Release\.js
+AqarAlghad.exe: 00002D10: 15:17:41 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002D10: 15:17:41 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002D10: 15:17:41 [TUniServerModule]:Global Cache Folder Erased. <58> Files deleted.
+AqarAlghad.exe: 00002D10: 15:17:41 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002D10: 15:17:41 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000024EC: 15:17:52 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00002370: 15:17:53 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000029E0: 15:17:57 [HandleFileRequest[192.168.100.4]]:File not found: D:\0UniGui\Alghad\Win64\Release\.js
+AqarAlghad.exe: 00000368: 15:18:39 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000368: 15:18:39 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000368: 15:18:39 [TUniServerModule]:Global Cache Folder Erased. <58> Files deleted.
+AqarAlghad.exe: 00000368: 15:18:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000368: 15:18:39 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000954: 15:18:42 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 0000079C: 15:18:42 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 0000136C: 15:19:47 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000136C: 15:19:47 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000136C: 15:19:47 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 0000136C: 15:19:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000136C: 15:19:47 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000014A8: 15:19:49 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00002D0C: 15:19:50 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00002A10: 15:20:29 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002A10: 15:20:29 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002A10: 15:20:29 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00002A10: 15:20:29 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002A10: 15:20:29 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001FF0: 15:20:31 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001618: 15:20:32 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000001CC: 15:21:38 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000001CC: 15:21:38 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000001CC: 15:21:38 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 000001CC: 15:21:38 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000001CC: 15:21:38 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000E60: 15:21:42 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00002148: 15:21:43 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000010B0: 15:23:58 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000010B0: 15:23:58 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000010B0: 15:23:58 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 000010B0: 15:23:58 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000010B0: 15:23:58 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001F2C: 15:24:01 [192.168.100.4]:EUniSessionException : Invalid session or session Timeout. (Session not found: ZJUcfIqRkW10714B1A7 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 000011E0: 15:24:03 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 0000293C: 15:24:04 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00002D4C: 15:25:09 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002D4C: 15:25:09 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002D4C: 15:25:09 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00002D4C: 15:25:09 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002D4C: 15:25:09 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000498: 15:25:50 [192.168.100.4]:EUniSessionException : Invalid session or session Timeout. (Session not found: sT3DpPEth710714B24B ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00002C30: 15:25:53 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001EF8: 15:25:54 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000015D0: 15:32:09 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000015D0: 15:32:09 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000015D0: 15:32:09 [TUniServerModule]:Global Cache Folder Erased. <58> Files deleted.
+AqarAlghad.exe: 000015D0: 15:32:09 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000015D0: 15:32:09 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002FEC: 15:32:11 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001D8C: 15:32:12 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00003188: 15:34:21 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00003188: 15:34:21 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00003188: 15:34:21 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00003188: 15:34:21 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00003188: 15:34:21 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002100: 15:34:24 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001CF8: 15:34:25 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001020: 15:36:37 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001020: 15:36:37 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001020: 15:36:37 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00001020: 15:36:37 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001020: 15:36:37 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000E54: 15:36:54 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 00001250: 15:36:55 [HandleFileRequest[192.168.100.4]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\ext-7.2.0\build\classic\locale\locale-ar.js
+AqarAlghad.exe: 000031B8: 15:38:32 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000031B8: 15:38:32 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000031B8: 15:38:32 [TUniServerModule]:Global Cache Folder Erased. <54> Files deleted.
+AqarAlghad.exe: 000031B8: 15:38:32 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000031B8: 15:38:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000079C: 15:40:33 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000079C: 15:40:33 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000079C: 15:40:33 [TUniServerModule]:Global Cache Folder Erased. <108> Files deleted.
+AqarAlghad.exe: 0000079C: 15:40:33 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000079C: 15:40:33 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000019B4: 15:41:44 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000019B4: 15:41:44 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000019B4: 15:41:44 [TUniServerModule]:Global Cache Folder Erased. <76> Files deleted.
+AqarAlghad.exe: 000019B4: 15:41:44 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000019B4: 15:41:44 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000954: 15:42:53 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000954: 15:42:53 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000954: 15:42:53 [TUniServerModule]:Global Cache Folder Erased. <67> Files deleted.
+AqarAlghad.exe: 00000954: 15:42:53 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000954: 15:42:53 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002720: 15:44:28 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002720: 15:44:28 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002720: 15:44:28 [TUniServerModule]:Global Cache Folder Erased. <75> Files deleted.
+AqarAlghad.exe: 00002720: 15:44:28 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002720: 15:44:29 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000CDC: 15:44:35 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GVayOEhMfl10714B768 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 000030B4: 15:44:36 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GVayOEhMfl10714B768 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00001F14: 15:44:38 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GVayOEhMfl10714B768 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00000864: 15:44:47 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000864: 15:44:47 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000864: 15:44:47 [TUniServerModule]:Global Cache Folder Erased. <21> Files deleted.
+AqarAlghad.exe: 00000864: 15:44:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000864: 15:44:47 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001AE8: 16:13:42 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001AE8: 16:13:42 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001AE8: 16:13:42 [TUniServerModule]:Global Cache Folder Erased. <79> Files deleted.
+AqarAlghad.exe: 00001AE8: 16:13:42 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001AE8: 16:13:42 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001C18: 16:14:40 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001C18: 16:14:40 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001C18: 16:14:40 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00001C18: 16:14:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001C18: 16:14:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001318: 16:14:47 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: fnDrheKSmh10714BFC8 ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 00002A88: 16:14:54 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002A88: 16:14:54 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002A88: 16:14:54 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 00002A88: 16:14:54 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002A88: 16:14:54 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002DD0: 16:15:09 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002DD0: 16:15:09 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002DD0: 16:15:09 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 00002DD0: 16:15:09 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002DD0: 16:15:09 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001AD0: 16:19:51 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 000032F8: 17:24:04 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000032F8: 17:24:04 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000032F8: 17:24:04 [TUniServerModule]:Global Cache Folder Erased. <62> Files deleted.
+AqarAlghad.exe: 000032F8: 17:24:05 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000032F8: 17:24:05 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000016BC: 17:24:49 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 0000112C: 17:29:18 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000112C: 17:29:18 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000112C: 17:29:18 [TUniServerModule]:Global Cache Folder Erased. <68> Files deleted.
+AqarAlghad.exe: 0000112C: 17:29:19 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000112C: 17:29:19 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000B54: 17:29:39 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 0000053C: 17:32:34 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000053C: 17:32:34 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000053C: 17:32:34 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 0000053C: 17:32:35 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000053C: 17:32:35 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001730: 17:32:37 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 26GJf8XMoL10714D44E ) : Addr: $00000000009DBEC7
+AqarAlghad.exe: 000007A4: 17:32:50 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000007A4: 17:32:50 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000007A4: 17:32:50 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 000007A4: 17:32:50 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000007A4: 17:32:50 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002990: 17:33:20 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 00002DB0: 17:35:15 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002DB0: 17:35:15 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002DB0: 17:35:15 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00002DB0: 17:35:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002DB0: 17:35:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002FA8: 17:35:28 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002FA8: 17:35:28 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002FA8: 17:35:28 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 00002FA8: 17:35:28 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002FA8: 17:35:28 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001B64: 17:35:38 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 00000C98: 17:36:11 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000C98: 17:36:11 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000C98: 17:36:11 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00000C98: 17:36:11 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000C98: 17:36:11 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000A5C: 17:36:32 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 00002E90: 17:39:27 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002E90: 17:39:27 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002E90: 17:39:27 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00002E90: 17:39:27 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002E90: 17:39:27 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000032D4: 17:39:39 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 00002FBC: 17:46:15 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002FBC: 17:46:15 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002FBC: 17:46:15 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00002FBC: 17:46:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002FBC: 17:46:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002958: 17:46:24 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 00002948: 17:46:49 [127.0.0.1]:EDatabaseError : PaymensQ: Cannot perform this operation on a closed dataset : Addr: $00000000008167BE
+AqarAlghad.exe: 0000144C: 17:48:54 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000144C: 17:48:54 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000144C: 17:48:54 [TUniServerModule]:Global Cache Folder Erased. <64> Files deleted.
+AqarAlghad.exe: 0000144C: 17:48:54 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000144C: 17:48:55 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000B38: 17:49:09 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 000016EC: 17:51:29 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000016EC: 17:51:29 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000016EC: 17:51:29 [TUniServerModule]:Global Cache Folder Erased. <69> Files deleted.
+AqarAlghad.exe: 000016EC: 17:51:29 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000016EC: 17:51:29 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000100C: 17:52:33 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000100C: 17:52:33 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000100C: 17:52:33 [TUniServerModule]:Global Cache Folder Erased. <70> Files deleted.
+AqarAlghad.exe: 0000100C: 17:52:33 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000100C: 17:52:33 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000F78: 17:56:36 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000F78: 17:56:36 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000F78: 17:56:36 [TUniServerModule]:Global Cache Folder Erased. <78> Files deleted.
+AqarAlghad.exe: 00000F78: 17:56:36 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000F78: 17:56:36 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001FE4: 17:57:53 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001FE4: 17:57:53 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001FE4: 17:57:53 [TUniServerModule]:Global Cache Folder Erased. <86> Files deleted.
+AqarAlghad.exe: 00001FE4: 17:57:53 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001FE4: 17:57:53 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000DF8: 18:00:25 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000DF8: 18:00:25 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000DF8: 18:00:25 [TUniServerModule]:Global Cache Folder Erased. <62> Files deleted.
+AqarAlghad.exe: 00000DF8: 18:00:25 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000DF8: 18:00:25 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000019E0: 18:02:12 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000019E0: 18:02:12 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000019E0: 18:02:12 [TUniServerModule]:Global Cache Folder Erased. <73> Files deleted.
+AqarAlghad.exe: 000019E0: 18:02:12 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000019E0: 18:02:12 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000009D4: 18:03:46 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000009D4: 18:03:46 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000009D4: 18:03:46 [TUniServerModule]:Global Cache Folder Erased. <80> Files deleted.
+AqarAlghad.exe: 000009D4: 18:03:46 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000009D4: 18:03:46 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001598: 18:14:39 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001598: 18:14:39 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001598: 18:14:39 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00001598: 18:14:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001598: 18:14:39 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00003108: 18:17:58 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00003108: 18:17:58 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00003108: 18:17:58 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00003108: 18:17:58 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00003108: 18:17:58 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001C88: 18:20:24 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001C88: 18:20:24 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001C88: 18:20:24 [TUniServerModule]:Global Cache Folder Erased. <60> Files deleted.
+AqarAlghad.exe: 00001C88: 18:20:24 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001C88: 18:20:25 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000150C: 18:20:55 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000150C: 18:20:55 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000150C: 18:20:55 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 0000150C: 18:20:55 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000150C: 18:20:55 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002714: 18:22:31 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002714: 18:22:31 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002714: 18:22:31 [TUniServerModule]:Global Cache Folder Erased. <60> Files deleted.
+AqarAlghad.exe: 00002714: 18:22:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002714: 18:22:31 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000020E4: 23:44:38 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000020E4: 23:44:38 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000020E4: 23:44:38 [TUniServerModule]:Global Cache Folder Erased. <64> Files deleted.
+AqarAlghad.exe: 000020E4: 23:44:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000020E4: 23:44:39 [TUniServerModule]:HTTP Server Started on Port: 8077

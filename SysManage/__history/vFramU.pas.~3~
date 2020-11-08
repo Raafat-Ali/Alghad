@@ -1,0 +1,28 @@
+unit vFramU;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIFrame, uniEdit, uniGUIBaseClasses, uniPanel, uniLabel;
+
+type
+  TvFrame = class(TUniFrame)
+    cPa: TUniContainerPanel;
+    NumEdtAmount: TUniNumberEdit;
+    UniEdit1: TUniEdit;
+    lblKind: TUniLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+{$R *.dfm}
+
+
+
+end.

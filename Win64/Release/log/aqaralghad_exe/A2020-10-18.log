@@ -1,0 +1,335 @@
+AqarAlghad.exe: 00002284: 14:05:06 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002284: 14:05:06 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002284: 14:05:06 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00002284: 14:05:06 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002284: 14:05:06 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000019E4: 14:07:16 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000019E4: 14:07:16 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000019E4: 14:07:16 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 000019E4: 14:07:16 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000019E4: 14:07:16 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002808: 14:11:13 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002808: 14:11:13 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002808: 14:11:13 [TUniServerModule]:Global Cache Folder Erased. <64> Files deleted.
+AqarAlghad.exe: 00002808: 14:11:13 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002808: 14:11:13 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002D6C: 14:13:47 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002D6C: 14:13:47 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002D6C: 14:13:47 [TUniServerModule]:Global Cache Folder Erased. <61> Files deleted.
+AqarAlghad.exe: 00002D6C: 14:13:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002D6C: 14:13:47 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002D58: 14:13:50 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: YHvGQA9ZZ2106FDBB2F ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00002D58: 14:13:51 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: YHvGQA9ZZ2106FDBB2F ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00000BA0: 14:13:52 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: YHvGQA9ZZ2106FDBB2F ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00002D58: 14:13:53 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: YHvGQA9ZZ2106FDBB2F ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00000478: 14:14:11 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000478: 14:14:11 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000478: 14:14:11 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 00000478: 14:14:11 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000478: 14:14:11 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000259C: 14:15:43 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000259C: 14:15:43 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000259C: 14:15:43 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 0000259C: 14:15:43 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000259C: 14:15:43 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002C80: 14:16:15 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002C80: 14:16:15 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002C80: 14:16:15 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00002C80: 14:16:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002C80: 14:16:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002F60: 14:16:19 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: w2mulr9OJv106FDBC63 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 0000223C: 14:16:20 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: w2mulr9OJv106FDBC63 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00002824: 14:16:21 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: w2mulr9OJv106FDBC63 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00002DF4: 14:16:22 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: w2mulr9OJv106FDBC63 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00002F60: 14:16:23 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: w2mulr9OJv106FDBC63 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 0000207C: 14:16:24 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: w2mulr9OJv106FDBC63 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00000BA0: 14:16:40 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000BA0: 14:16:40 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000BA0: 14:16:40 [TUniServerModule]:Global Cache Folder Erased. <57> Files deleted.
+AqarAlghad.exe: 00000BA0: 14:16:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000BA0: 14:16:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002D24: 14:20:00 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002D24: 14:20:00 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002D24: 14:20:00 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00002D24: 14:20:00 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002D24: 14:20:00 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001038: 14:22:33 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001038: 14:22:33 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001038: 14:22:33 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00001038: 14:22:33 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001038: 14:22:33 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001C1C: 14:24:14 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001C1C: 14:24:14 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001C1C: 14:24:14 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00001C1C: 14:24:14 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001C1C: 14:24:14 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001FE8: 14:25:44 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001FE8: 14:25:44 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001FE8: 14:25:44 [TUniServerModule]:Global Cache Folder Erased. <62> Files deleted.
+AqarAlghad.exe: 00001FE8: 14:25:44 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001FE8: 14:25:44 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000F08: 14:25:50 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: kL5PnhAbKJ106FDBEB7 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00002DF0: 14:26:03 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002DF0: 14:26:03 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002DF0: 14:26:03 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 00002DF0: 14:26:03 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002DF0: 14:26:03 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000718: 14:30:49 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000718: 14:30:49 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000718: 14:30:49 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00000718: 14:30:49 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000718: 14:30:49 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000B6C: 14:43:04 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000B6C: 14:43:04 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000B6C: 14:43:04 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00000B6C: 14:43:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000B6C: 14:43:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000117C: 14:43:34 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000117C: 14:43:34 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000117C: 14:43:34 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 0000117C: 14:43:34 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000117C: 14:43:34 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000027E4: 14:43:57 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000027E4: 14:43:57 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000027E4: 14:43:57 [TUniServerModule]:Global Cache Folder Erased. <28> Files deleted.
+AqarAlghad.exe: 000027E4: 14:43:57 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000027E4: 14:43:57 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000020D4: 14:45:49 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000020D4: 14:45:49 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000020D4: 14:45:50 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 000020D4: 14:45:50 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000020D4: 14:45:50 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000DE0: 14:45:53 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 3Fk6Yya6kA106FDC410 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00000DE0: 14:45:54 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 3Fk6Yya6kA106FDC410 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00000DE0: 14:45:55 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: 3Fk6Yya6kA106FDC410 ) : Addr: $00000000009DBE57
+AqarAlghad.exe: 00000B38: 14:46:06 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000B38: 14:46:06 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000B38: 14:46:06 [TUniServerModule]:Global Cache Folder Erased. <53> Files deleted.
+AqarAlghad.exe: 00000B38: 14:46:06 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000B38: 14:46:06 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001670: 14:53:48 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001670: 14:53:48 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001670: 14:53:48 [TUniServerModule]:Global Cache Folder Erased. <62> Files deleted.
+AqarAlghad.exe: 00001670: 14:53:48 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001670: 14:53:48 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000242C: 15:04:40 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000242C: 15:04:40 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000242C: 15:04:40 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 0000242C: 15:04:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000242C: 15:04:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002E4C: 15:09:31 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002E4C: 15:09:31 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002E4C: 15:09:31 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00002E4C: 15:09:31 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002E4C: 15:09:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000024F4: 15:11:04 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000024F4: 15:11:04 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000024F4: 15:11:04 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 000024F4: 15:11:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000024F4: 15:11:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002448: 15:12:15 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002448: 15:12:15 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002448: 15:12:15 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00002448: 15:12:15 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002448: 15:12:15 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002A14: 15:12:58 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002A14: 15:12:58 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002A14: 15:12:58 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00002A14: 15:12:58 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002A14: 15:12:58 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000005B4: 15:13:36 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000005B4: 15:13:36 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000005B4: 15:13:36 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 000005B4: 15:13:36 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000005B4: 15:13:36 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002DA4: 15:14:40 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002DA4: 15:14:40 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002DA4: 15:14:40 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00002DA4: 15:14:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002DA4: 15:14:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002620: 15:18:32 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002620: 15:18:32 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002620: 15:18:32 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00002620: 15:18:32 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002620: 15:18:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001A18: 15:19:22 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001A18: 15:19:22 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001A18: 15:19:22 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00001A18: 15:19:22 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001A18: 15:19:22 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001D64: 15:21:32 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001D64: 15:21:32 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001D64: 15:21:32 [TUniServerModule]:Global Cache Folder Erased. <64> Files deleted.
+AqarAlghad.exe: 00001D64: 15:21:32 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001D64: 15:21:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001C40: 15:26:51 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001C40: 15:26:51 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001C40: 15:26:51 [TUniServerModule]:Global Cache Folder Erased. <67> Files deleted.
+AqarAlghad.exe: 00001C40: 15:26:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001C40: 15:26:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000C08: 15:34:24 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000C08: 15:34:24 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000C08: 15:34:24 [TUniServerModule]:Global Cache Folder Erased. <70> Files deleted.
+AqarAlghad.exe: 00000C08: 15:34:24 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000C08: 15:34:24 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000013D8: 15:36:47 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000013D8: 15:36:47 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000013D8: 15:36:47 [TUniServerModule]:Global Cache Folder Erased. <69> Files deleted.
+AqarAlghad.exe: 000013D8: 15:36:47 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000013D8: 15:36:47 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000023D4: 15:37:01 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000023D4: 15:37:01 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000023D4: 15:37:01 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 000023D4: 15:37:02 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000023D4: 15:37:02 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000050C: 15:42:32 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000050C: 15:42:32 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000050C: 15:42:32 [TUniServerModule]:Global Cache Folder Erased. <67> Files deleted.
+AqarAlghad.exe: 0000050C: 15:42:32 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000050C: 15:42:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002E90: 15:42:50 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002E90: 15:42:51 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002E90: 15:42:51 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 00002E90: 15:42:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002E90: 15:42:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002854: 15:44:04 [127.0.0.1]:EArgumentOutOfRangeException : Argument out of range : Addr: $0000000000548956
+AqarAlghad.exe: 0000166C: 15:45:54 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000166C: 15:45:54 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000166C: 15:45:54 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 0000166C: 15:45:54 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000166C: 15:45:54 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002608: 15:46:34 [127.0.0.1]:EArgumentOutOfRangeException : Argument out of range : Addr: $0000000000548956
+AqarAlghad.exe: 00000CA0: 15:47:55 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000CA0: 15:47:55 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000CA0: 15:47:55 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00000CA0: 15:47:55 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000CA0: 15:47:55 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001408: 15:49:26 [127.0.0.1]:EArgumentOutOfRangeException : Argument out of range : Addr: $0000000000548956
+AqarAlghad.exe: 00002D78: 15:52:19 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002D78: 15:52:19 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002D78: 15:52:19 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00002D78: 15:52:19 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002D78: 15:52:19 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002AC0: 15:52:33 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002AC0: 15:52:33 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002AC0: 15:52:33 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 00002AC0: 15:52:33 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002AC0: 15:52:33 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001610: 15:55:03 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001610: 15:55:03 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001610: 15:55:03 [TUniServerModule]:Global Cache Folder Erased. <70> Files deleted.
+AqarAlghad.exe: 00001610: 15:55:03 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001610: 15:55:03 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002EC0: 15:56:44 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002EC0: 15:56:44 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002EC0: 15:56:44 [TUniServerModule]:Global Cache Folder Erased. <64> Files deleted.
+AqarAlghad.exe: 00002EC0: 15:56:44 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002EC0: 15:56:44 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002F48: 15:57:11 [127.0.0.1]:EArgumentOutOfRangeException : Argument out of range : Addr: $0000000000548956
+AqarAlghad.exe: 00000A04: 15:58:33 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000A04: 15:58:33 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000A04: 15:58:33 [TUniServerModule]:Global Cache Folder Erased. <67> Files deleted.
+AqarAlghad.exe: 00000A04: 15:58:33 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000A04: 15:58:33 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001384: 15:59:43 [127.0.0.1]:EArgumentOutOfRangeException : Argument out of range : Addr: $0000000000548956
+AqarAlghad.exe: 00002D34: 16:06:26 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002D34: 16:06:26 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002D34: 16:06:26 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00002D34: 16:06:26 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002D34: 16:06:26 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000026C8: 16:09:58 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000026C8: 16:09:58 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000026C8: 16:09:58 [TUniServerModule]:Global Cache Folder Erased. <68> Files deleted.
+AqarAlghad.exe: 000026C8: 16:09:59 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000026C8: 16:09:59 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001E54: 16:12:33 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001E54: 16:12:33 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001E54: 16:12:33 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00001E54: 16:12:33 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001E54: 16:12:34 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000301C: 16:14:06 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000301C: 16:14:06 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000301C: 16:14:06 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 0000301C: 16:14:06 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000301C: 16:14:06 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000C64: 16:17:23 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000C64: 16:17:23 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000C64: 16:17:23 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00000C64: 16:17:23 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000C64: 16:17:23 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000021A0: 16:19:18 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000021A0: 16:19:18 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000021A0: 16:19:18 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 000021A0: 16:19:18 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000021A0: 16:19:18 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00003128: 16:20:19 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00003128: 16:20:19 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00003128: 16:20:19 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00003128: 16:20:19 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00003128: 16:20:19 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002D68: 16:24:40 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002D68: 16:24:40 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002D68: 16:24:40 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00002D68: 16:24:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002D68: 16:24:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001908: 16:26:13 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001908: 16:26:13 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001908: 16:26:13 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00001908: 16:26:13 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001908: 16:26:13 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001568: 16:32:26 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001568: 16:32:26 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001568: 16:32:26 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00001568: 16:32:26 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001568: 16:32:26 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00003308: 16:36:19 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00003308: 16:36:19 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00003308: 16:36:19 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00003308: 16:36:19 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00003308: 16:36:19 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001798: 16:40:02 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001798: 16:40:02 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001798: 16:40:02 [TUniServerModule]:Global Cache Folder Erased. <68> Files deleted.
+AqarAlghad.exe: 00001798: 16:40:02 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001798: 16:40:02 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000016C8: 16:41:13 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000016C8: 16:41:13 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000016C8: 16:41:13 [TUniServerModule]:Global Cache Folder Erased. <70> Files deleted.
+AqarAlghad.exe: 000016C8: 16:41:13 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000016C8: 16:41:13 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002040: 16:42:26 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002040: 16:42:26 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002040: 16:42:26 [TUniServerModule]:Global Cache Folder Erased. <68> Files deleted.
+AqarAlghad.exe: 00002040: 16:42:27 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002040: 16:42:27 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00003248: 16:45:49 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00003248: 16:45:49 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00003248: 16:45:49 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00003248: 16:45:49 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00003248: 16:45:49 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002664: 16:48:32 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002664: 16:48:32 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002664: 16:48:32 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00002664: 16:48:32 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002664: 16:48:32 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000DA8: 16:55:46 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000DA8: 16:55:46 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000DA8: 16:55:46 [TUniServerModule]:Global Cache Folder Erased. <68> Files deleted.
+AqarAlghad.exe: 00000DA8: 16:55:46 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000DA8: 16:55:46 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000030BC: 16:56:19 [127.0.0.1]:EStringListError : List index out of bounds (-1) : Addr: $00000000004EEDC0
+AqarAlghad.exe: 00000A2C: 16:58:10 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000A2C: 16:58:10 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000A2C: 16:58:10 [TUniServerModule]:Global Cache Folder Erased. <64> Files deleted.
+AqarAlghad.exe: 00000A2C: 16:58:10 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000A2C: 16:58:10 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000026E0: 17:00:37 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000026E0: 17:00:37 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000026E0: 17:00:37 [TUniServerModule]:Global Cache Folder Erased. <64> Files deleted.
+AqarAlghad.exe: 000026E0: 17:00:37 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000026E0: 17:00:37 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001760: 17:48:23 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001760: 17:48:23 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001760: 17:48:23 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00001760: 17:48:24 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001760: 17:48:24 [TUniServerModule]:HTTP Server Started on Port: 8077

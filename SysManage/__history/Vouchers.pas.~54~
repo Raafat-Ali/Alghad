@@ -1,0 +1,458 @@
+unit Vouchers;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,  StrUtils,
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  uniEdit, uniMultiItem, uniComboBox, uniDBComboBox, uniDBLookupComboBox,
+  Data.DB, DBAccess, Uni, MemDS, uniRadioButton, uniBasicGrid, uniDBGrid,
+  uniDateTimePicker, uniButton, frxClass, frxDBSet, uniBitBtn, uniDBEdit;
+
+type
+  TVouchersF = class(TBaseFormF)
+    pnlWest: TUniContainerPanel;
+    VouchTypeQry: TUniQuery;
+    VouchTypeQryID: TIntegerField;
+    VouchTypeQrySection: TWideStringField;
+    DS1: TUniDataSource;
+    UniContainerPanel1: TUniContainerPanel;
+    UniRadioButton1: TUniRadioButton;
+    UniRadioButton2: TUniRadioButton;
+    UniContainerPanel2: TUniContainerPanel;
+    UniDBLookupComboBox1: TUniDBLookupComboBox;
+    NumEdtAmount: TUniNumberEdit;
+    UniContainerPanel3: TUniContainerPanel;
+    UniDBGrid1: TUniDBGrid;
+    UniDateTimePicker1: TUniDateTimePicker;
+    UniContainerPanel4: TUniContainerPanel;
+    vouchers: TUniQuery;
+    vouchersDS: TUniDataSource;
+    btnSave: TUniButton;
+    btnPrint: TUniButton;
+    //frxReport1: TfrxReport;
+    frxDBDataset1: TfrxDBDataset;
+    VouchTypeQryPSection: TIntegerField;
+    PrintVouchQ: TUniQuery;
+    vouchersVID: TIntegerField;
+    vouchersvType: TIntegerField;
+    vouchersvSubType: TIntegerField;
+    vouchersvEXP: TWideStringField;
+    vouchersvIn: TFloatField;
+    vouchersvOut: TFloatField;
+    vouchersvDate: TDateField;
+    frxReport1: TfrxReport;
+    voucherssVtype: TStringField;
+    voucherssVsubType: TStringField;
+    VAllTypes: TUniQuery;
+    IntegerField1: TIntegerField;
+    WideStringField1: TWideStringField;
+    IntegerField2: TIntegerField;
+    UniContainerPanel5: TUniContainerPanel;
+    UniEdit2: TUniEdit;
+    UniEdit1: TUniEdit;
+    vouchersvPname: TWideStringField;
+    UniBitBtn1: TUniBitBtn;
+    btnCancel: TUniButton;
+    vouchersvNo: TIntegerField;
+    vouchersisMaster: TBooleanField;
+    PrintVouchQVID: TIntegerField;
+    PrintVouchQvNo: TIntegerField;
+    PrintVouchQvType: TIntegerField;
+    PrintVouchQvSubType: TIntegerField;
+    PrintVouchQvEXP: TWideStringField;
+    PrintVouchQvIn: TFloatField;
+    PrintVouchQvOut: TFloatField;
+    PrintVouchQvDate: TDateField;
+    PrintVouchQvPname: TWideStringField;
+    PrintVouchQisMaster: TBooleanField;
+    PrintVouchQsVsubType: TStringField;
+    SumQry: TUniQuery;
+    paSumm: TUniContainerPanel;
+    SumQryS: TUniDataSource;
+    UniContainerPanel6: TUniContainerPanel;
+    UniContainerPanel7: TUniContainerPanel;
+    UniDBEdit1: TUniDBEdit;
+    UniDBEdit3: TUniDBEdit;
+    UniDBEdit2: TUniDBEdit;
+    UniDBEdit4: TUniDBEdit;
+    SumQryIns: TFloatField;
+    SumQryOuts: TFloatField;
+    SumQryBal: TFloatField;
+    SumQryvCNT: TLargeintField;
+    procedure UniRadioButton1Click(Sender: TObject);
+    procedure UniRadioButton2Click(Sender: TObject);
+    procedure UniFormCreate(Sender: TObject);
+    procedure btnSaveClick(Sender: TObject);
+    procedure btnPrintClick(Sender: TObject);
+    procedure frxReport1BeforePrint(Sender: TfrxReportComponent);
+    procedure UniBitBtn1Click(Sender: TObject);
+    procedure PrintVQDAfterOpen(DataSet: TDataSet);
+  private
+    { Private declarations }
+    procedure sumVoTotal();
+
+   function  getMaxVno():Integer;
+  public
+    { Public declarations }
+  end;
+
+function VouchersF: TVouchersF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, G_Funcs, Main, FrToolsData, NumInWords, vFramU;
+
+function VouchersF: TVouchersF;
+begin
+  Result := TVouchersF(UniMainModule.GetFormInstance(TVouchersF));
+end;
+//==============================================================================
+//------------------------------------------------------------------------------
+function TVouchersF.getMaxVno;
+var TempQry:TUniQuery;
+begin
+  TempQry := TUniQuery.Create(nil);
+ TempQry.Connection := UniMainModule.MainDB;
+
+      TempQry.SQL.Clear;
+    TempQry.SQL.Add( 'Select Max(vNo) as MaxV From vouchers Where vType = ''' + IntToStr(VouchTypeQryPSection.Value) + '''  ');
+ TempQry.Open;
+
+ Result := TempQry.FieldByName('MaxV').AsInteger +1;
+
+end;
+procedure TVouchersF.PrintVQDAfterOpen(DataSet: TDataSet);
+begin
+  inherited;
+
+end;
+
+//------------------------------------------------------------------------------
+procedure TVouchersF.sumVoTotal;
+var
+i  : integer;
+vTot: Float32;
+begin
+  inherited;
+
+  if UniDBLookupComboBox1.Text = '' then  exit;
+
+  vTot := 0;
+
+  for I := 0 to ComponentCount -1  do begin
+
+    if Components[I] is TvFrame then begin
+
+    vTot := vTot + (Components[I] as TvFrame).NumEdtAmount.Value;
+    end;
+
+  end;
+
+
+  if vTot = 0 then
+ NumEdtAmount.Value := 1
+ ELSE
+  NumEdtAmount.Value := vTot;
+
+
+
+
+end;
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+procedure TVouchersF.btnPrintClick(Sender: TObject);
+begin
+  inherited;
+    PrintVouchQ.Close;
+//  PrintVQD.Close;
+
+  PrintVouchQ.ParamByName('Vid').AsInteger := vouchersvNo.Value;
+ // PrintVQD.ParamByName('Vid').AsInteger := vouchersvNo.Value;
+
+  MainForm.DwnRepoFile:=False;
+
+
+   PrintVouchQ.Open;
+
+   if PrintVouchQvType = 1 then
+  DataFrTools.MyFrxLoad(frxReport1,'InVouch')
+                       else
+  DataFrTools.MyFrxLoad(frxReport1,'OutVouch');
+
+
+
+
+  DataFrTools.MyFrxShow(frxReport1);
+
+  PrintVouchQ.Close;
+
+end;
+
+procedure TVouchersF.btnSaveClick(Sender: TObject);
+var VoNo , I ,Vfram:Integer;
+
+  LIndex : Integer;     // for delete component after save.
+  LComponent : TComponent;
+
+begin
+  inherited;
+
+
+   VoNo := getMaxVno;
+
+//  `VID`, `vNo`, `vType`, `vSubType`, `vEXP`, `vIn`, `vOut`, `vDate` FROM `vouchers` WHERE 1
+
+  if (NumEdtAmount.Value > 0) And (not UniEdit1.IsBlank) then begin
+
+
+      for I := 0 to ComponentCount -1  do begin
+
+          if Components[I] is TvFrame then
+          Inc(Vfram);
+
+
+
+            end;
+
+
+
+        if Vfram > 0 then begin    // ===> more details
+
+               sumVoTotal;
+
+            ///add master Vouch
+            ///
+        vouchers.Append;
+           vouchers.FieldByName('vNo').AsInteger := VoNo;
+
+
+           vouchers.FieldByName('vType').AsInteger :=  VouchTypeQryPSection.Value;
+           vouchers.FieldByName('vSubType').AsInteger := VouchTypeQryPSection.Value;  //VouchTypeQryID.Value ;
+
+
+           vouchers.FieldByName('VEXP').AsString := UniEdit1.Text;
+           vouchers.FieldByName('vPname').AsString := UniEdit2.Text;
+
+          if UniRadioButton1.Checked then  begin
+             vouchers.FieldByName('VIN').AsFloat :=NumEdtAmount.Value ;
+             vouchers.FieldByName('VOUT').AsFloat :=0;
+          end;
+
+          if UniRadioButton2.Checked then begin
+             vouchers.FieldByName('VOUT').AsFloat :=NumEdtAmount.Value ;
+             vouchers.FieldByName('VIN').AsFloat :=0 ;
+          end;
+
+           vouchers.FieldByName('VDATE').AsDateTime := UniDateTimePicker1.DateTime;
+
+           vouchers.FieldByName('isMaster').AsBoolean := True;
+
+
+           vouchers.Post;
+
+           //--------------------------------------------------
+
+
+
+
+
+           for I := 0 to ComponentCount -1  do begin
+
+
+
+
+
+             if Components[I] is TvFrame then begin
+
+               vouchers.Append;
+               vouchers.FieldByName('vNo').AsInteger := VoNo;
+
+              vouchers.FieldByName('vType').AsInteger :=  VouchTypeQryPSection.Value;
+              vouchers.FieldByName('vSubType').AsInteger := StrToInt( (Components[I] as TvFrame).lblKind.Caption );
+
+              vouchers.FieldByName('VEXP').AsString :=(Components[I] as TvFrame).framEdt.Text;
+              // vouchers.FieldByName('vPname').AsString := UniEdit2.Text;
+
+             if UniRadioButton1.Checked then  begin
+                vouchers.FieldByName('VIN').AsFloat := (Components[I] as TvFrame).NumEdtAmount.Value;
+                vouchers.FieldByName('VOUT').AsFloat :=0;
+               end;
+
+             if UniRadioButton2.Checked then begin
+                vouchers.FieldByName('VOUT').AsFloat := (Components[I] as TvFrame).NumEdtAmount.Value ;
+                vouchers.FieldByName('VIN').AsFloat :=0 ;
+               end;
+
+               vouchers.FieldByName('VDATE').AsDateTime := UniDateTimePicker1.DateTime;
+
+               vouchers.Post;
+
+
+
+            end;
+
+
+          end;
+
+
+
+
+
+
+        end else begin //=============
+
+           vouchers.Append;
+           vouchers.FieldByName('vNo').AsInteger := VoNo;
+
+
+           vouchers.FieldByName('vType').AsInteger :=  VouchTypeQryPSection.Value;
+           vouchers.FieldByName('vSubType').AsInteger := VouchTypeQryID.Value ;
+
+
+           vouchers.FieldByName('VEXP').AsString := UniEdit1.Text;
+           vouchers.FieldByName('vPname').AsString := UniEdit2.Text;
+
+          if UniRadioButton1.Checked then  begin
+             vouchers.FieldByName('VIN').AsFloat :=NumEdtAmount.Value ;
+             vouchers.FieldByName('VOUT').AsFloat :=0;
+          end;
+
+          if UniRadioButton2.Checked then begin
+             vouchers.FieldByName('VOUT').AsFloat :=NumEdtAmount.Value ;
+             vouchers.FieldByName('VIN').AsFloat :=0 ;
+          end;
+
+           vouchers.FieldByName('VDATE').AsDateTime := UniDateTimePicker1.DateTime;
+
+           vouchers.FieldByName('isMaster').AsBoolean := True;
+
+
+           vouchers.Post;
+
+         end;
+
+
+
+
+       if  ShowSwA('Data saved successfully, Do you Want to Print Voucher?',4)then
+        btnPrintClick(Sender);
+
+
+
+        //free comp and zerox  to add a new one.   //-----------------------------------
+//                StartsText included IN              StrUtils
+
+        for LIndex := ComponentCount-1 downto 0 do
+    if StartsText('vF',Components[LIndex].Name) then
+    begin
+     LComponent:=Components[LIndex];
+     FreeAndNil(LComponent);
+    end;
+
+
+//          for I := 1 to ComponentCount-1   do begin
+//
+//            if Components[I] is TvFrame then
+//                      (Components[I] as TvFrame).bitFree.Click;
+//
+//
+//            end;
+
+            NumEdtAmount.Value := 1;
+            UniEdit1.Text := '';   UniEdit2.Text := '';
+            vouchers.Refresh;
+            SumQry.Close;SumQry.Open;
+  end;
+
+
+
+
+
+
+
+
+
+end;
+
+procedure TVouchersF.frxReport1BeforePrint(Sender: TfrxReportComponent);
+begin
+  inherited;
+  if Sender.Name = 'NumWmemo' then
+      (sender as TfrxMemoView).Memo.Text := NumberInWords(PrintVouchQ.FieldByName('vIn').AsInteger)
+      + ' —Ì«· ·« €Ì— ';
+
+end;
+
+procedure TVouchersF.UniBitBtn1Click(Sender: TObject);
+var vF : TvFrame;
+i,c : integer;
+vTot: Float32;
+begin
+  inherited;
+if UniDBLookupComboBox1.Text = '' then  exit;
+
+  vTot := 0;
+
+  for I := 0 to ComponentCount -1  do begin
+
+    if Components[I] is TvFrame then begin
+    Inc(c);
+    vTot := vTot + (Components[I] as TvFrame).NumEdtAmount.Value;
+    end;
+
+  end;
+
+
+  NumEdtAmount.Value := vTot;
+
+vF :=TvFrame.Create(self);
+vF.Name := 'vF'+IntToStr(c);
+vF.Parent:=  pnlWest;
+
+vF.NumEdtAmount.FieldLabel := UniDBLookupComboBox1.Text;
+vF.lblKind.caption := VouchTypeQryID.AsString;
+vF.Show;
+
+
+
+
+end;
+
+procedure TVouchersF.UniFormCreate(Sender: TObject);
+begin
+  inherited;
+vouchers.Open;
+VouchTypeQry.Open;
+UniDateTimePicker1.DateTime:=Date;
+AdjustGridView(UniDBGrid1);
+
+SumQry.Open;
+end;
+
+procedure TVouchersF.UniRadioButton1Click(Sender: TObject);
+begin
+  inherited;
+  VouchTypeQry.Close;
+  VouchTypeQry.SQL.Clear;
+  VouchTypeQry.SQL.Text:='Select * from secid where PSection=1 ';
+  VouchTypeQry.Open;
+end;
+
+procedure TVouchersF.UniRadioButton2Click(Sender: TObject);
+begin
+  inherited;
+  VouchTypeQry.Close;
+  VouchTypeQry.SQL.Clear;
+  VouchTypeQry.SQL.Text:='Select * from secid where PSection=2 ';
+  VouchTypeQry.Open;
+end;
+
+end.

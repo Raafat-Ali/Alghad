@@ -1,0 +1,50 @@
+unit mLogin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIRegClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  UniFSToggle, uniMultiItem, uniComboBox, uniEdit, uniLabel, uniButton,
+  uniPanel, uniGUIBaseClasses, uniImage, siComp, unimEdit, unimImage;
+
+type
+  TUnimLoginForm1 = class(TUnimLoginForm)
+    siLang1: TsiLang;
+    loginIMG: TUnimImage;
+    UnimContainerPanel1: TUnimContainerPanel;
+    UserEdt: TUnimEdit;
+    PassEdt: TUnimEdit;
+    procedure UnimLoginFormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function UnimLoginForm1: TUnimLoginForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  uniGUIVars, MainModule, uniGUIApplication;
+
+function UnimLoginForm1: TUnimLoginForm1;
+begin
+  Result := TUnimLoginForm1(UniMainModule.GetFormInstance(TUnimLoginForm1));
+end;
+//===================================================================================
+procedure TUnimLoginForm1.UnimLoginFormCreate(Sender: TObject);
+begin
+RTL := UniMainModule.RTL;
+//
+if RTL then  siLang1.ActiveLanguage := 2 ;
+end;
+
+initialization
+  RegisterAppFormClass(TUnimLoginForm1);
+
+end.

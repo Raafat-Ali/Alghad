@@ -1,0 +1,5 @@
+object DataFrTools: TDataFrTools
+  OldCreateOrder = False
+  Height = 452
+  Width = 498
+end

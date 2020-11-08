@@ -1,0 +1,38 @@
+unit SendSMS;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  IdHTTP, uniButton, uniLabel, uniEdit, uniURLFrame, Data.DB, MemDS, DBAccess,
+  Uni, uniBasicGrid, uniDBGrid;
+
+type
+  TSendSMSForm = class(TBaseFormF)
+    UniEdit1: TUniEdit;
+    pnlHead: TUniContainerPanel;
+    pnlDetail: TUniContainerPanel;
+    UniDBGrid1: TUniDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function SendSMSForm: TSendSMSForm;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function SendSMSForm: TSendSMSForm;
+begin
+  Result := TSendSMSForm(UniMainModule.GetFormInstance(TSendSMSForm));
+end;
+
+end.

@@ -1,0 +1,281 @@
+object mRentContracts: TmRentContracts
+  Left = 0
+  Top = 0
+  ClientHeight = 574
+  ClientWidth = 320
+  Caption = 'Contracts'
+  AlignmentControl = uniAlignmentClient
+  LayoutConfig.Width = '100%'
+  LayoutAttribs.Align = 'start'
+  LayoutAttribs.Pack = 'center'
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 47
+  PlatformData = {}
+  object UnimContainerPanel1: TUnimContainerPanel
+    Left = 0
+    Top = 0
+    Width = 320
+    Height = 574
+    Hint = ''
+    Align = alClient
+    LayoutAttribs.Align = 'start'
+    LayoutAttribs.Pack = 'start'
+    LayoutConfig.Width = '100%'
+    ExplicitHeight = 480
+    object UnimToolBar1: TUnimToolBar
+      Left = 0
+      Top = 0
+      Width = 320
+      Height = 48
+      Hint = ''
+      Images = UniMainModule.ImgTol32
+      Caption = ''
+      LayoutAttribs.Align = 'center'
+      LayoutAttribs.Pack = 'center'
+      LayoutConfig.Width = '100%'
+      ExplicitLeft = 64
+      ExplicitTop = 40
+      ExplicitWidth = 240
+      object UnimToolButton1: TUnimToolButton
+        Left = 0
+        Top = 0
+        Width = 8
+        Height = 48
+        Hint = ''
+        Style = tbsSeparator
+        Caption = 'UnimToolButton1'
+      end
+      object UnimToolButton2: TUnimToolButton
+        Left = 8
+        Top = 0
+        Width = 48
+        Height = 48
+        Hint = ''
+        Caption = 'UnimToolButton2'
+        ImageIndex = 0
+      end
+      object UnimToolButton4: TUnimToolButton
+        Left = 56
+        Top = 0
+        Width = 48
+        Height = 48
+        Hint = ''
+        Caption = 'UnimToolButton4'
+        ImageIndex = 1
+        ExplicitLeft = 64
+      end
+      object UnimToolButton6: TUnimToolButton
+        Left = 104
+        Top = 0
+        Width = 48
+        Height = 48
+        Hint = ''
+        Caption = 'UnimToolButton6'
+        ImageIndex = 3
+        ExplicitLeft = 120
+      end
+      object UnimToolButton7: TUnimToolButton
+        Left = 152
+        Top = 0
+        Width = 8
+        Height = 48
+        Hint = ''
+        Style = tbsSeparator
+        Caption = 'UnimToolButton7'
+        ExplicitLeft = 168
+      end
+      object UnimToolButton8: TUnimToolButton
+        Left = 160
+        Top = 0
+        Width = 48
+        Height = 48
+        Hint = ''
+        Caption = 'UnimToolButton8'
+        ImageIndex = 2
+        ExplicitLeft = 176
+      end
+      object UnimToolButton10: TUnimToolButton
+        Left = 208
+        Top = 0
+        Width = 48
+        Height = 48
+        Hint = ''
+        Caption = 'UnimToolButton10'
+        ImageIndex = 4
+        ExplicitLeft = 232
+      end
+      object UnimToolButton12: TUnimToolButton
+        Left = 256
+        Top = 0
+        Width = 48
+        Height = 48
+        Hint = ''
+        Caption = 'UnimToolButton12'
+        ImageIndex = 18
+        ExplicitLeft = 288
+      end
+      object UnimToolButton3: TUnimToolButton
+        Left = 304
+        Top = 0
+        Width = 8
+        Height = 48
+        Hint = ''
+        Style = tbsSeparator
+        Caption = 'UnimToolButton3'
+      end
+    end
+    object paTenant: TUnimContainerPanel
+      Left = 3
+      Top = 54
+      Width = 314
+      Height = 243
+      Hint = ''
+      LayoutAttribs.Align = 'start'
+      LayoutAttribs.Pack = 'center'
+      LayoutConfig.Width = '90%'
+      object TenantFieldSet: TUnimFieldSet
+        Left = 3
+        Top = 3
+        Width = 308
+        Height = 174
+        Hint = ''
+        LayoutConfig.Width = '100%'
+        Flex = 1
+        object UnimDBEdit1: TUnimDBEdit
+          Left = 3
+          Top = 3
+          Width = 225
+          Height = 25
+          Hint = ''
+          DataField = 'Name'
+          DataSource = TenantsSrc
+          EmptyText = 'Tenant Name'
+          TabOrder = 1
+        end
+        object UnimDBEdit2: TUnimDBEdit
+          Left = 3
+          Top = 34
+          Width = 225
+          Height = 25
+          Hint = ''
+          DataField = 'IqamaID'
+          DataSource = TenantsSrc
+          EmptyText = 'Tenant ID'
+          TabOrder = 2
+        end
+        object UnimFieldContainer1: TUnimFieldContainer
+          Left = 3
+          Top = 65
+          Width = 302
+          Height = 48
+          Hint = ''
+          ParentColor = False
+          Layout = 'hbox'
+          LayoutAttribs.Align = 'center'
+          LayoutAttribs.Pack = 'justify'
+          object UnimDBEdit3: TUnimDBEdit
+            Left = 3
+            Top = 20
+            Width = 126
+            Height = 25
+            Hint = ''
+            DataField = 'phone1'
+            DataSource = TenantsSrc
+            EmptyText = 'Mobile 1'
+            TabOrder = 1
+          end
+          object UnimDBEdit4: TUnimDBEdit
+            Left = 151
+            Top = 3
+            Width = 126
+            Height = 25
+            Hint = ''
+            DataField = 'phone2'
+            DataSource = TenantsSrc
+            EmptyText = 'Mobile 2'
+            TabOrder = 2
+          end
+        end
+        object UnimDBEdit5: TUnimDBEdit
+          Left = 3
+          Top = 116
+          Width = 225
+          Height = 25
+          Hint = ''
+          DataField = 'eMail'
+          DataSource = TenantsSrc
+          EmptyText = 'Email'
+          TabOrder = 4
+        end
+        object UnimDBEdit6: TUnimDBEdit
+          Left = 3
+          Top = 146
+          Width = 225
+          Height = 25
+          Hint = ''
+          DataField = 'workPlace'
+          DataSource = TenantsSrc
+          EmptyText = 'Work Location'
+          TabOrder = 5
+        end
+      end
+    end
+  end
+  object TenantsQry: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'Select * from Persons'
+      'where PersonType = '#39'tenant'#39
+      'order by ID')
+    Options.FullRefresh = True
+    Left = 12
+    Top = 432
+    object TenantsQryID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+    object TenantsQryName: TWideStringField
+      FieldName = 'Name'
+      Required = True
+      Size = 50
+    end
+    object TenantsQryphone1: TWideStringField
+      FieldName = 'phone1'
+      Required = True
+      Visible = False
+      Size = 15
+    end
+    object TenantsQryphone2: TWideStringField
+      FieldName = 'phone2'
+      Visible = False
+      Size = 15
+    end
+    object TenantsQryeMail: TWideStringField
+      FieldName = 'eMail'
+      Visible = False
+      Size = 50
+    end
+    object TenantsQrypersonType: TWideStringField
+      FieldName = 'personType'
+      Required = True
+      Visible = False
+    end
+    object TenantsQryIqamaID: TWideStringField
+      FieldName = 'IqamaID'
+      Size = 10
+    end
+    object TenantsQryworkPlace: TWideStringField
+      FieldName = 'workPlace'
+      Size = 50
+    end
+  end
+  object TenantsSrc: TUniDataSource
+    DataSet = TenantsQry
+    Left = 132
+    Top = 411
+  end
+end

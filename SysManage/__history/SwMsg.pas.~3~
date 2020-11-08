@@ -1,0 +1,45 @@
+unit SwMsg;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniGUIBaseClasses, uniSweetAlert, siComp;
+
+type
+  TSwMsgF = class(TUniForm)
+    SweetAlert: TUniSweetAlert;
+    siLang1: TsiLang;
+    procedure UniFormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function SwMsgF: TSwMsgF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function SwMsgF: TSwMsgF;
+begin
+  Result := TSwMsgF(UniMainModule.GetFormInstance(TSwMsgF));
+end;
+
+procedure TSwMsgF.UniFormCreate(Sender: TObject);
+begin
+RTL := UniMainModule.RTL;
+
+  if RTL then
+   siLang1.ActiveLanguage:=2
+  else
+   siLang1.ActiveLanguage:=1;
+end;
+
+end.

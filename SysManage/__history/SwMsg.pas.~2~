@@ -1,0 +1,33 @@
+unit SwMsg;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniGUIBaseClasses, uniSweetAlert;
+
+type
+  TSwMsgF = class(TUniForm)
+    SweetAlert: TUniSweetAlert;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function SwMsgF: TSwMsgF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function SwMsgF: TSwMsgF;
+begin
+  Result := TSwMsgF(UniMainModule.GetFormInstance(TSwMsgF));
+end;
+
+end.

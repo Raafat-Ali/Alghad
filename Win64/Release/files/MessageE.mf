@@ -1,0 +1,24 @@
+Data saved successfully
+Are you sure you want to delete ?
+Data deleted successfully
+First Delete Related Estates
+First Delete Related Units
+Used data can not be deleted
+Cancel
+OK
+Are you sure to renew the contract
+Contract has been Renewed successfully
+Are you sure to terminate the contract
+Contract has been Terminated successfully
+Payment has been Registered successfully
+Are you sure you want to Cancel Payment?
+Payment has been Cancelled successfully
+Are you sure you want to Edit Payment?
+Maintenance has been Registered successfully
+Payment Already Paid
+Invalid UserName Or PassWord
+Password has been changed successfully
+Data saved successfully, Do you Want to Print Voucher?
+Do you Want to Print Voucher?
+The amount paid is greater than the amount due!
+Do you want to renew the contract

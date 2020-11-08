@@ -1,0 +1,34 @@
+unit mRentContractsU;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUImClasses, uniGUIForm, uniGUImForm, uniGUImJSForm,
+  uniGUIBaseClasses;
+
+type
+  TmRentContracts = class(TUnimForm)
+    UnimContainerPanel1: TUnimContainerPanel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function mRentContracts: TmRentContracts;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function mRentContracts: TmRentContracts;
+begin
+  Result := TmRentContracts(UniMainModule.GetFormInstance(TmRentContracts));
+end;
+
+end.

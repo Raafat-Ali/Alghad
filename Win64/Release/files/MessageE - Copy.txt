@@ -1,0 +1,6 @@
+Data saved successfully
+Are you sure you want to delete ?
+Data deleted successfully
+First Delete Related Estates
+First Delete Related Units
+Used data can not be deleted

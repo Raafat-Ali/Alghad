@@ -1,0 +1,39 @@
+object MainmForm: TMainmForm
+  Left = 0
+  Top = 0
+  ClientHeight = 480
+  ClientWidth = 320
+  Caption = 'MainmForm'
+  AlignmentControl = uniAlignmentClient
+  TitleButtons = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+  ScrollPosition = 0
+  ScrollHeight = 47
+  PlatformData = {}
+  object UnimContainerPanel1: TUnimContainerPanel
+    Left = 8
+    Top = 8
+    Width = 304
+    Height = 313
+    Hint = ''
+    LayoutConfig.Width = '100%'
+    Flex = 1
+    object UnimButton1: TUnimButton
+      Left = 24
+      Top = 48
+      Width = 225
+      Height = 47
+      Hint = ''
+      Caption = 'UnimButton1'
+    end
+    object UnimBitBtn1: TUnimBitBtn
+      Left = 24
+      Top = 112
+      Width = 225
+      Height = 47
+      Hint = ''
+      Caption = 'UnimBitBtn1'
+    end
+  end
+end

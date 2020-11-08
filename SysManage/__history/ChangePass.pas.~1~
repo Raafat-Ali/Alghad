@@ -1,0 +1,36 @@
+unit ChangePass;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, uniButton, uniEdit, uniGUIBaseClasses, uniPanel;
+
+type
+  TChangePassF = class(TUniForm)
+    pnlBaseContainer: TUniContainerPanel;
+    UniEdit1: TUniEdit;
+    UniEdit2: TUniEdit;
+    UniButton1: TUniButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function ChangePassF: TChangePassF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function ChangePassF: TChangePassF;
+begin
+  Result := TChangePassF(UniMainModule.GetFormInstance(TChangePassF));
+end;
+
+end.

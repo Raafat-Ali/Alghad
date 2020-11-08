@@ -1,0 +1,36 @@
+unit vFramU;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIFrame, uniEdit, uniGUIBaseClasses, uniPanel, uniLabel,
+  uniButton, uniBitBtn;
+
+type
+  TvFrame = class(TUniFrame)
+    cPa: TUniContainerPanel;
+    NumEdtAmount: TUniNumberEdit;
+    framEdt: TUniEdit;
+    lblKind: TUniLabel;
+    UniBitBtn1: TUniBitBtn;
+    procedure UniBitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+{$R *.dfm}
+
+
+
+procedure TvFrame.UniBitBtn1Click(Sender: TObject);
+begin
+Free;
+end;
+
+end.

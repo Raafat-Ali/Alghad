@@ -1,0 +1,797 @@
+unit RentTermination;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses, JvJCLUtils, // Date utils for contract
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  uniMultiItem, uniComboBox, uniDBComboBox, uniDBLookupComboBox, Data.DB,
+  DBAccess, Uni, MemDS, uniEdit, uniDBEdit, uniBasicGrid, uniDBGrid,
+  uniDBVerticalGrid, uniLabel, uniDateTimePicker, uniButton, uniCheckBox,
+  uniURLFrame, uniListBox, frxClass, frxDBSet;
+
+type
+  TRentTerminationF = class(TBaseFormF)
+    lookContractQ: TUniQuery;
+    LookContractQs: TUniDataSource;
+    lookEST: TUniQuery;
+    lookESTs: TUniDataSource;
+    lookUNIT: TUniQuery;
+    lookUNITs: TUniDataSource;
+    ContractCB: TUniDBLookupComboBox;
+    EstateCB: TUniDBLookupComboBox;
+    UnitCB: TUniDBLookupComboBox;
+    ContractDetailsQ: TUniQuery;
+    ContractDetails: TUniDataSource;
+    ContractData: TUniContainerPanel;
+    pnlFooter: TUniPanel;
+    SelecttedPnl: TUniContainerPanel;
+    dbeContract: TUniDBEdit;
+    UniDBEdit2: TUniDBEdit;
+    UniDBEdit3: TUniDBEdit;
+    dbeEstateNo: TUniDBEdit;
+    UniDBEdit5: TUniDBEdit;
+    UniDBEdit6: TUniDBEdit;
+    dbeUnitNo: TUniDBEdit;
+    UniDBEdit8: TUniDBEdit;
+    UniDBEdit9: TUniDBEdit;
+    UniPanel1: TUniPanel;
+    UniDBEdit1: TUniDBEdit;
+    DuePaymentsQ: TUniQuery;
+    DuePaymentsQs: TUniDataSource;
+    pnlTerminate: TUniContainerPanel;
+    pnlHead: TUniContainerPanel;
+    dtpTermDate: TUniDateTimePicker;
+    btnTerminate: TUniButton;
+    UniCheckBox1: TUniCheckBox;
+    UniEdit1: TUniEdit;
+    NumEdtAmount: TUniNumberEdit;
+    UniURLFrame1: TUniURLFrame;
+    SMSqry: TUniQuery;
+    SMSqryRecID: TIntegerField;
+    SMSqryEstNo: TIntegerField;
+    SMSqryUnitNo: TIntegerField;
+    SMSqryRecExp: TWideStringField;
+    SMSqryRecValue: TFloatField;
+    SMSqryRecDate: TDateField;
+    SMSqryContractRef: TIntegerField;
+    SMSqryPaymentSN: TIntegerField;
+    SMSqryUnit: TWideStringField;
+    SMSqryFloor: TWideStringField;
+    SMSqryESTID: TIntegerField;
+    SMSqryownerID: TIntegerField;
+    SMSqryName: TWideStringField;
+    SMSqryphone1: TWideStringField;
+    UniSimplePanel1: TUniSimplePanel;
+    UniButton1: TUniButton;
+    UniQuery1: TUniQuery;
+    PymtSchPnl: TUniContainerPanel;
+    UniLabel2: TUniLabel;
+    Pmt1: TUniNumberEdit;
+    Pmt2: TUniNumberEdit;
+    Pmt3: TUniNumberEdit;
+    Pmt4: TUniNumberEdit;
+    PaymentsListBox: TUniListBox;
+    PaymensQ: TUniQuery;
+    PaymensQID: TIntegerField;
+    PaymensQContractNo: TIntegerField;
+    PaymensQPaymentSN: TIntegerField;
+    PaymensQPaymentDate: TDateField;
+    PaymensQPaymentValu: TFloatField;
+    PaymensQPaid: TBooleanField;
+    PaymensQPayDate: TDateField;
+    PaymensQPayType: TWideStringField;
+    PaymensQpmtNotes: TWideStringField;
+    UniContainerPanel1: TUniContainerPanel;
+    dbePMTcnt: TUniDBEdit;
+    dbeRentAMT: TUniDBEdit;
+    NEdifCost: TUniNumberEdit;
+    paPayments: TUniContainerPanel;
+    pnlRestPayments: TUniContainerPanel;
+    UniLabel1: TUniLabel;
+    UniPanel2: TUniPanel;
+    pnlPaidPayments: TUniContainerPanel;
+    UniLabel3: TUniLabel;
+    UniPanel3: TUniPanel;
+    PaidPaymentsQ: TUniQuery;
+    PaidPaymentsQs: TUniDataSource;
+    PmtVerticalGrid: TUniDBGrid;
+    PaidPmtVerticalGrid: TUniDBGrid;
+    frxDBDataset1: TfrxDBDataset;
+    UniButton2: TUniButton;
+    frxReport1: TfrxReport;
+    PrintContractDetailsQ: TUniQuery;
+    procedure ContractCBSelect(Sender: TObject);
+    procedure EstateCBChangeValue(Sender: TObject);
+    procedure UnitCBSelect(Sender: TObject);
+    procedure DuePaymentsQAfterScroll(DataSet: TDataSet);
+    procedure btnTerminateClick(Sender: TObject);
+    procedure UniFormCreate(Sender: TObject);
+    procedure UniCheckBox1Change(Sender: TObject);
+    procedure UniButton1Click(Sender: TObject);
+    procedure dtpTermDateChange(Sender: TObject);
+    procedure ContractDetailsQAfterScroll(DataSet: TDataSet);
+    procedure UniButton2Click(Sender: TObject);
+    procedure NEdifCostChangeValue(Sender: TObject);
+  private
+    { Private declarations }
+//    newContractID : Integer;
+
+  procedure  AddEstMentInCome();
+       procedure SendSMS();
+        procedure AdjustTables();// Reset Unit Status to unRENTED and Count.
+
+              procedure PaymentSchdule();
+
+
+              procedure calcDifCost();
+
+  function getNewContVal(): String;
+
+  public
+    { Public declarations }
+  end;
+
+function RentTerminationF: TRentTerminationF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, G_Funcs, Main, FrToolsData;
+
+function RentTerminationF: TRentTerminationF;
+begin
+  Result := TRentTerminationF(UniMainModule.GetFormInstance(TRentTerminationF));
+end;
+//-----------------------------------------------------------------
+//------------------------------------------------------------------
+//------------------------------------------------------------------
+procedure TRentTerminationF.calcDifCost;
+var contValue , costPerDay ,daysCost : Double;
+
+
+begin
+contValue := StrToFloat(dbeRentAMT.Text);
+costPerDay := (contValue / 366 );
+ daysCost :=  costPerDay *
+DaysBetween(ContractDetailsQ.FieldByName('ContF').AsDateTime , dtpTermDate.DateTime);
+
+NEdifCost.Value := daysCost;
+
+end;
+//------------------------------------------------------------------
+function TRentTerminationF.getNewContVal : String;
+//var N:Integer;
+begin
+case dbePMTcnt.Field.AsInteger of
+1: Result := ContractDetailsQ.FieldByName('Price1').AsString;
+2: Result := ContractDetailsQ.FieldByName('Price2').AsString;
+3: Result := ContractDetailsQ.FieldByName('Price3').AsString;
+4: Result := ContractDetailsQ.FieldByName('Price4').AsString;
+end;
+
+end;
+
+
+procedure TRentTerminationF.NEdifCostChangeValue(Sender: TObject);
+var ConValue:Double;
+begin
+  inherited;
+  ConValue := StrToFloat(dbeRentAMT.Text);
+  if NEdifCost.Value > ConValue  then
+  NEdifCost.Color := clMoneyGreen
+  else
+  NEdifCost.Color := clSkyBlue;
+
+
+
+end;
+
+//------------------------------------------------------------------
+procedure TRentTerminationF.PaymentSchdule;
+var  PayCounts, I,  IncMnth: Integer;
+  P, MonthsInContract, UnitPrice :Double;
+   startDate:TDate;
+
+     TempQry  :TUniQuery;
+
+    tSQL:TUniSQL;
+    newContractID:String;
+begin
+
+ TempQry := TUniQuery.Create(self);
+ TempQry.Connection := UniMainModule.MainDB;
+ TempQry.SQL.Text:='SELECT ContractID , contF , contT, Payments , RentAmount  from contracts order by ContractID desc limit 1 ';
+ TempQry.Open;
+
+ ShowMessage(TempQry.FieldByName('ContractID').AsString);
+
+ newContractID :=  TempQry.FieldByName('ContractID').AsString;
+
+
+
+ PayCounts := TempQry.FieldByName('Payments').AsInteger;
+
+// MonthsInContract := MonthsBetween(ContractFrom.DateTime , ContractTo.DateTime) ;
+MonthsInContract := MonthsBetween(TempQry.FieldByName('contF').AsDateTime , TempQry.FieldByName('contT').AsDateTime) ;
+
+ P :=     MonthsInContract   /  PayCounts;
+
+ startDate :=   TempQry.FieldByName('contF').AsDateTime;
+ IncMnth   :=    Trunc(P);
+
+//UnitPrice:= 0;
+ PaymentsListBox.Clear;
+ //---
+  // --- Dates of payments schedule ---
+ for I := 0 to PayCounts-1 do begin
+  PaymentsListBox.Items.Add(DateToStr(startDate));      //(FormatDateTime('dd/mm/yyyy',startDate));
+  startDate := IncDate(startDate,0,IncMnth ,0) ;
+
+end;
+
+//--
+    UnitPrice :=TempQry.FieldByName('RentAmount').AsFloat /  PayCounts;
+
+//case PayCounts of
+//  1 : UnitPrice := UnitDetailsQPrice1.Value/1;
+//
+//  2 :  UnitPrice := UnitDetailsQPrice2.Value/2;
+//
+//  3 :  UnitPrice := UnitDetailsQPrice3.Value/3;
+//
+//
+//  4 :  UnitPrice := UnitDetailsQPrice4.Value/4;
+//
+//end;
+
+
+if PayCounts = 1 then begin
+  Pmt1.FieldLabel :=  PaymentsListBox.Items[0];
+  Pmt1.Value :=UnitPrice;
+
+end;
+if PayCounts = 2 then begin
+  Pmt1.FieldLabel :=  PaymentsListBox.Items[0];
+  Pmt1.Value :=UnitPrice;
+
+  Pmt2.FieldLabel :=  PaymentsListBox.Items[1];
+  Pmt2.Value :=UnitPrice;
+
+end;
+if PayCounts = 3 then begin
+  Pmt1.FieldLabel :=  PaymentsListBox.Items[0];
+  Pmt1.Value :=UnitPrice;
+
+  Pmt2.FieldLabel :=  PaymentsListBox.Items[1];
+  Pmt2.Value :=UnitPrice;
+
+  Pmt3.FieldLabel :=  PaymentsListBox.Items[2];
+  Pmt3.Value :=UnitPrice;
+
+end;
+
+if PayCounts = 4 then begin
+  Pmt1.FieldLabel :=  PaymentsListBox.Items[0];
+  Pmt1.Value :=UnitPrice;
+
+  Pmt2.FieldLabel :=  PaymentsListBox.Items[1];
+  Pmt2.Value :=UnitPrice;
+
+  Pmt3.FieldLabel :=  PaymentsListBox.Items[2];
+  Pmt3.Value :=UnitPrice;
+
+  Pmt4.FieldLabel :=  PaymentsListBox.Items[3];
+  Pmt4.Value :=UnitPrice;
+
+end;
+
+
+//=====Now Add the Payments In Table of Payments=====
+
+ //PayCounts := PaymentsCB.ItemIndex +1;
+//
+
+tSQL := TUniSQL.Create(self);
+tSQL.Connection := UniMainModule.MainDB;
+tSQL.SQL.Clear;
+tSQL.SQL.Add('Delete from payments where ContractNo =     '''+ newContractID +'''   ');
+tSQL.Execute;
+
+ PaymensQ.Open;
+
+  for I := 0 to PayCounts-1 do begin
+ PaymensQ.Append;
+ PaymensQ.FieldByName('ContractNo').AsInteger := StrToInt(newContractID);//  ContractsQContractID.Value;
+
+  PaymensQ.FieldByName('PaymentSN').AsInteger := I +1;
+
+  PaymensQ.FieldByName('PaymentDate').AsDateTime := StrToDate( PaymentsListBox.Items[I]);
+
+   if I = 0 then
+    PaymensQ.FieldByName('PaymentValu').AsFloat := Pmt1.Value;
+   if I = 1 then
+    PaymensQ.FieldByName('PaymentValu').AsFloat := Pmt2.Value;
+   if I = 2 then
+    PaymensQ.FieldByName('PaymentValu').AsFloat := Pmt3.Value;
+   if I = 3 then
+    PaymensQ.FieldByName('PaymentValu').AsFloat := Pmt4.Value;
+
+
+     PaymensQ.FieldByName('Paid').AsBoolean :=False;
+
+
+    PaymensQ.Post;
+ end;
+
+
+tSQL.Free;
+
+
+
+ PaymensQ.Close;
+
+
+
+
+end;
+
+
+
+//------------------------------------------------------------------
+procedure TRentTerminationF.AdjustTables;
+var tSQL:TUniSQL;
+TempQry:TUniQuery;
+begin
+ tSQL := TUniSQL.Create(self);
+tSQL.Connection := UniMainModule.MainDB;
+
+ //Change unit state to Leased .
+tSQL.SQL.Clear;
+tSQL.SQL.Add('Update units Set isRented = FALSE where ID = '+ dbeUnitNo.Text +' ');
+tSQL.Execute;
+
+ //Change Count of Rented Units for the ESTATE.
+
+ TempQry := TUniQuery.Create(self);
+ TempQry.Connection := UniMainModule.MainDB;
+TempQry.SQL.Clear;
+
+TempQry.SQL.Text := '  Select Count(*) As CNT from Units  '
++ '  where ESTID =  '+ dbeEstateNo.Text+'   and  isRented = True  ' ;
+TempQry.Open;
+
+tSQL.SQL.Clear;
+ tSQL.SQL.Text := ''
+      + '  Update estates  '
+      + ' Set UnitsRented =   ''' + TempQry.FieldByName('CNT').AsString + '''  '
+
+      + '  where EstNo  =  '+dbeEstateNo.Text+' '  ;
+tSQL.Execute;
+
+TempQry.Free;
+tSQL.Free ;
+end;
+
+//---------------------------------------------------------
+
+
+ procedure TRentTerminationF.AddEstMentInCome;
+var tSQL:TUniSQL;
+
+begin
+
+
+  if (NumEdtAmount.Value > 0) And (not UniEdit1.IsBlank) then begin
+
+
+   tSQL := TUniSQL.Create(self);
+ tSQL.Connection := UniMainModule.MainDB;
+//`ID`, `EstNo`, `UnitNo`, `Maint`, `MaintValue`, `MaintDate` FROM `unitmaint`
+ tSQL.SQL.Clear;
+tSQL.SQL.Text := ' INSERT INTO EstateBalance (TransType,TransNo,EstNo,UnitNo,EXP,Income,TranDate) '
++ ' Values ( 2 , 0 , '
++'  '''+ dbeEstateNo.Text +'''  ,       '
++'  '''+ UniDBEdit8.Text +'''  ,       '
++'  '''+ UniEdit1.Text +'''  ,       '
++'  '''+ NumEdtAmount.Text +'''  ,       '
++' '''+ DateToStr(dtpTermDate.DateTime) +'''    ) ' ;
+//   Update units Set isRented = False where ID =     '''+ UnitDetailsQID.AsString +'''   ');
+tSQL.Execute;
+
+
+
+
+tSQL.Free;
+
+
+
+ UniEdit1.Text := '';  NumEdtAmount.Text := '0';
+
+
+  end;
+
+
+
+ end;
+//------------------------------------------------------------------
+ procedure TRentTerminationF.SendSMS;
+var WebPost,Msg:String;
+begin
+ Msg:='⁄“Ì“Ì x1,  „ «Œ·«¡ «·‘ﬁ… x2 » «—ÌŒ x3';
+
+ SMSqry.Close;
+SMSqry.ParamByName('UnitOwnerID').AsString := lookUNIT.FieldByName('ownerID').AsString;
+SMSqry.Open;
+
+Msg := StringReplace(Msg, 'x1', SMSqryName.AsString , [rfReplaceAll, rfIgnoreCase]);
+Msg := StringReplace(Msg, 'x2', UniDBEdit8.Text , [rfReplaceAll, rfIgnoreCase]);
+Msg := StringReplace(Msg, 'x3', dtpTermDate.Text , [rfReplaceAll, rfIgnoreCase]);
+
+WebPost:='https://www.alfa-cell.com/api/msgSend.php?apiKey=a21f6b73ddbd4c15011f60bb2734185f'
++'&numbers='+SMSqryphone1.AsString+',966581112800,966539499059'
++'&sender=Aqar Alghad'
++'&msg='+Msg
++'&lang=3'
++'&applicationType=68';
+
+//ShowMessage(Msg);
+UniURLFrame1.URL:= WebPost;
+
+//+'&numbers=966582999825,966557997379,966539499059,966556422654'  «·⁄—»Ê‰
+
+end;
+
+
+
+
+
+//------------------------------------------------------------------
+
+procedure TRentTerminationF.btnTerminateClick(Sender: TObject);
+var tSQL:TUniSQL;
+TempQry , TempQry1 :TUniQuery;
+PmtSN:String;
+ PmtVal : Double;
+begin
+  inherited;
+   if ShowSwA('Are you sure to terminate the contract',4) then begin
+
+
+
+// Set Unit isRented to False
+//adjust payments and remove not paid payments
+
+// Set Contract Expired to True and ACTIVE to False.
+ tSQL := TUniSQL.Create(self);
+ tSQL.Connection := UniMainModule.MainDB;
+
+
+
+tSQL.SQL.Clear;       //Set Unit is UnRented
+tSQL.SQL.Text := ''
++ ' UPDATE units  Set isRented = False '
++ ' Where  ID	 = '''+ dbeUnitNo.Text +'''  '
++ '   AND ESTID =  '''+ dbeEstateNo.Text +'''  ';
+tSQL.Execute;
+
+
+//       TempQry1 := TUniQuery.Create(self);
+//     TempQry1.Connection := UniMainModule.MainDB;
+//
+//     TempQry.Close;
+//     TempQry.SQL.Clear;
+
+       tSQL.SQL.Clear;       //Delete the REST OF Payments (no need )
+     tSQL.SQL.Text := 'DELETE FROM Payments where ContractNo = '''+ dbeContract.Text +''' AND PAID = FALSE ';
+     tSQL.Execute;
+                                                              //DELETE Unpaid Payments.
+
+        PmtVal := StrToFloat(dbeRentAMT.Text) - NEdifCost.Value;
+
+    if  PmtVal < 0 then begin // => ⁄·ÌÂ ›·Ê”
+        TempQry := TUniQuery.Create(self);
+        TempQry.Connection := UniMainModule.MainDB;
+
+        PmtSN := '1';
+
+      TempQry.SQL.Text := 'SELECT Max(PaymentSN) FROM payments '
+    +' WHERE   ContractNo = '''+ dbeContract.Text +'''      ';
+
+     TempQry.Open;
+
+      if TempQry.RecordCount > 0 then   PmtSN := IntToStr(TempQry.RecordCount)+1 else  PmtSN := '1';
+
+
+     tSQL.SQL.Clear;       //insert payment «·œ›⁄Â »”»» «‰Â«¡ «·⁄ﬁœ
+     tSQL.SQL.Text := ' INSERT INTO ( ContractNo, PaymentSN, PaymentDate, PaymentValu, Paid, pmtNotes) '
+     +' VALUES ( '''+ dbeContract.Text +''', '''+ PmtSN +''', '''+ DateToStr(dtpTermDate.DateTime) +''' , '''+ PmtVal +''', FALSE, ›—ﬁ «‰Â«¡ «·⁄ﬁœ ) ';
+
+     tSQL.Execute;
+
+
+
+    end;
+
+
+
+
+
+//     TempQry.SQL.Text := 'SELECT * FROM rvouchers '
+//+' WHERE   ContractRef = '''+ dbeContract.Text +''' '
+//+' And PaymentSN = (SELECT Max(PaymentSN) from rvouchers where ContractRef = '''+ dbeContract.Text +''') ';
+//
+//     TempQry.Open;
+
+//     if TempQry.RecordCount > 0 then begin
+//         PmtSN := TempQry.FieldByName('PaymentSN').AsString;
+//         PaidVouchVal:= TempQry.FieldByName('RecValue').AsFloat; //from RVouchers TBL.
+//
+//          TempQry1.Close;
+//     TempQry1.SQL.Clear;
+//
+//  TempQry1.SQL.Text := 'SELECT * FROM payments '
+//+' WHERE   ContractNo = '''+ dbeContract.Text +''' '
+//+' And PaymentSN =   '''+ PmtSN +'''  ';
+//
+//       TempQry1.Open;
+//
+//     PmtVal := TempQry1.FieldByName('PaymentValu').AsFloat;  //from Payments TBL.
+//
+//
+//
+//tSQL.SQL.Clear;    //Update The stats of the Due Payment as PAID, IF the Amount WAS FULL AMOUNT PAID
+//tSQL.SQL.Add('UPDATE payments Set PAID = TRUE  ');
+//
+//if PaidVouchVal <> PmtVal then      // value paid in vouchers <> value of pmt tble.
+//tSQL.SQL.Add(' , PaymentValu = '''+ FloatToStr(PaidVouchVal) +'''   ');
+//
+//tSQL.SQL.Add(' WHERE ContractNo = '''+ dbeContract.Text +''' AND PaymentSN = '''+ PmtSN +'''  ') ;
+//tSQL.Execute;
+//
+//
+//
+//   tSQL.SQL.Clear;       //Delete the REST OF Payments (no need )
+//tSQL.SQL.Text := 'DELETE FROM Payments where ContractNo = '''+ dbeContract.Text +''' AND PaymentSN > '''+ PmtSN +''' ';
+//  tSQL.Execute;
+//
+//
+//
+//     end;
+
+
+
+
+
+
+
+tSQL.SQL.Clear;      //Set Contract is  Terminated.
+tSQL.SQL.Text := ''
++ ' UPDATE contracts  Set Termination = True , TerminDate = '''+ DateToStr(dtpTermDate.DateTime) +'''  '
++ ' , Active = False  Where  ContractID	 = '''+ dbeContract.Text +'''  ';
+tSQL.Execute;
+
+
+tSQL.Free;
+
+   //  print   ‰„Ê–Ã  ”·Ì„ «·„” √Ã— ··ÊÕœ… «·≈ÌÃ«—Ì… //
+      PrintContractDetailsQ.Filtered := false;
+    PrintContractDetailsQ.Filter := 'ContractID='+ContractDetailsQ.FieldByName('ContractID').AsString;
+    PrintContractDetailsQ.Filtered := true;
+   //  print   ‰„Ê–Ã  ”·Ì„ «·„” √Ã— ··ÊÕœ… «·≈ÌÃ«—Ì… //
+
+
+
+
+  if UniCheckBox1.Checked    then   // íÌÊÃœ ’Ì«‰Â
+  AddEstMentInCome();
+
+
+
+
+ if UniMainModule.gSendSMS ='T' then
+  SendSMS();
+
+
+  AdjustTables; // reset the Status to Not RENTED.
+
+//    ContractCB.Text :='';UnitCB.Text:='';
+ContractCB.KeyValue := Null;
+UnitCB.KeyValue := Null;
+
+    ContractDetailsQ.Close;
+ lookContractQ.Close; lookEST.Close; lookUNIT.Close;
+//
+  lookEST.Open; lookUNIT.Open; lookContractQ.Open;
+//
+
+ pnlRestPayments.Visible := false;
+
+
+
+
+
+
+
+  ShowSwA('Contract has been Terminated successfully',1) ;
+
+
+//  print   ‰„Ê–Ã  ”·Ì„ «·„” √Ã— ··ÊÕœ… «·≈ÌÃ«—Ì… //
+//      PrintContractDetailsQ.Filtered := false;
+//    PrintContractDetailsQ.Filter := 'ContractID='+ContractDetailsQ.FieldByName('ContractID').AsString;
+//    PrintContractDetailsQ.Filtered := true;
+     MainForm.DwnRepoFile:=False;
+
+    DataFrTools.MyFrxLoad(frxReport1,'HandOver') ;
+     DataFrTools.MyFrxShow(frxReport1);
+
+   end;
+
+end;
+
+procedure TRentTerminationF.ContractCBSelect(Sender: TObject);
+begin
+  inherited;
+  ContractDetailsQ.Open;
+  ContractDetailsQ.Locate('ContractID',
+ContractCB.ListSource.DataSet.FieldByName('ContractID').AsString,[]);
+  UnitCB.Text :='';
+  pnlRestPayments.Visible := True;
+  pnlPaidPayments.Visible := True;
+end;
+
+procedure TRentTerminationF.ContractDetailsQAfterScroll(DataSet: TDataSet);
+begin
+  inherited;
+    DuePaymentsQ.Close;
+PaidPaymentsQ.Close;
+   DuePaymentsQ.ParamByName('ConID').AsInteger := ContractDetailsQ.FieldByName('ContractID').AsInteger;
+   PaidPaymentsQ.ParamByName('ConID').AsInteger := ContractDetailsQ.FieldByName('ContractID').AsInteger;
+     DuePaymentsQ.Open;
+PaidPaymentsQ.Open;
+end;
+
+procedure TRentTerminationF.dtpTermDateChange(Sender: TObject);
+begin
+  inherited;
+//  DuePaymentsQ.Close;
+//PaidPaymentsQ.Close;
+
+  calcDifCost(); //Õ”«» «·›—ﬁ
+
+//  DuePaymentsQ.Open;
+//PaidPaymentsQ.Open;
+end;
+
+procedure TRentTerminationF.DuePaymentsQAfterScroll(DataSet: TDataSet);
+begin
+  inherited;
+PmtVerticalGrid.Visible :=  DuePaymentsQ.RecordCount > 0;
+
+UniLabel1.Visible := Not PmtVerticalGrid.Visible;
+
+
+ PaidPmtVerticalGrid.Visible :=  PaidPaymentsQ.RecordCount > 0;
+
+UniLabel3.Visible := Not PaidPmtVerticalGrid.Visible;
+
+end;
+
+procedure TRentTerminationF.EstateCBChangeValue(Sender: TObject);
+begin
+  inherited;
+
+  ContractCB.KeyValue := Null;
+
+lookUNIT.Filter := 'EstNo='+EstateCB.ListSource.DataSet.FieldByName(EstateCB.KeyField).AsString;
+lookUNIT.Filtered:= true;
+end;
+
+procedure TRentTerminationF.UniButton1Click(Sender: TObject);
+Var InsertSTR:String;
+ tSQL:TUniSQL;
+
+ contValue:String;
+
+begin
+  inherited;
+  if dbeContract.Text = '' then
+  exit;
+
+ if ShowSwM(' Â·  —€» » ÃœÌœ «·⁄ﬁœ '+ dbeContract.Text ,4) then begin
+
+ //dbeUnitNo.Text;
+ ContractDetailsQ.Refresh;
+
+ contValue := getNewContVal();
+
+ InsertSTR := ''        //ContractID
+ +' INSERT INTO contracts(conDate, tenantID, estNo, unitNo, conPeriod, contF, contT, '
+ +' Payments, RentAmount, Insur, Water, Elec, Expired, Termination, TerminDate, Active) '
+
++' SELECT CURDATE() , tenantID, estNo, unitNo, conPeriod, contT, DATE_ADD(contT, INTERVAL 12 MONTH), '
++ ' Payments, '''+ contValue +''', Insur, Water, Elec, Expired, Termination, TerminDate, Active '
+
++ ' FROM contracts WHERE  ContractID = '''+ dbeContract.Text +''' ';
+
+//  DATE_ADD("2017-06-15", INTERVAL 10 DAY)
+
+ tSQL := TUniSQL.Create(self);
+ tSQL.Connection := UniMainModule.MainDB;
+
+ tSQL.SQL.Clear;
+tSQL.SQL.Text := InsertSTR;
+tSQL.Execute;
+
+//---Add Payments To Pmt TABLE:
+//                         get New Inserted Contract
+   PaymentSchdule;
+
+
+   //SET the OLD Contracr as InACTIVE ;
+
+  tSQL.SQL.Clear;
+tSQL.SQL.Text := 'UPDATE contracts Set Active = False where  ContractID = '''+ dbeContract.Text +'''';
+tSQL.Execute;
+
+
+
+ContractCB.KeyValue := Null;
+UnitCB.KeyValue := Null;
+
+    ContractDetailsQ.Close;
+ lookContractQ.Close; lookEST.Close; lookUNIT.Close;
+//
+  lookEST.Open; lookUNIT.Open; lookContractQ.Open;
+//
+
+ pnlRestPayments.Visible := false;
+
+ShowSwA('Contract has been Renewed successfully');
+
+ end;
+
+
+end;
+
+procedure TRentTerminationF.UniButton2Click(Sender: TObject);
+begin
+  inherited;
+//  print   ‰„Ê–Ã  ”·Ì„ «·„” √Ã— ··ÊÕœ… «·≈ÌÃ«—Ì… //
+      PrintContractDetailsQ.Filtered := false;
+    PrintContractDetailsQ.Filter := 'ContractID='+ContractDetailsQ.FieldByName('ContractID').AsString;
+    PrintContractDetailsQ.Filtered := true;
+     MainForm.DwnRepoFile:=False;
+
+    DataFrTools.MyFrxLoad(frxReport1,'HandOver') ;
+     DataFrTools.MyFrxShow(frxReport1);
+end;
+
+procedure TRentTerminationF.UniCheckBox1Change(Sender: TObject);
+begin
+  inherited;
+UniEdit1.Visible := UniCheckBox1.Checked;
+NumEdtAmount.Visible := UniCheckBox1.Checked;
+end;
+
+procedure TRentTerminationF.UniFormCreate(Sender: TObject);
+begin
+  inherited;
+dtpTermDate.DateTime:=Date;
+end;
+
+procedure TRentTerminationF.UnitCBSelect(Sender: TObject);
+begin
+  inherited;
+    ContractDetailsQ.Open;
+    ContractDetailsQ.Locate('ContractID',
+UnitCB.ListSource.DataSet.FieldByName('ContractID').AsString,[]);
+
+  ContractCB.Text :='';
+    pnlRestPayments.Visible := True;
+end;
+
+end.

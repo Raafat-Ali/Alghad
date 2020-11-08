@@ -1,0 +1,2294 @@
+inherited rRentContracts: TrRentContracts
+  ClientHeight = 725
+  ClientWidth = 916
+  Caption = 'Rent Contracts'
+  BorderStyle = bsNone
+  Font.Charset = ANSI_CHARSET
+  Font.Height = -13
+  Font.Name = 'Tajawal'
+  ExplicitWidth = 916
+  ExplicitHeight = 725
+  PixelsPerInch = 96
+  TextHeight = 18
+  inherited pnlBaseContainer: TUniContainerPanel
+    Left = 8
+    Top = 16
+    Width = 908
+    Height = 701
+    Layout = 'vbox'
+    LayoutAttribs.Align = 'center'
+    ExplicitLeft = 8
+    ExplicitTop = 16
+    ExplicitWidth = 908
+    ExplicitHeight = 701
+    object pnlHead: TUniContainerPanel
+      Left = 3
+      Top = 3
+      Width = 878
+      Height = 50
+      Hint = ''
+      ParentColor = False
+      TabOrder = 1
+      Layout = 'hbox'
+      LayoutAttribs.Align = 'middle'
+      LayoutConfig.Width = '100%'
+      LayoutConfig.Margin = '10 0 0 0'
+      object UniContainerPanel5: TUniContainerPanel
+        Left = 7
+        Top = 3
+        Width = 190
+        Height = 30
+        Hint = ''
+        ParentColor = False
+        TabOrder = 3
+        Layout = 'fit'
+        LayoutAttribs.Pack = 'center'
+        object UniDBLookupComboBox1: TUniDBLookupComboBox
+          Left = 12
+          Top = 5
+          Width = 150
+          Hint = ''
+          ListField = 'ContractID;sTenName'
+          ListSource = ContractsQsrc
+          KeyField = 'ContractID'
+          ListFieldIndex = 0
+          EmptyText = 'Search For Contract'
+          TabOrder = 1
+          Color = clWindow
+        end
+      end
+      object UniToolBar1: TUniToolBar
+        Left = 147
+        Top = 2
+        Width = 705
+        Height = 45
+        Hint = ''
+        ButtonHeight = 40
+        ButtonWidth = 40
+        Images = UniMainModule.ImgTol32
+        LayoutAttribs.Align = 'middle'
+        LayoutAttribs.Pack = 'center'
+        LayoutConfig.Flex = 1
+        LayoutConfig.Width = '90%'
+        LayoutConfig.Margin = '0 5 0 5'
+        Layout = 'hbox'
+        Align = alNone
+        TabOrder = 1
+        ParentColor = False
+        Color = clBtnFace
+        object UniToolButton6: TUniToolButton
+          Left = 0
+          Top = 0
+          Width = 8
+          Hint = ''
+          Style = tbsDivider
+          Caption = 'UniToolButton6'
+          TabOrder = 6
+        end
+        object UniToolButton1: TUniToolButton
+          Left = 8
+          Top = 0
+          Action = DatasetInsert1
+          ImageIndex = 0
+          TabOrder = 1
+        end
+        object UniToolButton2: TUniToolButton
+          Left = 48
+          Top = 0
+          Width = 8
+          Hint = ''
+          Style = tbsDivider
+          Caption = 'UniToolButton2'
+          TabOrder = 2
+          ExplicitLeft = 31
+        end
+        object UniToolButton3: TUniToolButton
+          Left = 56
+          Top = 0
+          Action = DatasetPost1
+          ImageIndex = 1
+          TabOrder = 3
+        end
+        object UniToolButton4: TUniToolButton
+          Left = 96
+          Top = 0
+          Width = 8
+          Hint = ''
+          Style = tbsDivider
+          Caption = 'UniToolButton4'
+          TabOrder = 4
+          ExplicitLeft = 62
+        end
+        object UniToolButton5: TUniToolButton
+          Left = 104
+          Top = 0
+          Action = DatasetDelete1
+          ImageIndex = 3
+          TabOrder = 5
+        end
+        object UniToolButton22: TUniToolButton
+          Left = 144
+          Top = 0
+          Width = 8
+          Hint = ''
+          Style = tbsDivider
+          Caption = 'UniToolButton22'
+          TabOrder = 13
+          ExplicitLeft = 93
+        end
+        object UniToolButton7: TUniToolButton
+          Left = 152
+          Top = 0
+          Width = 385
+          Hint = ''
+          ParentRTL = False
+          Style = tbsContainer
+          Caption = 'UniToolButton7'
+          Layout = 'fit'
+          TabOrder = 14
+          ExplicitLeft = 101
+          object UniToolBar2: TUniToolBar
+            Left = 12
+            Top = 2
+            Width = 337
+            Height = 37
+            Hint = ''
+            ParentRTL = False
+            ButtonHeight = 35
+            ButtonWidth = 35
+            Images = UniMainModule.ImgTol32
+            LayoutAttribs.Align = 'middle'
+            LayoutAttribs.Pack = 'center'
+            LayoutConfig.Flex = 1
+            Layout = 'hbox'
+            Align = alNone
+            TabOrder = 1
+            ParentColor = False
+            Color = clBtnFace
+            object UniToolButton9: TUniToolButton
+              Left = 0
+              Top = 0
+              Width = 8
+              Hint = ''
+              Style = tbsSeparator
+              Caption = 'UniToolButton7'
+              TabOrder = 1
+            end
+            object UniToolButton10: TUniToolButton
+              Left = 8
+              Top = 0
+              ParentRTL = False
+              Action = DatasetFirst1
+              ImageIndex = 12
+              IconAlign = iaCenter
+              TabOrder = 2
+            end
+            object UniToolButton11: TUniToolButton
+              Left = 43
+              Top = 0
+              Width = 8
+              Hint = ''
+              Style = tbsDivider
+              Caption = 'UniToolButton9'
+              TabOrder = 3
+            end
+            object UniToolButton12: TUniToolButton
+              Left = 51
+              Top = 0
+              ParentRTL = False
+              Action = DatasetPrior1
+              ImageIndex = 11
+              IconAlign = iaCenter
+              TabOrder = 4
+            end
+            object UniToolButton13: TUniToolButton
+              Left = 86
+              Top = 0
+              Width = 8
+              Hint = ''
+              Style = tbsDivider
+              Caption = 'UniToolButton11'
+              TabOrder = 5
+            end
+            object UniToolButton23: TUniToolButton
+              Left = 94
+              Top = 0
+              Width = 131
+              Hint = ''
+              Style = tbsContainer
+              Caption = 'UniToolButton23'
+              TabOrder = 10
+              object edtEmpNO: TUniDBEdit
+                Left = 0
+                Top = 0
+                Width = 131
+                Height = 35
+                Hint = ''
+                DataField = 'ContractID'
+                DataSource = ContractsQsrc
+                Align = alClient
+                Alignment = taCenter
+                ParentFont = False
+                Font.Charset = ARABIC_CHARSET
+                Font.Height = -19
+                Font.Name = 'Tajawal Black'
+                Font.Style = [fsBold]
+                TabOrder = 1
+                ReadOnly = True
+                UseFieldAlignment = False
+              end
+            end
+            object UniToolButton24: TUniToolButton
+              Left = 225
+              Top = 0
+              Width = 8
+              Hint = ''
+              Style = tbsDivider
+              Caption = 'UniToolButton24'
+              TabOrder = 11
+            end
+            object UniToolButton14: TUniToolButton
+              Left = 233
+              Top = 0
+              ParentRTL = False
+              Action = DatasetNext1
+              ImageIndex = 10
+              IconAlign = iaCenter
+              TabOrder = 6
+            end
+            object UniToolButton15: TUniToolButton
+              Left = 268
+              Top = 0
+              Width = 8
+              Hint = ''
+              Style = tbsDivider
+              Caption = 'UniToolButton13'
+              TabOrder = 7
+            end
+            object UniToolButton25: TUniToolButton
+              Left = 276
+              Top = 0
+              ParentRTL = False
+              Action = DatasetLast1
+              ImageIndex = 9
+              IconAlign = iaCenter
+              TabOrder = 8
+            end
+            object UniToolButton26: TUniToolButton
+              Left = 311
+              Top = 0
+              Width = 8
+              Hint = ''
+              Style = tbsSeparator
+              Caption = 'UniToolButton15'
+              TabOrder = 9
+            end
+          end
+        end
+        object UniToolButton8: TUniToolButton
+          Left = 537
+          Top = 0
+          Width = 8
+          Hint = ''
+          Style = tbsDivider
+          Caption = 'UniToolButton8'
+          TabOrder = 15
+          ExplicitLeft = 486
+        end
+        object UniToolButton17: TUniToolButton
+          Left = 545
+          Top = 0
+          Action = DatasetEdit1
+          ImageIndex = 4
+          TabOrder = 8
+        end
+        object UniToolButton18: TUniToolButton
+          Left = 585
+          Top = 0
+          Width = 8
+          Hint = ''
+          Style = tbsDivider
+          Caption = 'UniToolButton18'
+          TabOrder = 9
+          ExplicitLeft = 517
+        end
+        object UniToolButton19: TUniToolButton
+          Left = 593
+          Top = 0
+          Action = DatasetCancel1
+          ImageIndex = 2
+          TabOrder = 10
+        end
+        object UniToolButton16: TUniToolButton
+          Left = 633
+          Top = 0
+          Width = 8
+          Hint = ''
+          Style = tbsDivider
+          Caption = 'UniToolButton16'
+          TabOrder = 7
+          ExplicitLeft = 548
+        end
+        object UniToolButton21: TUniToolButton
+          Left = 641
+          Top = 0
+          Hint = ''
+          ImageIndex = 18
+          Caption = 'UniToolButton21'
+          TabOrder = 12
+          OnClick = UniToolButton21Click
+        end
+        object UniToolButton20: TUniToolButton
+          Left = 681
+          Top = 0
+          Width = 8
+          Hint = ''
+          Style = tbsDivider
+          Caption = 'UniToolButton20'
+          TabOrder = 11
+          ExplicitLeft = 579
+        end
+      end
+      object UniContainerPanel2: TUniContainerPanel
+        Left = 680
+        Top = 17
+        Width = 190
+        Height = 30
+        Hint = ''
+        ParentColor = False
+        TabOrder = 2
+        Layout = 'fit'
+        LayoutAttribs.Pack = 'center'
+        object UniDBDateTimePicker1: TUniDBDateTimePicker
+          Left = 10
+          Top = 3
+          Width = 162
+          Hint = ''
+          DataField = 'conDate'
+          DataSource = ContractsQsrc
+          DateTime = 43933.000000000000000000
+          DateFormat = 'yyyy-MM-dd'
+          TimeFormat = 'HH:mm:ss'
+          TabOrder = 1
+          ParentFont = False
+          Font.Style = [fsBold]
+          FieldLabel = 'Contract Date'
+          FieldLabelWidth = 60
+        end
+      end
+    end
+    object UniContainerPanel8: TUniContainerPanel
+      Left = 15
+      Top = 56
+      Width = 890
+      Height = 630
+      Hint = ''
+      ParentColor = False
+      TabOrder = 2
+      Layout = 'hbox'
+      LayoutAttribs.Align = 'top'
+      LayoutAttribs.Pack = 'start'
+      LayoutConfig.Width = '100%'
+      object UniContainerPanel7: TUniContainerPanel
+        Left = 3
+        Top = 288
+        Width = 158
+        Height = 159
+        Hint = ''
+        ParentColor = False
+        TabOrder = 1
+        Layout = 'fit'
+        LayoutConfig.Height = '100%'
+        object grdUnitsL: TUniDBGrid
+          Left = 10
+          Top = 30
+          Width = 150
+          Height = 91
+          Hint = ''
+          DataSource = ContractsQsrc
+          Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
+          ReadOnly = True
+          WebOptions.Paged = False
+          WebOptions.FetchAll = True
+          LoadMask.Message = 'Loading data...'
+          ForceFit = True
+          LayoutConfig.Flex = 1
+          LayoutConfig.Width = '100%'
+          Font.Charset = ANSI_CHARSET
+          Font.Height = -13
+          Font.Name = 'Tajawal'
+          ParentFont = False
+          TabOrder = 1
+          Columns = <
+            item
+              FieldName = 'ContractID'
+              Title.Caption = 'ContractID'
+              Width = 74
+              Font.Charset = ANSI_CHARSET
+              Font.Name = 'Tajawal'
+            end
+            item
+              FieldName = 'sTenName'
+              Title.Caption = 'sTenName'
+              Width = 144
+              Font.Charset = ANSI_CHARSET
+              Font.Name = 'Tajawal'
+            end>
+        end
+      end
+      object pnlConData: TUniContainerPanel
+        Left = 167
+        Top = 19
+        Width = 714
+        Height = 608
+        Hint = ''
+        ParentColor = False
+        TabOrder = 2
+        Layout = 'vbox'
+        LayoutAttribs.Align = 'center'
+        LayoutAttribs.Pack = 'start'
+        LayoutConfig.Flex = 1
+        LayoutConfig.Height = '100%'
+        object UniContainerPanel1: TUniContainerPanel
+          Left = 12
+          Top = 7
+          Width = 681
+          Height = 182
+          Hint = ''
+          ParentColor = False
+          TabOrder = 1
+          Layout = 'vbox'
+          LayoutAttribs.Align = 'center'
+          LayoutConfig.Width = '90%'
+          LayoutConfig.Margin = '15 0 0 0'
+          object TenantFieldSet: TUniFieldSet
+            Left = 3
+            Top = 3
+            Width = 553
+            Height = 167
+            Hint = ''
+            Title = 'Tenant Data'
+            LayoutConfig.Flex = 1
+            LayoutConfig.Width = '80%'
+            TabOrder = 1
+            object UniFieldContainer2: TUniFieldContainer
+              Left = 19
+              Top = 16
+              Width = 534
+              Height = 28
+              Hint = ''
+              Margins.Left = 0
+              Margins.Top = 0
+              Margins.Right = 0
+              Margins.Bottom = 0
+              ParentColor = False
+              TabOrder = 5
+              Layout = 'hbox'
+              LayoutAttribs.Align = 'middle'
+              LayoutConfig.Anchor = '100%'
+              LayoutConfig.Margin = '10 0 0 0'
+              object edTname: TUniDBEdit
+                Left = 11
+                Top = 0
+                Width = 172
+                Height = 25
+                Hint = ''
+                DataField = 'Name'
+                DataSource = TenantsSrc
+                ParentFont = False
+                Font.Charset = ANSI_CHARSET
+                Font.Height = -13
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+                TabOrder = 1
+                LayoutConfig.Flex = 1
+                FieldLabel = 'Tenant Name'
+              end
+            end
+            object edTIDNo: TUniDBEdit
+              Left = 24
+              Top = 47
+              Width = 121
+              Height = 25
+              Hint = ''
+              DataField = 'IqamaID'
+              DataSource = TenantsSrc
+              ParentFont = False
+              Font.Charset = ANSI_CHARSET
+              Font.Height = -13
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+              TabOrder = 1
+              ClientEvents.ExtEvents.Strings = (
+                
+                  'keydown=function keydown(sender, e, eOpts)'#13#10'{'#13#10'   var ok ='#13#10'    ' +
+                  '    event.keyCode == 8 || //backspace'#13#10'        event.keyCode == ' +
+                  '9 || //tab'#13#10'        event.keyCode == 13 || //enter  '#13#10'        ev' +
+                  'ent.keyCode >= 35 && event.keyCode <= 37 || //end, home, left ar' +
+                  'row '#13#10'        event.keyCode == 39 || //right arrow, downd arrow,' +
+                  ' insert, delete'#13#10'        event.keyCode == 45 || //insert'#13#10'      ' +
+                  '  event.keyCode == 46 || //delete'#13#10'        event.keyCode >= 96 &' +
+                  '& event.keyCode <= 105 || // 0-9 on keypad'#13#10'        event.keyCod' +
+                  'e >= 48 && event.keyCode <= 57; // 0-9'#13#10#13#10#13#10'    if (!ok) {'#13#10'    ' +
+                  '    e.preventDefault();'#13#10'    }'#13#10'}')
+              LayoutConfig.Margin = '5 0 0 0'
+              FieldLabel = 'Tenant ID'
+              FieldLabelWidth = 70
+            end
+            object UniFieldContainer1: TUniFieldContainer
+              Left = 16
+              Top = 73
+              Width = 534
+              Height = 28
+              Hint = ''
+              ParentColor = False
+              TabOrder = 4
+              Layout = 'hbox'
+              LayoutConfig.Anchor = '100%'
+              LayoutConfig.Margin = '5 0 0 0'
+              object edTph1: TUniDBEdit
+                Left = 25
+                Top = 2
+                Width = 200
+                Height = 25
+                Hint = ''
+                DataField = 'phone1'
+                DataSource = TenantsSrc
+                ParentFont = False
+                Font.Charset = ANSI_CHARSET
+                Font.Height = -13
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+                TabOrder = 1
+                ClientEvents.ExtEvents.Strings = (
+                  
+                    'keypress=function keypress(sender, e, eOpts)'#13#10'{'#13#10'     var ok ='#13#10 +
+                    '        event.keyCode == 8 || //backspace'#13#10'        event.keyCode' +
+                    ' == 9 || //tab'#13#10'        event.keyCode == 13 || //enter  '#13#10'      ' +
+                    '  event.keyCode >= 35 && event.keyCode <= 37 || //end, home, lef' +
+                    't arrow '#13#10'        event.keyCode == 39 || //right arrow, downd ar' +
+                    'row, insert, delete'#13#10'        event.keyCode == 45 || //insert'#13#10'  ' +
+                    '      event.keyCode == 46 || //delete'#13#10'        event.keyCode >= ' +
+                    '96 && event.keyCode <= 105 || // 0-9 on keypad'#13#10'        event.ke' +
+                    'yCode >= 48 && event.keyCode <= 57; // 0-9'#13#10#13#10#13#10'    if (!ok) {'#13#10 +
+                    '        e.preventDefault();'#13#10'    }'#13#10'}')
+                FieldLabel = 'Mobile 1'
+                FieldLabelWidth = 70
+              end
+              object edTph2: TUniDBEdit
+                Left = 226
+                Top = 2
+                Width = 200
+                Height = 25
+                Hint = ''
+                DataField = 'phone2'
+                DataSource = TenantsSrc
+                ParentFont = False
+                Font.Charset = ANSI_CHARSET
+                Font.Height = -13
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+                TabOrder = 2
+                ClientEvents.ExtEvents.Strings = (
+                  
+                    'keypress=function keypress(sender, e, eOpts)'#13#10'{'#13#10'     var ok ='#13#10 +
+                    '        event.keyCode == 8 || //backspace'#13#10'        event.keyCode' +
+                    ' == 9 || //tab'#13#10'        event.keyCode == 13 || //enter  '#13#10'      ' +
+                    '  event.keyCode >= 35 && event.keyCode <= 37 || //end, home, lef' +
+                    't arrow '#13#10'        event.keyCode == 39 || //right arrow, downd ar' +
+                    'row, insert, delete'#13#10'        event.keyCode == 45 || //insert'#13#10'  ' +
+                    '      event.keyCode == 46 || //delete'#13#10'        event.keyCode >= ' +
+                    '96 && event.keyCode <= 105 || // 0-9 on keypad'#13#10'        event.ke' +
+                    'yCode >= 48 && event.keyCode <= 57; // 0-9'#13#10#13#10#13#10'    if (!ok) {'#13#10 +
+                    '        e.preventDefault();'#13#10'    }'#13#10'}')
+                LayoutConfig.Margin = '0 0 0 5'
+                FieldLabel = 'Mobile 2'
+                FieldLabelWidth = 70
+              end
+            end
+            object edTmail: TUniDBEdit
+              Left = 24
+              Top = 109
+              Width = 121
+              Height = 25
+              Hint = ''
+              DataField = 'eMail'
+              DataSource = TenantsSrc
+              ParentFont = False
+              Font.Charset = ANSI_CHARSET
+              Font.Height = -13
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+              TabOrder = 2
+              LayoutConfig.Margin = '5 0 0 0'
+              FieldLabel = 'Email'
+              FieldLabelWidth = 70
+            end
+            object edTwork: TUniDBEdit
+              Left = 24
+              Top = 140
+              Width = 121
+              Height = 25
+              Hint = ''
+              DataField = 'workPlace'
+              DataSource = TenantsSrc
+              ParentFont = False
+              Font.Charset = ANSI_CHARSET
+              Font.Height = -13
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+              TabOrder = 3
+              LayoutConfig.Margin = '5 0 0 0'
+              FieldLabel = 'Work Location'
+            end
+          end
+        end
+        object SelectEstatPnl: TUniPanel
+          Left = 13
+          Top = 191
+          Width = 680
+          Height = 50
+          Hint = ''
+          TabOrder = 2
+          Caption = 'SelectEstatPnl'
+          Layout = 'hbox'
+          LayoutAttribs.Align = 'middle'
+          LayoutAttribs.Pack = 'center'
+          LayoutConfig.Width = '90%'
+          object DBLookupEstates: TUniDBLookupComboBox
+            Left = 88
+            Top = 15
+            Width = 126
+            Height = 27
+            Hint = ''
+            ListField = 'estNo;estName'
+            ListSource = EstatesSrc
+            KeyField = 'ID'
+            ListFieldIndex = 0
+            ParentFont = False
+            Font.Charset = ANSI_CHARSET
+            Font.Height = -13
+            Font.Name = 'Tajawal'
+            Font.Style = [fsBold]
+            AnyMatch = True
+            TabOrder = 1
+            Color = clWindow
+            MatchFieldWidth = False
+            RemoteQuery = True
+            LayoutConfig.Width = '30%'
+            LayoutConfig.Margin = '5 5 5 5'
+            FieldLabel = 'Select Estate'
+            FieldLabelWidth = 90
+            Style = csDropDown
+            OnSelect = DBLookupEstatesSelect
+          end
+          object DBLookupUnits: TUniDBLookupComboBox
+            Left = 279
+            Top = 15
+            Width = 126
+            Height = 27
+            Hint = ''
+            ListField = 'Unit'
+            ListSource = UnitsSrc
+            KeyField = 'ID'
+            ListFieldIndex = 0
+            ParentFont = False
+            Font.Charset = ANSI_CHARSET
+            Font.Height = -13
+            Font.Name = 'Tajawal'
+            Font.Style = [fsBold]
+            AnyMatch = True
+            TabOrder = 2
+            Color = clWindow
+            MatchFieldWidth = False
+            RemoteQuery = True
+            LayoutConfig.Width = '30%'
+            LayoutConfig.Margin = '5 5 5 5'
+            FieldLabel = 'Select Unit'
+            FieldLabelWidth = 90
+            Style = csDropDown
+            OnSelect = DBLookupUnitsSelect
+          end
+        end
+        object UniContainerPanel3: TUniContainerPanel
+          Left = 19
+          Top = 247
+          Width = 668
+          Height = 60
+          Hint = ''
+          ParentColor = False
+          TabOrder = 3
+          Layout = 'fit'
+          LayoutConfig.Width = '90%'
+          object grdUnitDetails: TUniDBGrid
+            Left = 109
+            Top = 11
+            Width = 135
+            Height = 46
+            Hint = ''
+            DataSource = UnitDetailsQsrc
+            Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
+            ReadOnly = True
+            WebOptions.Paged = False
+            WebOptions.FetchAll = True
+            LoadMask.Message = 'Loading data...'
+            ForceFit = True
+            LayoutConfig.Flex = 1
+            LayoutConfig.Width = '100%'
+            Font.Charset = ANSI_CHARSET
+            Font.Color = clBlue
+            Font.Height = -13
+            Font.Name = 'Tajawal'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+            Columns = <
+              item
+                FieldName = 'Unit'
+                Title.Caption = 'Unit'
+                Width = 284
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Rooms'
+                Title.Caption = 'Rooms'
+                Width = 284
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Floor'
+                Title.Caption = 'Floor'
+                Width = 144
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Price1'
+                Title.Caption = 'Price1'
+                Width = 74
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Price2'
+                Title.Caption = 'Price2'
+                Width = 74
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Price3'
+                Title.Caption = 'Price3'
+                Width = 74
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Price4'
+                Title.Caption = 'Price4'
+                Width = 74
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Notes'
+                Title.Caption = 'Notes'
+                Width = 529
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Electricity'
+                Title.Caption = 'E'
+                Width = 39
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Kitchen'
+                Title.Caption = 'K'
+                Width = 39
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'Conditions'
+                Title.Caption = 'C'
+                Width = 39
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'isRented'
+                Title.Caption = 'R'
+                Width = 39
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'ESTID'
+                Title.Caption = 'ESTID'
+                Width = 74
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'ownerID'
+                Title.Caption = 'ownerID'
+                Width = 74
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end
+              item
+                FieldName = 'ID'
+                Title.Caption = 'ID'
+                Width = 74
+                Font.Charset = ANSI_CHARSET
+                Font.Color = clBlue
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+              end>
+          end
+        end
+        object ContractBox: TUniGroupBox
+          Left = 24
+          Top = 310
+          Width = 659
+          Height = 283
+          Hint = ''
+          Caption = 'ContractBox'
+          Layout = 'vbox'
+          LayoutAttribs.Align = 'center'
+          LayoutAttribs.Pack = 'start'
+          LayoutConfig.Flex = 1
+          LayoutConfig.Width = '95%'
+          TabOrder = 4
+          object Cont1: TUniContainerPanel
+            Left = 3
+            Top = 16
+            Width = 638
+            Height = 33
+            Hint = ''
+            ParentColor = False
+            Color = clBtnShadow
+            TabOrder = 1
+            Layout = 'hbox'
+            LayoutAttribs.Align = 'middle'
+            LayoutAttribs.Pack = 'center'
+            LayoutAttribs.Padding = '5'
+            LayoutConfig.Width = '100%'
+            LayoutConfig.Margin = '5 0 0 0'
+            object ContractPeriodCB: TUniComboBox
+              Left = 12
+              Top = 8
+              Width = 145
+              Height = 26
+              Hint = ''
+              Style = csDropDownList
+              Text = ''
+              Items.Strings = (
+                'Yearly'
+                'Monthly')
+              TabOrder = 2
+              LayoutConfig.Flex = 1
+              LayoutConfig.Margin = '0 3 0 10'
+              FieldLabel = 'Contract Period'
+              FieldLabelWidth = 60
+              IconItems = <>
+            end
+            object ContractFrom: TUniDateTimePicker
+              Left = 178
+              Top = 7
+              Width = 120
+              Hint = ''
+              DateTime = 43931.000000000000000000
+              DateFormat = 'dd/MM/yyyy'
+              TimeFormat = 'HH:mm:ss'
+              TabOrder = 3
+              ParentFont = False
+              Font.Charset = ANSI_CHARSET
+              Font.Height = -13
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+              LayoutConfig.Flex = 1
+              LayoutConfig.Margin = '0 3 0 20'
+              FieldLabel = 'Starts From'
+              FieldLabelWidth = 50
+              OnChange = ContractFromChange
+            end
+            object ContractTo: TUniDateTimePicker
+              Left = 326
+              Top = 3
+              Width = 120
+              Hint = ''
+              DateTime = 43931.000000000000000000
+              DateFormat = 'dd/MM/yyyy'
+              TimeFormat = 'HH:mm:ss'
+              ReadOnly = True
+              TabOrder = 4
+              ParentFont = False
+              Font.Charset = ANSI_CHARSET
+              Font.Height = -13
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+              LayoutConfig.Flex = 1
+              LayoutConfig.Margin = '0 20 0 3'
+              FieldLabel = 'Ends In'
+              FieldLabelWidth = 70
+            end
+            object PaymentsCB: TUniComboBox
+              Left = 476
+              Top = 3
+              Width = 145
+              Height = 26
+              Hint = ''
+              Style = csDropDownList
+              Text = ''
+              Items.Strings = (
+                '1 Payment'
+                '2 Payments'
+                '3 Payments'
+                '4 Payments')
+              TabOrder = 1
+              LayoutConfig.Flex = 1
+              LayoutConfig.Margin = '0 10 0 3'
+              FieldLabel = 'Payment Type'
+              FieldLabelWidth = 70
+              IconItems = <>
+              OnCloseUp = PaymentsCBCloseUp
+            end
+          end
+          object PymtSchPnl: TUniContainerPanel
+            Left = 3
+            Top = 51
+            Width = 649
+            Height = 57
+            Hint = ''
+            Visible = False
+            ParentColor = False
+            TabOrder = 2
+            Layout = 'hbox'
+            LayoutAttribs.Align = 'middle'
+            LayoutAttribs.Pack = 'center'
+            LayoutConfig.Width = '100%'
+            LayoutConfig.Margin = '5 0 5 0'
+            object UniLabel1: TUniLabel
+              Left = 19
+              Top = 24
+              Width = 90
+              Height = 18
+              Hint = ''
+              Caption = 'Paymt Schedule:'
+              TabOrder = 1
+              LayoutConfig.Margin = '0 3 0 3'
+            end
+            object Pmt1: TUniNumberEdit
+              Left = 111
+              Top = 21
+              Width = 121
+              Hint = ''
+              TabOrder = 2
+              Color = clMoneyGreen
+              ReadOnly = True
+              FieldLabelAlign = laTop
+              FieldLabelFont.Style = [fsBold]
+              LayoutConfig.Margin = '0 3 0 10'
+              DecimalSeparator = '.'
+            end
+            object Pmt2: TUniNumberEdit
+              Left = 238
+              Top = 21
+              Width = 121
+              Hint = ''
+              TabOrder = 3
+              ReadOnly = True
+              FieldLabel = '1-'
+              FieldLabelAlign = laTop
+              FieldLabelFont.Style = [fsBold]
+              LayoutConfig.Margin = '0 3 0 3'
+              DecimalSeparator = '.'
+            end
+            object Pmt3: TUniNumberEdit
+              Left = 361
+              Top = 21
+              Width = 121
+              Hint = ''
+              TabOrder = 4
+              Color = clMoneyGreen
+              ReadOnly = True
+              FieldLabel = '1-'
+              FieldLabelAlign = laTop
+              FieldLabelFont.Style = [fsBold]
+              LayoutConfig.Margin = '0 3 0 3'
+              DecimalSeparator = '.'
+            end
+            object Pmt4: TUniNumberEdit
+              Left = 488
+              Top = 21
+              Width = 121
+              Hint = ''
+              TabOrder = 5
+              ReadOnly = True
+              FieldLabel = '1-'
+              FieldLabelAlign = laTop
+              FieldLabelFont.Style = [fsBold]
+              LayoutConfig.Margin = '0 3 0 3'
+              DecimalSeparator = '.'
+            end
+          end
+          object PaymentsListBox: TUniListBox
+            Left = 21
+            Top = 55
+            Width = 74
+            Height = 85
+            Hint = ''
+            Visible = False
+            TabOrder = 3
+          end
+          object UniContainerPanel4: TUniContainerPanel
+            Left = 101
+            Top = 114
+            Width = 533
+            Height = 39
+            Hint = ''
+            ParentColor = False
+            TabOrder = 4
+            Layout = 'hbox'
+            LayoutAttribs.Align = 'middle'
+            LayoutConfig.Margin = '5 0 5 0'
+            object InsurEdt: TUniNumberEdit
+              Left = 40
+              Top = 3
+              Width = 121
+              Hint = ''
+              TabOrder = 1
+              SelectOnFocus = True
+              FieldLabel = 'Insurance'
+              FieldLabelWidth = 65
+              LayoutConfig.Flex = 1
+              LayoutConfig.Margin = '0 5 0 5'
+              DecimalSeparator = '.'
+            end
+            object WaterEdt: TUniNumberEdit
+              Left = 167
+              Top = 3
+              Width = 121
+              Hint = ''
+              TabOrder = 2
+              SelectOnFocus = True
+              FieldLabel = 'Water'
+              FieldLabelWidth = 60
+              LayoutConfig.Flex = 1
+              LayoutConfig.Margin = '0 5 0 5'
+              DecimalSeparator = '.'
+            end
+            object ElectEdt: TUniFormattedNumberEdit
+              Left = 344
+              Top = 3
+              Width = 121
+              Hint = ''
+              FormattedInput.ShowCurrencySign = True
+              FormattedInput.ShowThousandSeparator = False
+              FormattedInput.CurrencySignPos = cpsRight
+              FormattedInput.DefaultCurrencySign = False
+              FormattedInput.CurrencySign = '  %'
+              FormattedInput.CurrencySignSpace = crsAvailable
+              TabOrder = 3
+              SelectOnFocus = True
+              FieldLabel = 'Shared Electricity'
+              FieldLabelWidth = 80
+              LayoutConfig.Flex = 1
+              LayoutConfig.Margin = '0 5 0 5'
+              DecimalSeparator = '.'
+              ThousandSeparator = ','
+            end
+          end
+          object PmtVerticalGrid: TUniDBVerticalGrid
+            Left = 116
+            Top = 141
+            Width = 405
+            Height = 139
+            Hint = ''
+            DataSource = PaymensQs
+            FieldsColumn.Alignment = taCenter
+            FieldsColumn.Title.Alignment = taCenter
+            FieldsColumn.TitleField = 'PaymentSN'
+            FieldsColumn.Locked = False
+            VerticalColumns = <
+              item
+                Alignment = taCenter
+                Width = 80
+                Color = 13425151
+                Title.Alignment = taCenter
+                Title.Caption = 'A'
+                Title.Color = 13425151
+                Title.Font.Style = [fsBold]
+              end
+              item
+                Alignment = taCenter
+                Width = 80
+                Color = 13434879
+                Title.Alignment = taCenter
+                Title.Caption = 'B'
+                Title.Color = 13434879
+                Title.Font.Style = [fsBold]
+              end
+              item
+                Alignment = taCenter
+                Width = 80
+                Color = 15138764
+                Title.Alignment = taCenter
+                Title.Caption = 'C'
+                Title.Color = 15138764
+                Title.Font.Style = [fsBold]
+              end
+              item
+                Alignment = taCenter
+                Width = 80
+                Color = 13434854
+                Title.Alignment = taCenter
+                Title.Caption = 'D'
+                Title.Color = 13434854
+                Title.Font.Style = [fsBold]
+              end>
+            DefaultColWidth = 80
+            HeaderTitle = 'Payments Schdule'
+            HeaderTitleAlign = taCenter
+            TabOrder = 5
+            LayoutConfig.Margin = '5 0 5 0'
+            LoadMask.Message = 'Loading data...'
+            Columns = <
+              item
+                FieldName = 'PaymentDate'
+                Title.Alignment = taCenter
+                Title.Caption = 'PaymentDate'
+                Width = 75
+                Font.Charset = ANSI_CHARSET
+                Font.Name = 'Tajawal'
+                Font.Style = [fsBold]
+                Alignment = taCenter
+                ReadOnly = True
+              end
+              item
+                FieldName = 'PaymentValu'
+                Title.Alignment = taCenter
+                Title.Caption = 'PaymentValu'
+                Width = 66
+                Font.Charset = ANSI_CHARSET
+                Font.Name = 'Tajawal'
+                Alignment = taCenter
+                ReadOnly = True
+              end
+              item
+                FieldName = 'Paid'
+                Title.Alignment = taCenter
+                Title.Caption = 'Paid'
+                Width = 34
+                Font.Charset = ANSI_CHARSET
+                Font.Name = 'Tajawal'
+                Alignment = taCenter
+                ReadOnly = True
+              end>
+          end
+        end
+      end
+    end
+  end
+  inherited siLang1: TsiLang
+    TranslationData = {
+      73007400430061007000740069006F006E0073005F0055006E00690063006F00
+      640065000D000A0054007200520065006E00740043006F006E00740072006100
+      6300740073000100520065006E007400200043006F006E007400720061006300
+      7400730001003906420648062F0620002706440627064A062C06270631060100
+      0D000A0055006E00690054006F006F006C0042007500740074006F006E003600
+      010055006E00690054006F006F006C0042007500740074006F006E0036000100
+      01000D000A0055006E00690054006F006F006C0042007500740074006F006E00
+      3200010055006E00690054006F006F006C0042007500740074006F006E003200
+      010001000D000A0055006E00690054006F006F006C0042007500740074006F00
+      6E003400010055006E00690054006F006F006C0042007500740074006F006E00
+      3400010001000D000A0055006E00690054006F006F006C004200750074007400
+      6F006E0032003200010055006E00690054006F006F006C004200750074007400
+      6F006E0032003200010001000D000A0055006E00690054006F006F006C004200
+      7500740074006F006E003700010055006E00690054006F006F006C0042007500
+      740074006F006E003700010001000D000A0055006E00690054006F006F006C00
+      42007500740074006F006E003900010055006E00690054006F006F006C004200
+      7500740074006F006E003700010001000D000A0055006E00690054006F006F00
+      6C0042007500740074006F006E0031003100010055006E00690054006F006F00
+      6C0042007500740074006F006E003900010001000D000A0055006E0069005400
+      6F006F006C0042007500740074006F006E0031003300010055006E0069005400
+      6F006F006C0042007500740074006F006E0031003100010001000D000A005500
+      6E00690054006F006F006C0042007500740074006F006E003200330001005500
+      6E00690054006F006F006C0042007500740074006F006E003200330001000100
+      0D000A0055006E00690054006F006F006C0042007500740074006F006E003200
+      3400010055006E00690054006F006F006C0042007500740074006F006E003200
+      3400010001000D000A0055006E00690054006F006F006C004200750074007400
+      6F006E0031003500010055006E00690054006F006F006C004200750074007400
+      6F006E0031003300010001000D000A0055006E00690054006F006F006C004200
+      7500740074006F006E0032003600010055006E00690054006F006F006C004200
+      7500740074006F006E0031003500010001000D000A0055006E00690054006F00
+      6F006C0042007500740074006F006E003800010055006E00690054006F006F00
+      6C0042007500740074006F006E003800010001000D000A0055006E0069005400
+      6F006F006C0042007500740074006F006E0031003800010055006E0069005400
+      6F006F006C0042007500740074006F006E0031003800010001000D000A005500
+      6E00690054006F006F006C0042007500740074006F006E003100360001005500
+      6E00690054006F006F006C0042007500740074006F006E003100360001000100
+      0D000A0055006E00690054006F006F006C0042007500740074006F006E003200
+      3100010055006E00690054006F006F006C0042007500740074006F006E003200
+      3100010001000D000A0055006E00690054006F006F006C004200750074007400
+      6F006E0032003000010055006E00690054006F006F006C004200750074007400
+      6F006E0032003000010001000D000A00530065006C0065006300740045007300
+      74006100740050006E006C000100530065006C00650063007400450073007400
+      6100740050006E006C00010001000D000A0043006F006E007400720061006300
+      740042006F007800010043006F006E007400720061006300740042006F007800
+      010001000D000A0055006E0069004C006100620065006C003100010050006100
+      79006D00740020005300630068006500640075006C0065003A0001002C062F06
+      480644062000270644062F064106390627062A0601000D000A00730074004800
+      69006E00740073005F0055006E00690063006F00640065000D000A0044006100
+      7400610073006500740046006900720073007400310001004600690072007300
+      7400010001000D000A0044006100740061007300650074005000720069006F00
+      7200310001005000720069006F007200010001000D000A004400610074006100
+      7300650074004E00650078007400310001004E00650078007400010001000D00
+      0A0044006100740061007300650074004C00610073007400310001004C006100
+      73007400010001000D000A00440061007400610073006500740049006E007300
+      6500720074003100010049006E007300650072007400010001000D000A004400
+      610074006100730065007400440065006C006500740065003100010044006500
+      6C00650074006500010001000D000A0044006100740061007300650074004500
+      640069007400310001004500640069007400010001000D000A00440061007400
+      610073006500740050006F00730074003100010050006F007300740001000100
+      0D000A004400610074006100730065007400430061006E00630065006C003100
+      0100430061006E00630065006C00010001000D000A0044006100740061007300
+      6500740052006500660072006500730068003100010052006500660072006500
+      73006800010001000D000A007300740044006900730070006C00610079004C00
+      6100620065006C0073005F0055006E00690063006F00640065000D000A005400
+      65006E0061006E00740073005100720079004900440001004900440001000100
+      0D000A00540065006E0061006E0074007300510072007900700068006F006E00
+      650031000100700068006F006E006500310001002C0648062706440620003100
+      01000D000A00540065006E0061006E0074007300510072007900700068006F00
+      6E00650032000100700068006F006E006500320001002C064806270644062000
+      320001000D000A00540065006E0061006E007400730051007200790065004D00
+      610069006C00010065004D00610069006C0001002706440627064A0645064A06
+      440601000D000A00540065006E0061006E007400730051007200790070006500
+      720073006F006E005400790070006500010070006500720073006F006E005400
+      790070006500010001000D000A00540065006E0061006E007400730051007200
+      790077006F0072006B0050006C00610063006500010077006F0072006B005000
+      6C00610063006500010045064306270646062000270644063906450644060100
+      0D000A0045007300740061007400650073005100720079004900440001004900
+      4400010001000D000A0045007300740061007400650073005100720079006F00
+      77006E00650072004900440001006F0077006E00650072004900440001000100
+      0D000A0045007300740061007400650073005100720079006500730074004E00
+      6F0001006500730074004E006F00010001000D000A0045007300740061007400
+      650073005100720079006500730074004E0061006D0065000100650073007400
+      4E0061006D006500010027063306450620002706440639064206270631060100
+      0D000A0045007300740061007400650073005100720079006500730074004400
+      6900730074007200690063007400010065007300740044006900730074007200
+      6900630074000100270644062D064A0601000D000A0045007300740061007400
+      6500730051007200790065007300740053007400720065006500740001006500
+      7300740053007400720065006500740001002706440634062706310639060100
+      0D000A00450073007400610074006500730051007200790055006E0069007400
+      730043006F0075006E007400010055006E0069007400730043006F0075006E00
+      740001002706440648062D062F0627062A0601000D000A004500730074006100
+      74006500730051007200790055006E00690074007300520065006E0074006500
+      6400010055006E00690074007300520065006E00740065006400010045062406
+      2C06310601000D000A0055006E0069007400730051007200790055006E006900
+      7400010055006E006900740001002706440648062D062F06290601000D000A00
+      55006E0069007400730051007200790052006F006F006D007300010052006F00
+      6F006D0073000100270644063A063106410601000D000A0055006E0069007400
+      730051007200790046006C006F006F007200010046006C006F006F0072000100
+      27064406370627062806420601000D000A0055006E0069007400730051007200
+      7900500072006900630065003100010050007200690063006500310001003100
+      20002F0641063906470601000D000A0055006E00690074007300510072007900
+      5000720069006300650032000100500072006900630065003200010032002000
+      2F0641063906470601000D000A0055006E006900740073005100720079005000
+      7200690063006500330001005000720069006300650033000100330020002F06
+      41063906470601000D000A0055006E0069007400730051007200790050007200
+      690063006500340001005000720069006300650034000100340020002F064106
+      3906470601000D000A0055006E006900740073005100720079004E006F007400
+      6500730001004E006F0074006500730001004506440627062D06380629060100
+      0D000A0055006E0069007400730051007200790045006C006500630074007200
+      69006300690074007900010045000100450001000D000A0055006E0069007400
+      73005100720079004B00690074006300680065006E0001004B0001004B000100
+      0D000A0055006E0069007400730051007200790043006F006E00640069007400
+      69006F006E007300010043000100430001000D000A0055006E00690074007300
+      51007200790069007300520065006E0074006500640001005200010052000100
+      0D000A0055006E00690074007300510072007900450053005400490044000100
+      45005300540049004400010001000D000A0055006E0069007400730051007200
+      79006F0077006E00650072004900440001006F0077006E006500720049004400
+      010001000D000A0055006E006900740073005100720079004900440001004900
+      4400010001000D000A0055006E0069007400440065007400610069006C007300
+      510049004400010049004400010001000D000A0055006E006900740044006500
+      7400610069006C007300510055006E0069007400010055006E00690074000100
+      01000D000A0055006E0069007400440065007400610069006C00730051005200
+      6F006F006D007300010052006F006F006D007300010001000D000A0055006E00
+      69007400440065007400610069006C007300510046006C006F006F0072000100
+      46006C006F006F007200010001000D000A0055006E0069007400440065007400
+      610069006C007300510050007200690063006500310001005000720069006300
+      65003100010001000D000A0055006E0069007400440065007400610069006C00
+      7300510050007200690063006500320001005000720069006300650032000100
+      01000D000A0055006E0069007400440065007400610069006C00730051005000
+      720069006300650033000100500072006900630065003300010001000D000A00
+      55006E0069007400440065007400610069006C00730051005000720069006300
+      650034000100500072006900630065003400010001000D000A0055006E006900
+      7400440065007400610069006C00730051004E006F0074006500730001004E00
+      6F00740065007300010001000D000A0055006E00690074004400650074006100
+      69006C007300510045006C006500630074007200690063006900740079000100
+      45006C00650063007400720069006300690074007900010001000D000A005500
+      6E0069007400440065007400610069006C00730051004B006900740063006800
+      65006E0001004B00690074006300680065006E00010001000D000A0055006E00
+      69007400440065007400610069006C007300510043006F006E00640069007400
+      69006F006E007300010043006F006E0064006900740069006F006E0073000100
+      01000D000A0055006E0069007400440065007400610069006C00730051004500
+      5300540049004400010045005300540049004400010001000D000A0055006E00
+      69007400440065007400610069006C00730051006F0077006E00650072004900
+      440001006F0077006E006500720049004400010001000D000A0055006E006900
+      7400440065007400610069006C007300510069007300520065006E0074006500
+      6400010069007300520065006E00740065006400010001000D000A0043006F00
+      6E00740072006100630074007300510043006F006E0074007200610063007400
+      49004400010043006F006E007400720061006300740049004400010001000D00
+      0A0043006F006E0074007200610063007400730051006500730074004E006F00
+      01006500730074004E006F00010001000D000A0043006F006E00740072006100
+      630074007300510075006E00690074004E006F00010075006E00690074004E00
+      6F00010001000D000A0043006F006E0074007200610063007400730051006300
+      6F006E0050006500720069006F006400010063006F006E005000650072006900
+      6F006400010001000D000A0043006F006E007400720061006300740073005100
+      63006F006E0074004600010063006F006E0074004600010001000D000A004300
+      6F006E00740072006100630074007300510063006F006E007400540001006300
+      6F006E0074005400010001000D000A0043006F006E0074007200610063007400
+      730051005000610079006D0065006E007400730001005000610079006D006500
+      6E0074007300010001000D000A0043006F006E00740072006100630074007300
+      510049006E00730075007200010049006E00730075007200010001000D000A00
+      43006F006E007400720061006300740073005100570061007400650072000100
+      57006100740065007200010001000D000A0043006F006E007400720061006300
+      74007300510045006C0065006300010045006C0065006300010001000D000A00
+      43006F006E007400720061006300740073005100450078007000690072006500
+      640001004500780070006900720065006400010001000D000A00500061007900
+      6D0065006E007300510049004400010049004400010001000D000A0050006100
+      79006D0065006E007300510043006F006E00740072006100630074004E006F00
+      010043006F006E00740072006100630074004E006F00010001000D000A005000
+      610079006D0065006E00730051005000610079006D0065006E00740053004E00
+      01005000610079006D0065006E00740053004E00010001000D000A0050006100
+      79006D0065006E00730051005000610079006D0065006E007400440061007400
+      650001005000610079006D0065006E0074004400610074006500010001000D00
+      0A005000610079006D0065006E00730051005000610079006D0065006E007400
+      560061006C00750001005000610079006D0065006E007400560061006C007500
+      010001000D000A005000610079006D0065006E00730051005000610069006400
+      01005000610069006400010001000D000A005000610079006D0065006E007300
+      5100500061007900440061007400650001005000610079004400610074006500
+      010001000D000A005000610079006D0065006E00730051005000610079005400
+      79007000650001005000610079005400790070006500010001000D000A004300
+      6F006E007400720061006300740073005100740065006E0061006E0074004900
+      44000100740065006E0061006E00740049004400010001000D000A0054006500
+      6E0061006E00740073005100720079004900710061006D006100490044000100
+      4900710061006D00610049004400010001000D000A00540065006E0061006E00
+      740073005100720079004E0061006D00650001004E0061006D00650001000100
+      0D000A0043006F006E00740072006100630074007300510063006F006E004400
+      610074006500010063006F006E004400610074006500010001000D000A004300
+      6F006E007400720061006300740073005100520065006E00740041006D006F00
+      75006E0074000100520065006E00740041006D006F0075006E00740001000100
+      0D000A0043006F006E0074007200610063007400730051007300540065006E00
+      4E0061006D00650001007300540065006E004E0061006D006500010001000D00
+      0A007300740046006F006E00740073005F0055006E00690063006F0064006500
+      0D000A00730074004D0075006C00740069004C0069006E00650073005F005500
+      6E00690063006F00640065000D000A0043006F006E0074007200610063007400
+      50006500720069006F006400430042002E004900740065006D00730001005900
+      6500610072006C0079002C004D006F006E00740068006C007900010001000D00
+      0A005000610079006D0065006E0074007300430042002E004900740065006D00
+      730001002200310020005000610079006D0065006E00740022002C0022003200
+      20005000610079006D0065006E007400730022002C0022003300200050006100
+      79006D0065006E007400730022002C002200340020005000610079006D006500
+      6E00740073002200010001000D000A007300740044006C006700730043006100
+      7000740069006F006E0073005F0055006E00690063006F00640065000D000A00
+      5700610072006E0069006E00670001005700610072006E0069006E0067000100
+      01000D000A004500720072006F00720001004500720072006F00720001000100
+      0D000A0049006E0066006F0072006D006100740069006F006E00010049006E00
+      66006F0072006D006100740069006F006E00010001000D000A0043006F006E00
+      6600690072006D00010043006F006E006600690072006D00010001000D000A00
+      59006500730001002600590065007300010001000D000A004E006F0001002600
+      4E006F00010001000D000A004F004B0001004F004B00010001000D000A004300
+      61006E00630065006C000100430061006E00630065006C00010001000D000A00
+      410062006F007200740001002600410062006F0072007400010001000D000A00
+      520065007400720079000100260052006500740072007900010001000D000A00
+      490067006E006F007200650001002600490067006E006F007200650001000100
+      0D000A0041006C006C000100260041006C006C00010001000D000A004E006F00
+      200054006F00200041006C006C0001004E0026006F00200074006F0020004100
+      6C006C00010001000D000A00590065007300200054006F00200041006C006C00
+      0100590065007300200074006F002000260041006C006C00010001000D000A00
+      480065006C00700001002600480065006C007000010001000D000A0073007400
+      53007400720069006E00670073005F0055006E00690063006F00640065000D00
+      0A00730074004F00740068006500720053007400720069006E00670073005F00
+      55006E00690063006F00640065000D000A0054007200520065006E0074004300
+      6F006E007400720061006300740073002E004C00610079006F00750074000100
+      660069007400010001000D000A0070006E006C00420061007300650043006F00
+      6E007400610069006E00650072002E004C00610079006F007500740001007600
+      62006F007800010001000D000A0055006E006900740073005100720079002E00
+      440065007400610069006C004600690065006C00640073000100450053005400
+      49004400010001000D000A0055006E0069007400440065007400610069006C00
+      730051002E00440065007400610069006C004600690065006C00640073000100
+      49004400010001000D000A0070006E006C0048006500610064002E004C006100
+      79006F00750074000100680062006F007800010001000D000A0055006E006900
+      54006F006F006C0042006100720031002E004C00610079006F00750074000100
+      680062006F007800010001000D000A0055006E00690054006F006F006C004200
+      7500740074006F006E0037002E004C00610079006F0075007400010066006900
+      7400010001000D000A0055006E00690054006F006F006C004200610072003200
+      2E004C00610079006F00750074000100680062006F007800010001000D000A00
+      65006400740045006D0070004E004F002E004600690065006C0064004C006100
+      620065006C0053006500700061007200610074006F00720001003A0001000100
+      0D000A00540065006E0061006E00740073005100720079002E00440065007400
+      610069006C004600690065006C0064007300010049004400010001000D000A00
+      5000610079006D0065006E00730051002E00440065007400610069006C004600
+      690065006C0064007300010043006F006E00740072006100630074004E006F00
+      010001000D000A0055006E00690043006F006E007400610069006E0065007200
+      500061006E0065006C0032002E004C00610079006F0075007400010066006900
+      7400010001000D000A0055006E00690044004200440061007400650054006900
+      6D0065005000690063006B006500720031002E00440061007400650046006F00
+      72006D0061007400010079007900790079002D004D004D002D00640064000100
+      01000D000A0055006E006900440042004400610074006500540069006D006500
+      5000690063006B006500720031002E004600690065006C0064004C0061006200
+      65006C00010043006F006E007400720061006300740020004400610074006500
+      01002A06270631064A062E06200027064406390642062F0601000D000A005500
+      6E006900440042004400610074006500540069006D0065005000690063006B00
+      6500720031002E004600690065006C0064004C006100620065006C0053006500
+      700061007200610074006F00720001003A00010001000D000A0055006E006900
+      440042004400610074006500540069006D0065005000690063006B0065007200
+      31002E00540069006D00650046006F0072006D00610074000100480048003A00
+      6D006D003A0073007300010001000D000A0055006E00690043006F006E007400
+      610069006E0065007200500061006E0065006C0035002E004C00610079006F00
+      750074000100660069007400010001000D000A0055006E006900440042004C00
+      6F006F006B007500700043006F006D0062006F0042006F00780031002E004500
+      6D00700074007900540065007800740001005300650061007200630068002000
+      46006F007200200043006F006E0074007200610063007400010028062D062B06
+      2000390646062000390642062F0601000D000A0055006E006900440042004C00
+      6F006F006B007500700043006F006D0062006F0042006F00780031002E004600
+      690065006C0064004C006100620065006C005300650070006100720061007400
+      6F00720001003A00010001000D000A0055006E00690043006F006E0074006100
+      69006E0065007200500061006E0065006C0038002E004C00610079006F007500
+      74000100680062006F007800010001000D000A0055006E00690043006F006E00
+      7400610069006E0065007200500061006E0065006C0037002E004C0061007900
+      6F00750074000100660069007400010001000D000A0070006E006C0043006F00
+      6E0044006100740061002E004C00610079006F00750074000100760062006F00
+      7800010001000D000A0055006E00690043006F006E007400610069006E006500
+      7200500061006E0065006C0031002E004C00610079006F007500740001007600
+      62006F007800010001000D000A00540065006E0061006E007400460069006500
+      6C0064005300650074002E004C00610079006F0075007400010061006E006300
+      68006F007200010001000D000A00540065006E0061006E007400460069006500
+      6C0064005300650074002E005400690074006C0065000100540065006E006100
+      6E00740020004400610074006100010028064A062706460627062A0620002706
+      4406450633062A0623062C06310601000D000A0055006E006900460069006500
+      6C00640043006F006E007400610069006E006500720032002E004C0061007900
+      6F00750074000100680062006F007800010001000D000A006500640054006E00
+      61006D0065002E004600690065006C0064004C006100620065006C0001005400
+      65006E0061006E00740020004E0061006D006500010027063306450620002706
+      4406450633062A0623062C06310601000D000A006500640054006E0061006D00
+      65002E004600690065006C0064004C006100620065006C005300650070006100
+      7200610074006F00720001003A00010001000D000A0065006400540049004400
+      4E006F002E004600690065006C0064004C006100620065006C00010054006500
+      6E0061006E007400200049004400010001000D000A0065006400540049004400
+      4E006F002E004600690065006C0064004C006100620065006C00530065007000
+      61007200610074006F00720001003A00010001000D000A0055006E0069004600
+      690065006C00640043006F006E007400610069006E006500720031002E004C00
+      610079006F00750074000100680062006F007800010001000D000A0065006400
+      54007000680031002E004600690065006C0064004C006100620065006C000100
+      4D006F00620069006C0065002000310001002C06480627064406200031000100
+      0D000A006500640054007000680031002E004600690065006C0064004C006100
+      620065006C0053006500700061007200610074006F00720001003A0001000100
+      0D000A006500640054007000680032002E004600690065006C0064004C006100
+      620065006C0001004D006F00620069006C0065002000320001002C0648062706
+      44062000320001000D000A006500640054007000680032002E00460069006500
+      6C0064004C006100620065006C0053006500700061007200610074006F007200
+      01003A00010001000D000A006500640054006D00610069006C002E0046006900
+      65006C0064004C006100620065006C00010045006D00610069006C0001002706
+      440627064A0645064A06440601000D000A006500640054006D00610069006C00
+      2E004600690065006C0064004C006100620065006C0053006500700061007200
+      610074006F00720001003A00010001000D000A0065006400540077006F007200
+      6B002E004600690065006C0064004C006100620065006C00010057006F007200
+      6B0020004C006F0063006100740069006F006E00010045064306270646062000
+      2706440639064506440601000D000A0065006400540077006F0072006B002E00
+      4600690065006C0064004C006100620065006C00530065007000610072006100
+      74006F00720001003A00010001000D000A00530065006C006500630074004500
+      730074006100740050006E006C002E004C00610079006F007500740001006800
+      62006F007800010001000D000A00440042004C006F006F006B00750070004500
+      7300740061007400650073002E004600690065006C0064004C00610062006500
+      6C000100530065006C0065006300740020004500730074006100740065000100
+      27062E062A063106200027064406390642062706310601000D000A0044004200
+      4C006F006F006B007500700045007300740061007400650073002E0046006900
+      65006C0064004C006100620065006C0053006500700061007200610074006F00
+      720001003A00010001000D000A00440042004C006F006F006B00750070005500
+      6E006900740073002E004600690065006C0064004C006100620065006C000100
+      530065006C00650063007400200055006E0069007400010027062E062A063106
+      20002706440648062D062F06470601000D000A00440042004C006F006F006B00
+      7500700055006E006900740073002E004600690065006C0064004C0061006200
+      65006C0053006500700061007200610074006F00720001003A00010001000D00
+      0A0055006E00690043006F006E007400610069006E0065007200500061006E00
+      65006C0033002E004C00610079006F0075007400010066006900740001000100
+      0D000A0043006F006E007400720061006300740042006F0078002E004C006100
+      79006F00750074000100760062006F007800010001000D000A0043006F006E00
+      740031002E004C00610079006F00750074000100680062006F00780001000100
+      0D000A0043006F006E007400720061006300740050006500720069006F006400
+      430042002E004600690065006C0064004C006100620065006C00010043006F00
+      6E0074007200610063007400200050006500720069006F006400010045062F06
+      2906200027064406390642062F0601000D000A0043006F006E00740072006100
+      6300740050006500720069006F006400430042002E004600690065006C006400
+      4C006100620065006C0053006500700061007200610074006F00720001003A00
+      010001000D000A0043006F006E0074007200610063007400460072006F006D00
+      2E00440061007400650046006F0072006D00610074000100640064002F004D00
+      4D002F007900790079007900010001000D000A0043006F006E00740072006100
+      63007400460072006F006D002E004600690065006C0064004C00610062006500
+      6C0001005300740061007200740073002000460072006F006D0001004A062806
+      2F062306200041064A0601000D000A0043006F006E0074007200610063007400
+      460072006F006D002E004600690065006C0064004C006100620065006C005300
+      6500700061007200610074006F00720001003A00010001000D000A0043006F00
+      6E0074007200610063007400460072006F006D002E00540069006D0065004600
+      6F0072006D00610074000100480048003A006D006D003A007300730001000100
+      0D000A0043006F006E007400720061006300740054006F002E00440061007400
+      650046006F0072006D00610074000100640064002F004D004D002F0079007900
+      79007900010001000D000A0043006F006E007400720061006300740054006F00
+      2E004600690065006C0064004C006100620065006C00010045006E0064007300
+      200049006E000100480620004A0646062A0647064A06200041064A0601000D00
+      0A0043006F006E007400720061006300740054006F002E004600690065006C00
+      64004C006100620065006C0053006500700061007200610074006F0072000100
+      3A00010001000D000A0043006F006E007400720061006300740054006F002E00
+      540069006D00650046006F0072006D00610074000100480048003A006D006D00
+      3A0073007300010001000D000A005000610079006D0065006E00740073004300
+      42002E004600690065006C0064004C006100620065006C000100500061007900
+      6D0065006E00740020005400790070006500010039062F062F06200027064406
+      2F064106390627062A0601000D000A005000610079006D0065006E0074007300
+      430042002E004600690065006C0064004C006100620065006C00530065007000
+      61007200610074006F00720001003A00010001000D000A00500079006D007400
+      53006300680050006E006C002E004C00610079006F0075007400010068006200
+      6F007800010001000D000A0050006D00740031002E004600690065006C006400
+      4C006100620065006C0053006500700061007200610074006F00720001003A00
+      010001000D000A0050006D00740032002E004600690065006C0064004C006100
+      620065006C00010031002D00010001000D000A0050006D00740032002E004600
+      690065006C0064004C006100620065006C005300650070006100720061007400
+      6F00720001003A00010001000D000A0050006D00740033002E00460069006500
+      6C0064004C006100620065006C00010031002D00010001000D000A0050006D00
+      740033002E004600690065006C0064004C006100620065006C00530065007000
+      61007200610074006F00720001003A00010001000D000A0050006D0074003400
+      2E004600690065006C0064004C006100620065006C00010031002D0001000100
+      0D000A0050006D00740034002E004600690065006C0064004C00610062006500
+      6C0053006500700061007200610074006F00720001003A00010001000D000A00
+      55006E00690043006F006E007400610069006E0065007200500061006E006500
+      6C0034002E004C00610079006F00750074000100680062006F00780001000100
+      0D000A0049006E007300750072004500640074002E004600690065006C006400
+      4C006100620065006C00010049006E0073007500720061006E00630065000100
+      270644062A06230645064A06460601000D000A0049006E007300750072004500
+      640074002E004600690065006C0064004C006100620065006C00530065007000
+      61007200610074006F00720001003A00010001000D000A005700610074006500
+      72004500640074002E004600690065006C0064004C006100620065006C000100
+      5700610074006500720001002706440645064A062706470601000D000A005700
+      61007400650072004500640074002E004600690065006C0064004C0061006200
+      65006C0053006500700061007200610074006F00720001003A00010001000D00
+      0A0045006C006500630074004500640074002E004600690065006C0064004C00
+      6100620065006C000100530068006100720065006400200045006C0065006300
+      74007200690063006900740079000100270634062A0631062706430620002706
+      440643064706310628062706210601000D000A0045006C006500630074004500
+      640074002E004600690065006C0064004C006100620065006C00530065007000
+      61007200610074006F00720001003A00010001000D000A0050006D0074005600
+      6500720074006900630061006C0047007200690064002E004800650061006400
+      650072005400690074006C00650001005000610079006D0065006E0074007300
+      2000530063006800640075006C00650001002C062F0648064406200027064406
+      2F064106390627062A0601000D000A00730074004C006F00630061006C006500
+      73005F0055006E00690063006F00640065000D000A007300740043006F006C00
+      6C0065006300740069006F006E0073005F0055006E00690063006F0064006500
+      0D000A0067007200640055006E006900740073004C002E0043006F006C007500
+      6D006E0073005B0030005D002E0043006800650063006B0042006F0078004600
+      690065006C0064002E004600690065006C006400560061006C00750065007300
+      010074007200750065003B00660061006C0073006500010001000D000A006700
+      7200640055006E006900740073004C002E0043006F006C0075006D006E007300
+      5B0030005D002E005400690074006C0065002E00430061007000740069006F00
+      6E00010043006F006E007400720061006300740049004400010001000D000A00
+      67007200640055006E006900740073004C002E0043006F006C0075006D006E00
+      73005B0031005D002E0043006800650063006B0042006F007800460069006500
+      6C0064002E004600690065006C006400560061006C0075006500730001007400
+      7200750065003B00660061006C0073006500010001000D000A00670072006400
+      55006E006900740073004C002E0043006F006C0075006D006E0073005B003100
+      5D002E005400690074006C0065002E00430061007000740069006F006E000100
+      7300540065006E004E0061006D00650001002706330645062000270644064506
+      33062A0623062C06310601000D000A0067007200640055006E00690074004400
+      65007400610069006C0073002E0043006F006C0075006D006E0073005B003000
+      5D002E0043006800650063006B0042006F0078004600690065006C0064002E00
+      4600690065006C006400560061006C0075006500730001007400720075006500
+      3B00660061006C0073006500010001000D000A0067007200640055006E006900
+      7400440065007400610069006C0073002E0043006F006C0075006D006E007300
+      5B0030005D002E005400690074006C0065002E00430061007000740069006F00
+      6E00010055006E006900740001002706440648062D062F06470601000D000A00
+      67007200640055006E0069007400440065007400610069006C0073002E004300
+      6F006C0075006D006E0073005B0031005D002E0043006800650063006B004200
+      6F0078004600690065006C0064002E004600690065006C006400560061006C00
+      750065007300010074007200750065003B00660061006C007300650001000100
+      0D000A0067007200640055006E0069007400440065007400610069006C007300
+      2E0043006F006C0075006D006E0073005B0031005D002E005400690074006C00
+      65002E00430061007000740069006F006E00010052006F006F006D0073000100
+      270644063A063106410601000D000A0067007200640055006E00690074004400
+      65007400610069006C0073002E0043006F006C0075006D006E0073005B003200
+      5D002E0043006800650063006B0042006F0078004600690065006C0064002E00
+      4600690065006C006400560061006C0075006500730001007400720075006500
+      3B00660061006C0073006500010001000D000A0067007200640055006E006900
+      7400440065007400610069006C0073002E0043006F006C0075006D006E007300
+      5B0032005D002E005400690074006C0065002E00430061007000740069006F00
+      6E00010046006C006F006F007200010027064406370627062806420601000D00
+      0A0067007200640055006E0069007400440065007400610069006C0073002E00
+      43006F006C0075006D006E0073005B0033005D002E0043006800650063006B00
+      42006F0078004600690065006C0064002E004600690065006C00640056006100
+      6C00750065007300010074007200750065003B00660061006C00730065000100
+      01000D000A0067007200640055006E0069007400440065007400610069006C00
+      73002E0043006F006C0075006D006E0073005B0033005D002E00540069007400
+      6C0065002E00430061007000740069006F006E00010050007200690063006500
+      31000100310020002F0641063906470601000D000A0067007200640055006E00
+      69007400440065007400610069006C0073002E0043006F006C0075006D006E00
+      73005B0034005D002E0043006800650063006B0042006F007800460069006500
+      6C0064002E004600690065006C006400560061006C0075006500730001007400
+      7200750065003B00660061006C0073006500010001000D000A00670072006400
+      55006E0069007400440065007400610069006C0073002E0043006F006C007500
+      6D006E0073005B0034005D002E005400690074006C0065002E00430061007000
+      740069006F006E0001005000720069006300650032000100320020002F064106
+      3906470601000D000A0067007200640055006E00690074004400650074006100
+      69006C0073002E0043006F006C0075006D006E0073005B0035005D002E004300
+      6800650063006B0042006F0078004600690065006C0064002E00460069006500
+      6C006400560061006C00750065007300010074007200750065003B0066006100
+      6C0073006500010001000D000A0067007200640055006E006900740044006500
+      7400610069006C0073002E0043006F006C0075006D006E0073005B0035005D00
+      2E005400690074006C0065002E00430061007000740069006F006E0001005000
+      720069006300650033000100330020002F0641063906470601000D000A006700
+      7200640055006E0069007400440065007400610069006C0073002E0043006F00
+      6C0075006D006E0073005B0036005D002E0043006800650063006B0042006F00
+      78004600690065006C0064002E004600690065006C006400560061006C007500
+      65007300010074007200750065003B00660061006C0073006500010001000D00
+      0A0067007200640055006E0069007400440065007400610069006C0073002E00
+      43006F006C0075006D006E0073005B0036005D002E005400690074006C006500
+      2E00430061007000740069006F006E0001005000720069006300650034000100
+      340020002F0641063906470601000D000A0067007200640055006E0069007400
+      440065007400610069006C0073002E0043006F006C0075006D006E0073005B00
+      37005D002E0043006800650063006B0042006F0078004600690065006C006400
+      2E004600690065006C006400560061006C007500650073000100740072007500
+      65003B00660061006C0073006500010001000D000A0067007200640055006E00
+      69007400440065007400610069006C0073002E0043006F006C0075006D006E00
+      73005B0037005D002E005400690074006C0065002E0043006100700074006900
+      6F006E0001004E006F0074006500730001004506440627062D06380629060100
+      0D000A0067007200640055006E0069007400440065007400610069006C007300
+      2E0043006F006C0075006D006E0073005B0038005D002E004300680065006300
+      6B0042006F0078004600690065006C0064002E004600690065006C0064005600
+      61006C00750065007300010074007200750065003B00660061006C0073006500
+      010001000D000A0067007200640055006E006900740044006500740061006900
+      6C0073002E0043006F006C0075006D006E0073005B0038005D002E0054006900
+      74006C0065002E00430061007000740069006F006E0001004500010001000D00
+      0A0067007200640055006E0069007400440065007400610069006C0073002E00
+      43006F006C0075006D006E0073005B0039005D002E0043006800650063006B00
+      42006F0078004600690065006C0064002E004600690065006C00640056006100
+      6C00750065007300010074007200750065003B00660061006C00730065000100
+      01000D000A0067007200640055006E0069007400440065007400610069006C00
+      73002E0043006F006C0075006D006E0073005B0039005D002E00540069007400
+      6C0065002E00430061007000740069006F006E0001004B00010001000D000A00
+      67007200640055006E0069007400440065007400610069006C0073002E004300
+      6F006C0075006D006E0073005B00310030005D002E0043006800650063006B00
+      42006F0078004600690065006C0064002E004600690065006C00640056006100
+      6C00750065007300010074007200750065003B00660061006C00730065000100
+      01000D000A0067007200640055006E0069007400440065007400610069006C00
+      73002E0043006F006C0075006D006E0073005B00310030005D002E0054006900
+      74006C0065002E00430061007000740069006F006E0001004300010001000D00
+      0A0067007200640055006E0069007400440065007400610069006C0073002E00
+      43006F006C0075006D006E0073005B00310031005D002E004300680065006300
+      6B0042006F0078004600690065006C0064002E004600690065006C0064005600
+      61006C00750065007300010074007200750065003B00660061006C0073006500
+      010001000D000A0067007200640055006E006900740044006500740061006900
+      6C0073002E0043006F006C0075006D006E0073005B00310031005D002E005400
+      690074006C0065002E00430061007000740069006F006E000100520001000100
+      0D000A0067007200640055006E0069007400440065007400610069006C007300
+      2E0043006F006C0075006D006E0073005B00310032005D002E00430068006500
+      63006B0042006F0078004600690065006C0064002E004600690065006C006400
+      560061006C00750065007300010074007200750065003B00660061006C007300
+      6500010001000D000A0067007200640055006E00690074004400650074006100
+      69006C0073002E0043006F006C0075006D006E0073005B00310032005D002E00
+      5400690074006C0065002E00430061007000740069006F006E00010045005300
+      540049004400010001000D000A0067007200640055006E006900740044006500
+      7400610069006C0073002E0043006F006C0075006D006E0073005B0031003300
+      5D002E0043006800650063006B0042006F0078004600690065006C0064002E00
+      4600690065006C006400560061006C0075006500730001007400720075006500
+      3B00660061006C0073006500010001000D000A0067007200640055006E006900
+      7400440065007400610069006C0073002E0043006F006C0075006D006E007300
+      5B00310033005D002E005400690074006C0065002E0043006100700074006900
+      6F006E0001006F0077006E006500720049004400010001000D000A0067007200
+      640055006E0069007400440065007400610069006C0073002E0043006F006C00
+      75006D006E0073005B00310034005D002E0043006800650063006B0042006F00
+      78004600690065006C0064002E004600690065006C006400560061006C007500
+      65007300010074007200750065003B00660061006C0073006500010001000D00
+      0A0067007200640055006E0069007400440065007400610069006C0073002E00
+      43006F006C0075006D006E0073005B00310034005D002E005400690074006C00
+      65002E00430061007000740069006F006E00010049004400010001000D000A00
+      50006D00740056006500720074006900630061006C0047007200690064002E00
+      4400420043006F006C0075006D006E0073005B0030005D002E00430068006500
+      63006B0042006F0078004600690065006C0064002E004600690065006C006400
+      560061006C00750065007300010074007200750065003B00660061006C007300
+      6500010001000D000A0050006D00740056006500720074006900630061006C00
+      47007200690064002E004400420043006F006C0075006D006E0073005B003000
+      5D002E005400690074006C0065002E00430061007000740069006F006E000100
+      5000610079006D0065006E007400440061007400650001002A06270631064A06
+      2E062000270644062F0641063906470601000D000A0050006D00740056006500
+      720074006900630061006C0047007200690064002E004400420043006F006C00
+      75006D006E0073005B0031005D002E0043006800650063006B0042006F007800
+      4600690065006C0064002E004600690065006C006400560061006C0075006500
+      7300010074007200750065003B00660061006C0073006500010001000D000A00
+      50006D00740056006500720074006900630061006C0047007200690064002E00
+      4400420043006F006C0075006D006E0073005B0031005D002E00540069007400
+      6C0065002E00430061007000740069006F006E0001005000610079006D006500
+      6E007400560061006C0075000100270644064506280644063A0601000D000A00
+      50006D00740056006500720074006900630061006C0047007200690064002E00
+      4400420043006F006C0075006D006E0073005B0032005D002E00430068006500
+      63006B0042006F0078004600690065006C0064002E004600690065006C006400
+      560061006C00750065007300010074007200750065003B00660061006C007300
+      6500010001000D000A0050006D00740056006500720074006900630061006C00
+      47007200690064002E004400420043006F006C0075006D006E0073005B003200
+      5D002E005400690074006C0065002E00430061007000740069006F006E000100
+      50006100690064000100450633062F062F06470601000D000A0050006D007400
+      56006500720074006900630061006C0047007200690064002E00560065007200
+      74006900630061006C0043006F006C0075006D006E0073005B0030005D002E00
+      5400690074006C0065002E00430061007000740069006F006E00010041000100
+      01000D000A0050006D00740056006500720074006900630061006C0047007200
+      690064002E0056006500720074006900630061006C0043006F006C0075006D00
+      6E0073005B0031005D002E005400690074006C0065002E004300610070007400
+      69006F006E0001004200010001000D000A0050006D0074005600650072007400
+      6900630061006C0047007200690064002E005600650072007400690063006100
+      6C0043006F006C0075006D006E0073005B0032005D002E005400690074006C00
+      65002E00430061007000740069006F006E0001004300010001000D000A005000
+      6D00740056006500720074006900630061006C0047007200690064002E005600
+      6500720074006900630061006C0043006F006C0075006D006E0073005B003300
+      5D002E005400690074006C0065002E00430061007000740069006F006E000100
+      4400010001000D000A0073007400430068006100720053006500740073005F00
+      55006E00690063006F00640065000D000A00}
+  end
+  object TenantsQry: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'Select * from Persons'
+      'where PersonType = '#39'tenant'#39
+      'order by ID')
+    MasterSource = ContractsQsrc
+    MasterFields = 'tenantID'
+    DetailFields = 'ID'
+    Options.FullRefresh = True
+    OnNewRecord = TenantsQryNewRecord
+    Left = 22
+    Top = 163
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'tenantID'
+        Value = nil
+      end>
+    object TenantsQryID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+    object TenantsQryName: TWideStringField
+      FieldName = 'Name'
+      Required = True
+      Size = 50
+    end
+    object TenantsQryphone1: TWideStringField
+      FieldName = 'phone1'
+      Required = True
+      Visible = False
+      Size = 15
+    end
+    object TenantsQryphone2: TWideStringField
+      FieldName = 'phone2'
+      Visible = False
+      Size = 15
+    end
+    object TenantsQryeMail: TWideStringField
+      FieldName = 'eMail'
+      Visible = False
+      Size = 50
+    end
+    object TenantsQrypersonType: TWideStringField
+      FieldName = 'personType'
+      Required = True
+      Visible = False
+    end
+    object TenantsQryIqamaID: TWideStringField
+      FieldName = 'IqamaID'
+      Size = 10
+    end
+    object TenantsQryworkPlace: TWideStringField
+      FieldName = 'workPlace'
+      Size = 50
+    end
+  end
+  object TenantsSrc: TUniDataSource
+    DataSet = TenantsQry
+    Left = 30
+    Top = 219
+  end
+  object EstatesQry: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM estates'
+      'order by ID')
+    Left = 78
+    Top = 307
+    object EstatesQryID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+    object EstatesQryownerID: TIntegerField
+      FieldName = 'ownerID'
+      Required = True
+      Visible = False
+    end
+    object EstatesQryestNo: TIntegerField
+      FieldName = 'estNo'
+      Required = True
+    end
+    object EstatesQryestName: TWideStringField
+      FieldName = 'estName'
+      Size = 25
+    end
+    object EstatesQryestDistrict: TWideStringField
+      FieldName = 'estDistrict'
+      Required = True
+      Visible = False
+      Size = 40
+    end
+    object EstatesQryestStreet: TWideStringField
+      FieldName = 'estStreet'
+      Required = True
+      Visible = False
+      Size = 40
+    end
+    object EstatesQryUnitsCount: TIntegerField
+      FieldName = 'UnitsCount'
+      Visible = False
+    end
+    object EstatesQryUnitsRented: TIntegerField
+      FieldName = 'UnitsRented'
+      Visible = False
+    end
+  end
+  object EstatesSrc: TUniDataSource
+    DataSet = EstatesQry
+    Left = 94
+    Top = 275
+  end
+  object UnitsQry: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM units'
+      'where isRented =  '#39'0'#39' '
+      'order by ID')
+    MasterSource = EstatesSrc
+    MasterFields = 'estNo'
+    DetailFields = 'ESTID'
+    Left = 478
+    Top = 291
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'estNo'
+        ParamType = ptInput
+        Value = 33
+      end>
+    object UnitsQryUnit: TWideStringField
+      DisplayWidth = 20
+      FieldName = 'Unit'
+      Required = True
+      Size = 30
+    end
+    object UnitsQryRooms: TWideStringField
+      DisplayWidth = 40
+      FieldName = 'Rooms'
+      Size = 50
+    end
+    object UnitsQryFloor: TWideStringField
+      DisplayWidth = 20
+      FieldName = 'Floor'
+      Size = 30
+    end
+    object UnitsQryPrice1: TFloatField
+      FieldName = 'Price1'
+      Required = True
+    end
+    object UnitsQryPrice2: TFloatField
+      FieldName = 'Price2'
+    end
+    object UnitsQryPrice3: TFloatField
+      FieldName = 'Price3'
+    end
+    object UnitsQryPrice4: TFloatField
+      FieldName = 'Price4'
+    end
+    object UnitsQryNotes: TWideStringField
+      DisplayWidth = 75
+      FieldName = 'Notes'
+      Size = 250
+    end
+    object UnitsQryElectricity: TBooleanField
+      DisplayLabel = 'E'
+      FieldName = 'Electricity'
+    end
+    object UnitsQryKitchen: TBooleanField
+      DisplayLabel = 'K'
+      FieldName = 'Kitchen'
+    end
+    object UnitsQryConditions: TBooleanField
+      DisplayLabel = 'C'
+      FieldName = 'Conditions'
+    end
+    object UnitsQryisRented: TBooleanField
+      DisplayLabel = 'R'
+      FieldName = 'isRented'
+      Required = True
+    end
+    object UnitsQryESTID: TIntegerField
+      FieldName = 'ESTID'
+      Required = True
+      Visible = False
+    end
+    object UnitsQryownerID: TIntegerField
+      FieldName = 'ownerID'
+      Required = True
+      Visible = False
+    end
+    object UnitsQryID: TIntegerField
+      FieldName = 'ID'
+      Visible = False
+    end
+  end
+  object UnitsSrc: TUniDataSource
+    DataSet = UnitsQry
+    Left = 526
+    Top = 291
+  end
+  object UnitDetailsQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM units'
+      'order by ID')
+    MasterSource = UnitsSrc
+    MasterFields = 'ID'
+    DetailFields = 'ID'
+    AfterOpen = UnitDetailsQAfterOpen
+    AfterScroll = UnitDetailsQAfterScroll
+    Left = 278
+    Top = 371
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        Value = nil
+      end>
+    object UnitDetailsQUnit: TWideStringField
+      FieldName = 'Unit'
+      Required = True
+      Size = 30
+    end
+    object UnitDetailsQRooms: TWideStringField
+      FieldName = 'Rooms'
+      Size = 50
+    end
+    object UnitDetailsQFloor: TWideStringField
+      FieldName = 'Floor'
+      Size = 30
+    end
+    object UnitDetailsQPrice1: TFloatField
+      FieldName = 'Price1'
+      Required = True
+    end
+    object UnitDetailsQPrice2: TFloatField
+      FieldName = 'Price2'
+    end
+    object UnitDetailsQPrice3: TFloatField
+      FieldName = 'Price3'
+    end
+    object UnitDetailsQPrice4: TFloatField
+      FieldName = 'Price4'
+    end
+    object UnitDetailsQNotes: TWideStringField
+      FieldName = 'Notes'
+      Size = 250
+    end
+    object UnitDetailsQElectricity: TBooleanField
+      FieldName = 'Electricity'
+    end
+    object UnitDetailsQKitchen: TBooleanField
+      FieldName = 'Kitchen'
+    end
+    object UnitDetailsQConditions: TBooleanField
+      FieldName = 'Conditions'
+    end
+    object UnitDetailsQESTID: TIntegerField
+      FieldName = 'ESTID'
+      Required = True
+      Visible = False
+    end
+    object UnitDetailsQownerID: TIntegerField
+      FieldName = 'ownerID'
+      Required = True
+      Visible = False
+    end
+    object UnitDetailsQisRented: TBooleanField
+      FieldName = 'isRented'
+      Required = True
+      Visible = False
+    end
+    object UnitDetailsQID: TIntegerField
+      FieldName = 'ID'
+      Visible = False
+    end
+  end
+  object UnitDetailsQsrc: TUniDataSource
+    DataSet = UnitDetailsQ
+    Left = 398
+    Top = 347
+  end
+  object ContractsQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM contracts'
+      ' '
+      'order by contractID')
+    AfterEdit = ContractsQAfterEdit
+    BeforePost = ContractsQBeforePost
+    AfterPost = ContractsQAfterPost
+    BeforeCancel = ContractsQBeforeCancel
+    BeforeDelete = ContractsQBeforeDelete
+    AfterDelete = ContractsQAfterDelete
+    AfterScroll = ContractsQAfterScroll
+    OnNewRecord = ContractsQNewRecord
+    Left = 798
+    Top = 123
+    object ContractsQContractID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ContractID'
+    end
+    object ContractsQconDate: TDateField
+      FieldName = 'conDate'
+      Required = True
+    end
+    object ContractsQtenantID: TIntegerField
+      FieldName = 'tenantID'
+      Required = True
+    end
+    object ContractsQestNo: TIntegerField
+      FieldName = 'estNo'
+      Required = True
+    end
+    object ContractsQunitNo: TIntegerField
+      FieldName = 'unitNo'
+      Required = True
+    end
+    object ContractsQconPeriod: TWideStringField
+      FieldName = 'conPeriod'
+      Required = True
+      Size = 15
+    end
+    object ContractsQcontF: TDateField
+      FieldName = 'contF'
+      Required = True
+    end
+    object ContractsQcontT: TDateField
+      FieldName = 'contT'
+      Required = True
+    end
+    object ContractsQPayments: TIntegerField
+      FieldName = 'Payments'
+      Required = True
+    end
+    object ContractsQRentAmount: TFloatField
+      FieldName = 'RentAmount'
+      Required = True
+    end
+    object ContractsQInsur: TFloatField
+      FieldName = 'Insur'
+      Required = True
+    end
+    object ContractsQWater: TFloatField
+      FieldName = 'Water'
+      Required = True
+    end
+    object ContractsQElec: TFloatField
+      FieldName = 'Elec'
+      Required = True
+    end
+    object ContractsQExpired: TBooleanField
+      FieldName = 'Expired'
+      Required = True
+    end
+    object ContractsQsTenName: TStringField
+      FieldKind = fkLookup
+      FieldName = 'sTenName'
+      LookupDataSet = TenantsQry
+      LookupKeyFields = 'ID'
+      LookupResultField = 'Name'
+      KeyFields = 'tenantID'
+      Lookup = True
+    end
+  end
+  object ContractsQsrc: TUniDataSource
+    DataSet = ContractsQ
+    OnStateChange = ContractsQsrcStateChange
+    Left = 798
+    Top = 171
+  end
+  object ActionList1: TActionList
+    Left = 488
+    Top = 127
+    object DatasetFirst1: TDataSetFirst
+      Category = 'Contract Dataset'
+      Hint = 'First'
+      ImageIndex = 0
+      DataSource = ContractsQsrc
+    end
+    object DatasetPrior1: TDataSetPrior
+      Category = 'Contract Dataset'
+      Hint = 'Prior'
+      ImageIndex = 1
+      DataSource = ContractsQsrc
+    end
+    object DatasetNext1: TDataSetNext
+      Category = 'Contract Dataset'
+      Hint = 'Next'
+      ImageIndex = 2
+      DataSource = ContractsQsrc
+    end
+    object DatasetLast1: TDataSetLast
+      Category = 'Contract Dataset'
+      Hint = 'Last'
+      ImageIndex = 3
+      DataSource = ContractsQsrc
+    end
+    object DatasetInsert1: TDataSetInsert
+      Category = 'Contract Dataset'
+      Hint = 'Insert'
+      ImageIndex = 4
+      DataSource = ContractsQsrc
+    end
+    object DatasetDelete1: TDataSetDelete
+      Category = 'Contract Dataset'
+      Hint = 'Delete'
+      ImageIndex = 5
+      OnExecute = DatasetDelete1Execute
+      DataSource = ContractsQsrc
+    end
+    object DatasetEdit1: TDataSetEdit
+      Category = 'Contract Dataset'
+      Hint = 'Edit'
+      ImageIndex = 6
+      DataSource = ContractsQsrc
+    end
+    object DatasetPost1: TDataSetPost
+      Category = 'Contract Dataset'
+      Hint = 'Post'
+      ImageIndex = 7
+      DataSource = ContractsQsrc
+    end
+    object DatasetCancel1: TDataSetCancel
+      Category = 'Contract Dataset'
+      Hint = 'Cancel'
+      ImageIndex = 8
+      DataSource = ContractsQsrc
+    end
+    object DatasetRefresh1: TDataSetRefresh
+      Category = 'Contract Dataset'
+      Hint = 'Refresh'
+      ImageIndex = 9
+      DataSource = ContractsQsrc
+    end
+  end
+  object PaymensQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM payments'
+      'Order By ID')
+    MasterSource = ContractsQsrc
+    MasterFields = 'ContractID'
+    DetailFields = 'ContractNo'
+    ReadOnly = True
+    Active = True
+    Left = 224
+    Top = 600
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'ContractID'
+        ParamType = ptInput
+        Value = 33
+      end>
+    object PaymensQID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+    object PaymensQContractNo: TIntegerField
+      FieldName = 'ContractNo'
+      Required = True
+      Visible = False
+    end
+    object PaymensQPaymentSN: TIntegerField
+      FieldName = 'PaymentSN'
+      Required = True
+      Visible = False
+    end
+    object PaymensQPaymentDate: TDateField
+      FieldName = 'PaymentDate'
+      Required = True
+    end
+    object PaymensQPaymentValu: TFloatField
+      FieldName = 'PaymentValu'
+      Required = True
+    end
+    object PaymensQPaid: TBooleanField
+      FieldName = 'Paid'
+      Required = True
+    end
+    object PaymensQPayDate: TDateField
+      FieldName = 'PayDate'
+      Visible = False
+    end
+    object PaymensQPayType: TWideStringField
+      FieldName = 'PayType'
+      Visible = False
+      Size = 30
+    end
+  end
+  object PaymensQs: TUniDataSource
+    DataSet = PaymensQ
+    Left = 280
+    Top = 608
+  end
+  object UniQuery1: TUniQuery
+    Connection = UniMainModule.MainDB
+    Left = 662
+    Top = 335
+  end
+end

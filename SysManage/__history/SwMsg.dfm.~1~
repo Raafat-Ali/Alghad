@@ -1,0 +1,11 @@
+object SwMsgF: TSwMsgF
+  Left = 0
+  Top = 0
+  ClientHeight = 242
+  ClientWidth = 527
+  Caption = 'SwMsgF'
+  OldCreateOrder = False
+  MonitoredKeys.Keys = <>
+  PixelsPerInch = 96
+  TextHeight = 13
+end

@@ -1,0 +1,1702 @@
+inherited NewContF: TNewContF
+  ClientHeight = 872
+  ClientWidth = 1059
+  Caption = 'NewContF'
+  BorderStyle = bsNone
+  ExplicitLeft = -153
+  ExplicitWidth = 1059
+  ExplicitHeight = 872
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlBaseContainer: TUniContainerPanel
+    Left = 8
+    Top = 0
+    Width = 1033
+    Height = 809
+    Layout = 'border'
+    ExplicitLeft = 8
+    ExplicitTop = 0
+    ExplicitWidth = 1033
+    ExplicitHeight = 809
+    object pnlCenter: TUniContainerPanel
+      Left = 135
+      Top = 27
+      Width = 970
+      Height = 654
+      Hint = ''
+      ParentColor = False
+      TabOrder = 1
+      Layout = 'vbox'
+      LayoutAttribs.Align = 'center'
+      LayoutConfig.Region = 'center'
+      object pnlHead: TUniContainerPanel
+        Left = 3
+        Top = 15
+        Width = 958
+        Height = 50
+        Hint = ''
+        ParentColor = False
+        TabOrder = 1
+        Layout = 'hbox'
+        LayoutAttribs.Align = 'middle'
+        LayoutConfig.Width = '100%'
+        LayoutConfig.Margin = '10 0 0 0'
+        object UniToolBar1: TUniToolBar
+          Left = 3
+          Top = 2
+          Width = 774
+          Height = 45
+          Hint = ''
+          ButtonHeight = 40
+          ButtonWidth = 40
+          Images = UniMainModule.ImgTol32
+          LayoutAttribs.Align = 'middle'
+          LayoutAttribs.Pack = 'center'
+          LayoutConfig.Flex = 1
+          LayoutConfig.Margin = '0 5 0 5'
+          Layout = 'hbox'
+          Align = alNone
+          TabOrder = 1
+          ParentColor = False
+          Color = clBtnFace
+          object UniToolButton6: TUniToolButton
+            Left = 0
+            Top = 0
+            Width = 8
+            Hint = ''
+            Style = tbsDivider
+            Caption = 'UniToolButton6'
+            TabOrder = 6
+          end
+          object UniToolButton1: TUniToolButton
+            Left = 8
+            Top = 0
+            Hint = ''
+            ImageIndex = 0
+            Caption = ''
+            TabOrder = 1
+          end
+          object UniToolButton2: TUniToolButton
+            Left = 48
+            Top = 0
+            Width = 8
+            Hint = ''
+            Style = tbsDivider
+            Caption = 'UniToolButton2'
+            TabOrder = 2
+          end
+          object UniToolButton3: TUniToolButton
+            Left = 56
+            Top = 0
+            Hint = ''
+            ImageIndex = 1
+            Caption = ''
+            TabOrder = 3
+          end
+          object UniToolButton4: TUniToolButton
+            Left = 96
+            Top = 0
+            Width = 8
+            Hint = ''
+            Style = tbsDivider
+            Caption = 'UniToolButton4'
+            TabOrder = 4
+          end
+          object UniToolButton5: TUniToolButton
+            Left = 104
+            Top = 0
+            Hint = ''
+            ImageIndex = 3
+            Caption = ''
+            TabOrder = 5
+          end
+          object UniToolButton22: TUniToolButton
+            Left = 144
+            Top = 0
+            Width = 8
+            Hint = ''
+            Style = tbsDivider
+            Caption = 'UniToolButton22'
+            TabOrder = 13
+          end
+          object UniToolButton7: TUniToolButton
+            Left = 152
+            Top = 0
+            Width = 385
+            Hint = ''
+            ParentRTL = False
+            Style = tbsContainer
+            Caption = 'UniToolButton7'
+            Layout = 'fit'
+            TabOrder = 14
+            object UniToolBar2: TUniToolBar
+              Left = 12
+              Top = 2
+              Width = 337
+              Height = 37
+              Hint = ''
+              ParentRTL = False
+              ButtonHeight = 35
+              ButtonWidth = 35
+              Images = UniMainModule.ImgTol32
+              LayoutAttribs.Align = 'middle'
+              LayoutAttribs.Pack = 'center'
+              LayoutConfig.Flex = 1
+              Layout = 'hbox'
+              Align = alNone
+              TabOrder = 1
+              ParentColor = False
+              Color = clBtnFace
+              object UniToolButton9: TUniToolButton
+                Left = 0
+                Top = 0
+                Width = 8
+                Hint = ''
+                Style = tbsSeparator
+                Caption = 'UniToolButton7'
+                TabOrder = 1
+              end
+              object UniToolButton10: TUniToolButton
+                Left = 8
+                Top = 0
+                Hint = ''
+                ParentRTL = False
+                ImageIndex = 12
+                Caption = ''
+                IconAlign = iaCenter
+                TabOrder = 2
+              end
+              object UniToolButton11: TUniToolButton
+                Left = 43
+                Top = 0
+                Width = 8
+                Hint = ''
+                Style = tbsDivider
+                Caption = 'UniToolButton9'
+                TabOrder = 3
+              end
+              object UniToolButton12: TUniToolButton
+                Left = 51
+                Top = 0
+                Hint = ''
+                ParentRTL = False
+                ImageIndex = 11
+                Caption = ''
+                IconAlign = iaCenter
+                TabOrder = 4
+              end
+              object UniToolButton13: TUniToolButton
+                Left = 86
+                Top = 0
+                Width = 8
+                Hint = ''
+                Style = tbsDivider
+                Caption = 'UniToolButton11'
+                TabOrder = 5
+              end
+              object UniToolButton23: TUniToolButton
+                Left = 94
+                Top = 0
+                Width = 131
+                Hint = ''
+                Style = tbsContainer
+                Caption = 'UniToolButton23'
+                TabOrder = 10
+                object edtEmpNO: TUniDBEdit
+                  Left = 0
+                  Top = 0
+                  Width = 131
+                  Height = 35
+                  Hint = ''
+                  DataField = 'ContractID'
+                  DataSource = ContractsQsrc
+                  Align = alClient
+                  Alignment = taCenter
+                  ParentFont = False
+                  Font.Charset = ARABIC_CHARSET
+                  Font.Height = -19
+                  Font.Name = 'Tajawal Black'
+                  Font.Style = [fsBold]
+                  TabOrder = 1
+                  ReadOnly = True
+                  UseFieldAlignment = False
+                  ExplicitHeight = 37
+                end
+              end
+              object UniToolButton24: TUniToolButton
+                Left = 225
+                Top = 0
+                Width = 8
+                Hint = ''
+                Style = tbsDivider
+                Caption = 'UniToolButton24'
+                TabOrder = 11
+              end
+              object UniToolButton14: TUniToolButton
+                Left = 233
+                Top = 0
+                Hint = ''
+                ParentRTL = False
+                ImageIndex = 10
+                Caption = ''
+                IconAlign = iaCenter
+                TabOrder = 6
+              end
+              object UniToolButton15: TUniToolButton
+                Left = 268
+                Top = 0
+                Width = 8
+                Hint = ''
+                Style = tbsDivider
+                Caption = 'UniToolButton13'
+                TabOrder = 7
+              end
+              object UniToolButton25: TUniToolButton
+                Left = 276
+                Top = 0
+                Hint = ''
+                ParentRTL = False
+                ImageIndex = 9
+                Caption = ''
+                IconAlign = iaCenter
+                TabOrder = 8
+              end
+              object UniToolButton26: TUniToolButton
+                Left = 311
+                Top = 0
+                Width = 8
+                Hint = ''
+                Style = tbsSeparator
+                Caption = 'UniToolButton15'
+                TabOrder = 9
+              end
+            end
+          end
+          object UniToolButton8: TUniToolButton
+            Left = 537
+            Top = 0
+            Width = 8
+            Hint = ''
+            Style = tbsDivider
+            Caption = 'UniToolButton8'
+            TabOrder = 15
+          end
+          object UniToolButton17: TUniToolButton
+            Left = 545
+            Top = 0
+            Hint = ''
+            ImageIndex = 4
+            Caption = ''
+            TabOrder = 8
+          end
+          object UniToolButton18: TUniToolButton
+            Left = 585
+            Top = 0
+            Width = 8
+            Hint = ''
+            Style = tbsDivider
+            Caption = 'UniToolButton18'
+            TabOrder = 9
+          end
+          object UniToolButton19: TUniToolButton
+            Left = 593
+            Top = 0
+            Hint = ''
+            ImageIndex = 2
+            Caption = ''
+            TabOrder = 10
+          end
+          object UniToolButton16: TUniToolButton
+            Left = 633
+            Top = 0
+            Width = 8
+            Hint = ''
+            Style = tbsDivider
+            Caption = 'UniToolButton16'
+            TabOrder = 7
+          end
+          object UniToolButton21: TUniToolButton
+            Left = 641
+            Top = 0
+            Hint = ''
+            ImageIndex = 18
+            Caption = 'UniToolButton21'
+            TabOrder = 12
+            OnClick = UniToolButton21Click
+          end
+          object UniToolButton20: TUniToolButton
+            Left = 681
+            Top = 0
+            Width = 8
+            Hint = ''
+            Style = tbsDivider
+            Caption = 'UniToolButton20'
+            TabOrder = 11
+          end
+          object UniToolButton27: TUniToolButton
+            Left = 689
+            Top = 0
+            Hint = ''
+            ImageIndex = 27
+            Caption = ''
+            TabOrder = 16
+          end
+          object UniToolButton28: TUniToolButton
+            Left = 729
+            Top = 0
+            Width = 8
+            Hint = ''
+            Style = tbsDivider
+            Caption = 'UniToolButton28'
+            TabOrder = 17
+          end
+        end
+        object UniDBDateTimePicker1: TUniDBDateTimePicker
+          Left = 793
+          Top = 25
+          Width = 162
+          Hint = ''
+          DataField = 'conDate'
+          DataSource = ContractsQsrc
+          DateTime = 43933.000000000000000000
+          DateFormat = 'yyyy-MM-dd'
+          TimeFormat = 'HH:mm:ss'
+          TabOrder = 2
+          ParentFont = False
+          Font.Style = [fsBold]
+          FieldLabel = 'Contract Date'
+          FieldLabelWidth = 60
+        end
+      end
+      object UniContainerPanel1: TUniContainerPanel
+        Left = 14
+        Top = 71
+        Width = 681
+        Height = 182
+        Hint = ''
+        ParentColor = False
+        TabOrder = 2
+        Layout = 'vbox'
+        LayoutAttribs.Align = 'center'
+        LayoutConfig.Width = '90%'
+        LayoutConfig.Margin = '15 0 0 0'
+        object TenantFieldSet: TUniFieldSet
+          Left = 3
+          Top = 3
+          Width = 553
+          Height = 167
+          Hint = ''
+          Title = 'Tenant Data'
+          LayoutConfig.Flex = 1
+          LayoutConfig.Width = '80%'
+          TabOrder = 1
+          object UniFieldContainer2: TUniFieldContainer
+            Left = 19
+            Top = 16
+            Width = 534
+            Height = 28
+            Hint = ''
+            Margins.Left = 0
+            Margins.Top = 0
+            Margins.Right = 0
+            Margins.Bottom = 0
+            ParentColor = False
+            TabOrder = 5
+            Layout = 'hbox'
+            LayoutAttribs.Align = 'middle'
+            LayoutConfig.Anchor = '100%'
+            LayoutConfig.Margin = '5 0 0 0'
+            object edTname: TUniDBEdit
+              Left = 11
+              Top = 0
+              Width = 172
+              Height = 25
+              Hint = 'Tenant'
+              DataField = 'Name'
+              DataSource = TenantsSrc
+              ParentFont = False
+              Font.Charset = ANSI_CHARSET
+              Font.Height = -13
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+              TabOrder = 1
+              LayoutConfig.Flex = 1
+              FieldLabel = 'Tenant Name'
+            end
+          end
+          object edTIDNo: TUniDBEdit
+            Left = 24
+            Top = 47
+            Width = 121
+            Height = 25
+            Hint = ''
+            DataField = 'IqamaID'
+            DataSource = TenantsSrc
+            ParentFont = False
+            Font.Charset = ANSI_CHARSET
+            Font.Height = -13
+            Font.Name = 'Tajawal'
+            Font.Style = [fsBold]
+            TabOrder = 2
+            ClientEvents.ExtEvents.Strings = (
+              
+                'keydown=function keydown(sender, e, eOpts)'#13#10'{'#13#10'   var ok ='#13#10'    ' +
+                '    event.keyCode == 8 || //backspace'#13#10'        event.keyCode == ' +
+                '9 || //tab'#13#10'        event.keyCode == 13 || //enter  '#13#10'        ev' +
+                'ent.keyCode >= 35 && event.keyCode <= 37 || //end, home, left ar' +
+                'row '#13#10'        event.keyCode == 39 || //right arrow, downd arrow,' +
+                ' insert, delete'#13#10'        event.keyCode == 45 || //insert'#13#10'      ' +
+                '  event.keyCode == 46 || //delete'#13#10'        event.keyCode >= 96 &' +
+                '& event.keyCode <= 105 || // 0-9 on keypad'#13#10'        event.keyCod' +
+                'e >= 48 && event.keyCode <= 57; // 0-9'#13#10#13#10#13#10'    if (!ok) {'#13#10'    ' +
+                '    e.preventDefault();'#13#10'    }'#13#10'}')
+            LayoutConfig.Margin = '5 0 0 0'
+            FieldLabel = 'Tenant ID'
+            FieldLabelWidth = 70
+          end
+          object UniFieldContainer1: TUniFieldContainer
+            Left = 16
+            Top = 73
+            Width = 534
+            Height = 28
+            Hint = ''
+            ParentColor = False
+            TabOrder = 4
+            Layout = 'hbox'
+            LayoutConfig.Anchor = '100%'
+            LayoutConfig.Margin = '5 0 0 0'
+            object edTph1: TUniDBEdit
+              Left = 25
+              Top = 2
+              Width = 200
+              Height = 25
+              Hint = ''
+              DataField = 'phone1'
+              DataSource = TenantsSrc
+              ParentFont = False
+              Font.Charset = ANSI_CHARSET
+              Font.Height = -13
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+              TabOrder = 2
+              ClientEvents.ExtEvents.Strings = (
+                
+                  'keypress=function keypress(sender, e, eOpts)'#13#10'{'#13#10'     var ok ='#13#10 +
+                  '        event.keyCode == 8 || //backspace'#13#10'        event.keyCode' +
+                  ' == 9 || //tab'#13#10'        event.keyCode == 13 || //enter  '#13#10'      ' +
+                  '  event.keyCode >= 35 && event.keyCode <= 37 || //end, home, lef' +
+                  't arrow '#13#10'        event.keyCode == 39 || //right arrow, downd ar' +
+                  'row, insert, delete'#13#10'        event.keyCode == 45 || //insert'#13#10'  ' +
+                  '      event.keyCode == 46 || //delete'#13#10'        event.keyCode >= ' +
+                  '96 && event.keyCode <= 105 || // 0-9 on keypad'#13#10'        event.ke' +
+                  'yCode >= 48 && event.keyCode <= 57; // 0-9'#13#10#13#10#13#10'    if (!ok) {'#13#10 +
+                  '        e.preventDefault();'#13#10'    }'#13#10'}')
+              FieldLabel = 'Mobile 1'
+              FieldLabelWidth = 70
+            end
+            object edTph2: TUniDBEdit
+              Left = 230
+              Top = 2
+              Width = 200
+              Height = 25
+              Hint = ''
+              DataField = 'phone2'
+              DataSource = TenantsSrc
+              ParentFont = False
+              Font.Charset = ANSI_CHARSET
+              Font.Height = -13
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+              TabOrder = 1
+              ClientEvents.ExtEvents.Strings = (
+                
+                  'keypress=function keypress(sender, e, eOpts)'#13#10'{'#13#10'     var ok ='#13#10 +
+                  '        event.keyCode == 8 || //backspace'#13#10'        event.keyCode' +
+                  ' == 9 || //tab'#13#10'        event.keyCode == 13 || //enter  '#13#10'      ' +
+                  '  event.keyCode >= 35 && event.keyCode <= 37 || //end, home, lef' +
+                  't arrow '#13#10'        event.keyCode == 39 || //right arrow, downd ar' +
+                  'row, insert, delete'#13#10'        event.keyCode == 45 || //insert'#13#10'  ' +
+                  '      event.keyCode == 46 || //delete'#13#10'        event.keyCode >= ' +
+                  '96 && event.keyCode <= 105 || // 0-9 on keypad'#13#10'        event.ke' +
+                  'yCode >= 48 && event.keyCode <= 57; // 0-9'#13#10#13#10#13#10'    if (!ok) {'#13#10 +
+                  '        e.preventDefault();'#13#10'    }'#13#10'}')
+              LayoutConfig.Margin = '0 0 0 5'
+              FieldLabel = 'Mobile 2'
+              FieldLabelWidth = 70
+            end
+          end
+          object edTmail: TUniDBEdit
+            Left = 24
+            Top = 109
+            Width = 121
+            Height = 25
+            Hint = ''
+            DataField = 'eMail'
+            DataSource = TenantsSrc
+            ParentFont = False
+            Font.Charset = ANSI_CHARSET
+            Font.Height = -13
+            Font.Name = 'Tajawal'
+            Font.Style = [fsBold]
+            TabOrder = 1
+            LayoutConfig.Margin = '5 0 0 0'
+            FieldLabel = 'Email'
+            FieldLabelWidth = 70
+          end
+          object edTwork: TUniDBEdit
+            Left = 24
+            Top = 140
+            Width = 121
+            Height = 25
+            Hint = ''
+            DataField = 'workPlace'
+            DataSource = TenantsSrc
+            ParentFont = False
+            Font.Charset = ANSI_CHARSET
+            Font.Height = -13
+            Font.Name = 'Tajawal'
+            Font.Style = [fsBold]
+            TabOrder = 3
+            LayoutConfig.Margin = '5 0 0 0'
+            FieldLabel = 'Work Location'
+          end
+        end
+      end
+      object pnlSelectEstUnt: TUniPanel
+        Left = 17
+        Top = 259
+        Width = 680
+        Height = 50
+        Hint = ''
+        TabOrder = 3
+        Caption = ''
+        Layout = 'hbox'
+        LayoutAttribs.Align = 'middle'
+        LayoutAttribs.Pack = 'center'
+        LayoutConfig.Width = '90%'
+        object DBLookupEstates: TUniDBLookupComboBox
+          Left = 88
+          Top = 15
+          Width = 126
+          Height = 27
+          Hint = ''
+          ListField = 'estNo;estName'
+          ListSource = EstatesSrc
+          KeyField = 'ID'
+          ListFieldIndex = 0
+          ParentFont = False
+          Font.Charset = ANSI_CHARSET
+          Font.Height = -13
+          Font.Name = 'Tajawal'
+          Font.Style = [fsBold]
+          AnyMatch = True
+          TabOrder = 1
+          Color = clWindow
+          MatchFieldWidth = False
+          RemoteQuery = True
+          LayoutConfig.Width = '30%'
+          LayoutConfig.Margin = '5 5 5 5'
+          FieldLabel = 'Select Estate'
+          FieldLabelWidth = 90
+          Style = csDropDown
+        end
+        object DBLookupUnits: TUniDBLookupComboBox
+          Left = 279
+          Top = 15
+          Width = 126
+          Height = 27
+          Hint = ''
+          ListField = 'Unit'
+          ListSource = UnitsSrc
+          KeyField = 'ID'
+          ListFieldIndex = 0
+          ParentFont = False
+          Font.Charset = ANSI_CHARSET
+          Font.Height = -13
+          Font.Name = 'Tajawal'
+          Font.Style = [fsBold]
+          AnyMatch = True
+          TabOrder = 2
+          Color = clWindow
+          MatchFieldWidth = False
+          RemoteQuery = True
+          LayoutConfig.Width = '30%'
+          LayoutConfig.Margin = '5 5 5 5'
+          FieldLabel = 'Select Unit'
+          FieldLabelWidth = 90
+          Style = csDropDown
+        end
+      end
+      object pnlUnitDetails: TUniContainerPanel
+        Left = 14
+        Top = 315
+        Width = 668
+        Height = 60
+        Hint = ''
+        ParentColor = False
+        TabOrder = 4
+        Layout = 'fit'
+        LayoutConfig.Width = '90%'
+        object grdUnitDetails: TUniDBGrid
+          Left = 109
+          Top = 11
+          Width = 135
+          Height = 46
+          Hint = ''
+          DataSource = UnitDetailsQsrc
+          Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
+          ReadOnly = True
+          WebOptions.Paged = False
+          WebOptions.FetchAll = True
+          LoadMask.Message = 'Loading data...'
+          ForceFit = True
+          LayoutConfig.Flex = 1
+          LayoutConfig.Width = '100%'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlue
+          Font.Height = -13
+          Font.Name = 'Tajawal'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 1
+          Columns = <
+            item
+              FieldName = 'Unit'
+              Title.Caption = 'Unit'
+              Width = 284
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Rooms'
+              Title.Caption = 'Rooms'
+              Width = 284
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Floor'
+              Title.Caption = 'Floor'
+              Width = 144
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Price1'
+              Title.Caption = 'Price1'
+              Width = 74
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Price2'
+              Title.Caption = 'Price2'
+              Width = 74
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Price3'
+              Title.Caption = 'Price3'
+              Width = 74
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Price4'
+              Title.Caption = 'Price4'
+              Width = 74
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Notes'
+              Title.Caption = 'Notes'
+              Width = 529
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Electricity'
+              Title.Caption = 'E'
+              Width = 39
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Kitchen'
+              Title.Caption = 'K'
+              Width = 39
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'Conditions'
+              Title.Caption = 'C'
+              Width = 39
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'isRented'
+              Title.Caption = 'R'
+              Width = 39
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'ESTID'
+              Title.Caption = 'ESTID'
+              Width = 74
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'ownerID'
+              Title.Caption = 'ownerID'
+              Width = 74
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end
+            item
+              FieldName = 'ID'
+              Title.Caption = 'ID'
+              Width = 74
+              Font.Charset = ANSI_CHARSET
+              Font.Color = clBlue
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+            end>
+        end
+      end
+      object ContractBox: TUniGroupBox
+        Left = 17
+        Top = 368
+        Width = 659
+        Height = 283
+        Hint = ''
+        Caption = 'ContractBox'
+        Layout = 'vbox'
+        LayoutAttribs.Align = 'center'
+        LayoutAttribs.Pack = 'start'
+        LayoutConfig.Flex = 1
+        LayoutConfig.Width = '95%'
+        TabOrder = 5
+        object Cont1: TUniContainerPanel
+          Left = 3
+          Top = 16
+          Width = 638
+          Height = 33
+          Hint = ''
+          ParentColor = False
+          Color = clBtnShadow
+          TabOrder = 1
+          Layout = 'hbox'
+          LayoutAttribs.Align = 'middle'
+          LayoutAttribs.Pack = 'center'
+          LayoutAttribs.Padding = '5'
+          LayoutConfig.Width = '100%'
+          LayoutConfig.Margin = '5 0 0 0'
+          object ContractPeriodCB: TUniComboBox
+            Left = 12
+            Top = 8
+            Width = 145
+            Height = 26
+            Hint = ''
+            Style = csDropDownList
+            Text = ''
+            Items.Strings = (
+              'Yearly'
+              'Monthly')
+            TabOrder = 2
+            LayoutConfig.Flex = 1
+            LayoutConfig.Margin = '0 3 0 10'
+            FieldLabel = 'Contract Period'
+            FieldLabelWidth = 60
+            IconItems = <>
+          end
+          object ContractFrom: TUniDateTimePicker
+            Left = 178
+            Top = 7
+            Width = 120
+            Hint = ''
+            DateTime = 43931.000000000000000000
+            DateFormat = 'dd/MM/yyyy'
+            TimeFormat = 'HH:mm:ss'
+            TabOrder = 3
+            ParentFont = False
+            Font.Charset = ANSI_CHARSET
+            Font.Height = -13
+            Font.Name = 'Tajawal'
+            Font.Style = [fsBold]
+            LayoutConfig.Flex = 1
+            LayoutConfig.Margin = '0 3 0 20'
+            FieldLabel = 'Starts From'
+            FieldLabelWidth = 50
+          end
+          object ContractTo: TUniDateTimePicker
+            Left = 326
+            Top = 3
+            Width = 120
+            Hint = ''
+            DateTime = 43931.000000000000000000
+            DateFormat = 'dd/MM/yyyy'
+            TimeFormat = 'HH:mm:ss'
+            ReadOnly = True
+            TabOrder = 4
+            ParentFont = False
+            Font.Charset = ANSI_CHARSET
+            Font.Height = -13
+            Font.Name = 'Tajawal'
+            Font.Style = [fsBold]
+            LayoutConfig.Flex = 1
+            LayoutConfig.Margin = '0 20 0 3'
+            FieldLabel = 'Ends In'
+            FieldLabelWidth = 70
+          end
+          object PaymentsCB: TUniComboBox
+            Left = 476
+            Top = 3
+            Width = 145
+            Height = 26
+            Hint = ''
+            Style = csDropDownList
+            Text = ''
+            Items.Strings = (
+              '1 Payment'
+              '2 Payments'
+              '3 Payments'
+              '4 Payments')
+            TabOrder = 1
+            LayoutConfig.Flex = 1
+            LayoutConfig.Margin = '0 10 0 3'
+            FieldLabel = 'Payment Type'
+            FieldLabelWidth = 70
+            IconItems = <>
+          end
+        end
+        object PymtSchPnl: TUniContainerPanel
+          Left = 30
+          Top = 56
+          Width = 649
+          Height = 57
+          Hint = ''
+          Visible = False
+          ParentColor = False
+          TabOrder = 2
+          Layout = 'hbox'
+          LayoutAttribs.Align = 'middle'
+          LayoutAttribs.Pack = 'center'
+          LayoutConfig.Width = '100%'
+          LayoutConfig.Margin = '5 0 5 0'
+          object UniLabel1: TUniLabel
+            Left = 19
+            Top = 24
+            Width = 80
+            Height = 13
+            Hint = ''
+            Caption = 'Paymt Schedule:'
+            TabOrder = 1
+            LayoutConfig.Margin = '0 3 0 3'
+          end
+          object Pmt1: TUniNumberEdit
+            Left = 111
+            Top = 21
+            Width = 121
+            Hint = ''
+            TabOrder = 2
+            Color = clMoneyGreen
+            ReadOnly = True
+            FieldLabelAlign = laTop
+            FieldLabelFont.Style = [fsBold]
+            LayoutConfig.Margin = '0 3 0 10'
+            DecimalSeparator = '.'
+          end
+          object Pmt2: TUniNumberEdit
+            Left = 238
+            Top = 21
+            Width = 121
+            Hint = ''
+            TabOrder = 3
+            ReadOnly = True
+            FieldLabel = '1-'
+            FieldLabelAlign = laTop
+            FieldLabelFont.Style = [fsBold]
+            LayoutConfig.Margin = '0 3 0 3'
+            DecimalSeparator = '.'
+          end
+          object Pmt3: TUniNumberEdit
+            Left = 361
+            Top = 21
+            Width = 121
+            Hint = ''
+            TabOrder = 4
+            Color = clMoneyGreen
+            ReadOnly = True
+            FieldLabel = '1-'
+            FieldLabelAlign = laTop
+            FieldLabelFont.Style = [fsBold]
+            LayoutConfig.Margin = '0 3 0 3'
+            DecimalSeparator = '.'
+          end
+          object Pmt4: TUniNumberEdit
+            Left = 488
+            Top = 21
+            Width = 121
+            Hint = ''
+            TabOrder = 5
+            ReadOnly = True
+            FieldLabel = '1-'
+            FieldLabelAlign = laTop
+            FieldLabelFont.Style = [fsBold]
+            LayoutConfig.Margin = '0 3 0 3'
+            DecimalSeparator = '.'
+          end
+        end
+        object PaymentsListBox: TUniListBox
+          Left = 3
+          Top = 114
+          Width = 74
+          Height = 85
+          Hint = ''
+          Visible = False
+          TabOrder = 3
+        end
+        object UniContainerPanel4: TUniContainerPanel
+          Left = 101
+          Top = 114
+          Width = 533
+          Height = 39
+          Hint = ''
+          ParentColor = False
+          TabOrder = 4
+          Layout = 'hbox'
+          LayoutAttribs.Align = 'middle'
+          LayoutConfig.Margin = '5 0 5 0'
+          object InsurEdt: TUniNumberEdit
+            Left = 40
+            Top = 3
+            Width = 121
+            Hint = ''
+            TabOrder = 1
+            SelectOnFocus = True
+            FieldLabel = 'Insurance'
+            FieldLabelWidth = 65
+            LayoutConfig.Flex = 1
+            LayoutConfig.Margin = '0 5 0 5'
+            DecimalSeparator = '.'
+          end
+          object WaterEdt: TUniNumberEdit
+            Left = 167
+            Top = 3
+            Width = 121
+            Hint = ''
+            TabOrder = 2
+            SelectOnFocus = True
+            FieldLabel = 'Water'
+            FieldLabelWidth = 60
+            LayoutConfig.Flex = 1
+            LayoutConfig.Margin = '0 5 0 5'
+            DecimalSeparator = '.'
+          end
+          object ElectEdt: TUniFormattedNumberEdit
+            Left = 344
+            Top = 3
+            Width = 121
+            Hint = ''
+            FormattedInput.ShowCurrencySign = True
+            FormattedInput.ShowThousandSeparator = False
+            FormattedInput.CurrencySignPos = cpsRight
+            FormattedInput.DefaultCurrencySign = False
+            FormattedInput.CurrencySign = '  %'
+            FormattedInput.CurrencySignSpace = crsAvailable
+            TabOrder = 3
+            SelectOnFocus = True
+            FieldLabel = 'Shared Electricity'
+            FieldLabelWidth = 80
+            LayoutConfig.Flex = 1
+            LayoutConfig.Margin = '0 5 0 5'
+            DecimalSeparator = '.'
+            ThousandSeparator = ','
+          end
+        end
+        object PmtVerticalGrid: TUniDBVerticalGrid
+          Left = 110
+          Top = 159
+          Width = 405
+          Height = 139
+          Hint = ''
+          DataSource = PaymensQs
+          FieldsColumn.Alignment = taCenter
+          FieldsColumn.Title.Alignment = taCenter
+          FieldsColumn.TitleField = 'PaymentSN'
+          FieldsColumn.Locked = False
+          VerticalColumns = <
+            item
+              Alignment = taCenter
+              Width = 80
+              Color = 15130800
+              Title.Alignment = taCenter
+              Title.Caption = 'A'
+              Title.Color = 15631086
+              Title.Font.Style = [fsBold]
+            end
+            item
+              Alignment = taCenter
+              Width = 80
+              Color = 15128749
+              Title.Alignment = taCenter
+              Title.Caption = 'B'
+              Title.Color = 16775936
+              Title.Font.Style = [fsBold]
+            end
+            item
+              Alignment = taCenter
+              Width = 80
+              Color = 15138764
+              Title.Alignment = taCenter
+              Title.Caption = 'C'
+              Title.Color = 4678655
+              Title.Font.Style = [fsBold]
+            end
+            item
+              Alignment = taCenter
+              Width = 80
+              Color = 13434854
+              Title.Alignment = taCenter
+              Title.Caption = 'D'
+              Title.Color = 8388352
+              Title.Font.Style = [fsBold]
+            end>
+          DefaultColWidth = 80
+          HeaderTitle = 'Payments Schdule'
+          HeaderTitleAlign = taCenter
+          TabOrder = 5
+          LayoutConfig.Margin = '5 0 5 0'
+          LoadMask.WaitData = True
+          LoadMask.Message = 'Loading data...'
+          LoadMask.Target = ContractBox
+          Columns = <
+            item
+              FieldName = 'PaymentDate'
+              Title.Alignment = taCenter
+              Title.Caption = 'PaymentDate'
+              Width = 75
+              Font.Charset = ANSI_CHARSET
+              Font.Name = 'Tajawal'
+              Font.Style = [fsBold]
+              Alignment = taCenter
+              ReadOnly = True
+            end
+            item
+              FieldName = 'PaymentValu'
+              Title.Alignment = taCenter
+              Title.Caption = 'PaymentValu'
+              Width = 66
+              Font.Charset = ANSI_CHARSET
+              Font.Name = 'Tajawal'
+              Alignment = taCenter
+              ReadOnly = True
+            end
+            item
+              FieldName = 'Paid'
+              Title.Alignment = taCenter
+              Title.Caption = 'Paid'
+              Width = 34
+              Font.Charset = ANSI_CHARSET
+              Font.Name = 'Tajawal'
+              Alignment = taCenter
+              ReadOnly = True
+            end>
+        end
+      end
+    end
+    object pnlContracts: TUniContainerPanel
+      Left = 9
+      Top = 59
+      Width = 88
+      Height = 174
+      Hint = ''
+      ParentColor = False
+      TabOrder = 2
+      Layout = 'vbox'
+      LayoutAttribs.Align = 'center'
+      LayoutAttribs.Pack = 'start'
+      LayoutConfig.Width = '15%'
+      LayoutConfig.Region = 'west'
+      object DBLookupComboEMP: TUniDBLookupComboBox
+        Left = 32
+        Top = 15
+        Width = 126
+        Height = 24
+        Hint = ''
+        ListField = 'Unit;Name;ContractID'
+        ListSource = ContractsQsrc
+        KeyField = 'ID'
+        ListFieldIndex = 0
+        AnyMatch = True
+        TabOrder = 2
+        Color = clWindow
+        MatchFieldWidth = False
+        RemoteQuery = True
+        LayoutConfig.Width = '90%'
+        LayoutConfig.Margin = '5 5 5 5'
+        Style = csDropDown
+      end
+      object grdOwners: TUniDBGrid
+        Left = 3
+        Top = 45
+        Width = 190
+        Height = 108
+        Hint = ''
+        DataSource = ContractsQsrc
+        Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
+        ReadOnly = True
+        WebOptions.FetchAll = True
+        LoadMask.Message = 'Loading data...'
+        ForceFit = True
+        LayoutConfig.Flex = 1
+        LayoutConfig.Width = '100%'
+        Font.Height = -13
+        ParentFont = False
+        TabOrder = 1
+        Columns = <
+          item
+            FieldName = 'ContractID'
+            Title.Caption = 'ContractID'
+            Width = 74
+          end
+          item
+            FieldName = 'Name'
+            Title.Caption = 'Name'
+            Width = 354
+            ReadOnly = True
+          end>
+      end
+    end
+  end
+  object PrintQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'Select * From contracts_rv '
+      'where ContractID = :ConID')
+    Left = 871
+    Top = 251
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'ConID'
+        Value = nil
+      end>
+  end
+  object frxDBcontr: TfrxDBDataset
+    UserName = 'Contr'
+    CloseDataSource = False
+    FieldAliases.Strings = (
+      'ContractID=ContractID'
+      'conDate=conDate'
+      'conPeriod=conPeriod'
+      'contF=contF'
+      'contT=contT'
+      'Payments=Payments'
+      'RentAmount=RentAmount'
+      'Insur=Insur'
+      'Water=Water'
+      'Elec=Elec'
+      'Expired=Expired'
+      'Termination=Termination'
+      'TerminDate=TerminDate'
+      'Name=Name'
+      'phone1=phone1'
+      'IqamaID=IqamaID'
+      'workPlace=workPlace'
+      'EstNo=EstNo'
+      'estName=estName'
+      'estDistrict=estDistrict'
+      'unitNo=unitNo'
+      'Unit=Unit'
+      'Floor=Floor')
+    DataSet = PrintQ
+    BCDToCurrency = False
+    Left = 960
+    Top = 224
+  end
+  object ContractsQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT  C.*, P.ID, P.Name, P.IqamaID, P.Phone1 ,U.Unit  '
+      'FROM contracts C , Persons P , Units U'
+      ''
+      'where C.Expired = False'
+      'And P.ID = C.tenantID'
+      'And U.ID = C.UnitNo'
+      ' '
+      'order by C.contractID Desc'
+      ' '
+      ' ')
+    Active = True
+    Left = 878
+    Top = 67
+    object ContractsQContractID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ContractID'
+    end
+    object ContractsQconDate: TDateField
+      FieldName = 'conDate'
+      Required = True
+    end
+    object ContractsQtenantID: TIntegerField
+      FieldName = 'tenantID'
+      Required = True
+    end
+    object ContractsQestNo: TIntegerField
+      FieldName = 'estNo'
+      Required = True
+    end
+    object ContractsQunitNo: TIntegerField
+      FieldName = 'unitNo'
+      Required = True
+    end
+    object ContractsQconPeriod: TWideStringField
+      FieldName = 'conPeriod'
+      Required = True
+      Size = 15
+    end
+    object ContractsQcontF: TDateField
+      FieldName = 'contF'
+      Required = True
+    end
+    object ContractsQcontT: TDateField
+      FieldName = 'contT'
+      Required = True
+    end
+    object ContractsQPayments: TIntegerField
+      FieldName = 'Payments'
+      Required = True
+    end
+    object ContractsQRentAmount: TFloatField
+      FieldName = 'RentAmount'
+      Required = True
+    end
+    object ContractsQInsur: TFloatField
+      FieldName = 'Insur'
+      Required = True
+    end
+    object ContractsQWater: TFloatField
+      FieldName = 'Water'
+      Required = True
+    end
+    object ContractsQElec: TFloatField
+      FieldName = 'Elec'
+      Required = True
+    end
+    object ContractsQExpired: TBooleanField
+      FieldName = 'Expired'
+    end
+    object ContractsQTermination: TBooleanField
+      FieldName = 'Termination'
+    end
+    object ContractsQTerminDate: TDateField
+      FieldName = 'TerminDate'
+    end
+    object ContractsQID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      ReadOnly = True
+    end
+    object ContractsQName: TWideStringField
+      FieldName = 'Name'
+      ReadOnly = True
+      Required = True
+      Size = 50
+    end
+    object ContractsQIqamaID: TWideStringField
+      FieldName = 'IqamaID'
+      ReadOnly = True
+      Size = 10
+    end
+    object ContractsQPhone1: TWideStringField
+      FieldName = 'Phone1'
+      ReadOnly = True
+      Required = True
+      Size = 15
+    end
+    object ContractsQUnit: TWideStringField
+      FieldName = 'Unit'
+      ReadOnly = True
+      Required = True
+      Size = 30
+    end
+  end
+  object ContractsQsrc: TUniDataSource
+    DataSet = ContractsQ
+    Left = 878
+    Top = 115
+  end
+  object TenantsQry: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'Select * from Persons'
+      'where PersonType = '#39'tenant'#39
+      'order by ID')
+    Options.FullRefresh = True
+    Left = 534
+    Top = 115
+    object TenantsQryID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+    object TenantsQryName: TWideStringField
+      FieldName = 'Name'
+      Required = True
+      Size = 50
+    end
+    object TenantsQryphone1: TWideStringField
+      FieldName = 'phone1'
+      Required = True
+      Visible = False
+      Size = 15
+    end
+    object TenantsQryphone2: TWideStringField
+      FieldName = 'phone2'
+      Visible = False
+      Size = 15
+    end
+    object TenantsQryeMail: TWideStringField
+      FieldName = 'eMail'
+      Visible = False
+      Size = 50
+    end
+    object TenantsQrypersonType: TWideStringField
+      FieldName = 'personType'
+      Required = True
+      Visible = False
+    end
+    object TenantsQryIqamaID: TWideStringField
+      FieldName = 'IqamaID'
+      Size = 10
+    end
+    object TenantsQryworkPlace: TWideStringField
+      FieldName = 'workPlace'
+      Size = 50
+    end
+  end
+  object TenantsSrc: TUniDataSource
+    DataSet = TenantsQry
+    Left = 486
+    Top = 115
+  end
+  object EstatesQry: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM estates'
+      'where UnitsCount > UnitsRented'
+      'order by ID')
+    Left = 350
+    Top = 275
+    object EstatesQryID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+    object EstatesQryownerID: TIntegerField
+      FieldName = 'ownerID'
+      Required = True
+      Visible = False
+    end
+    object EstatesQryestNo: TIntegerField
+      FieldName = 'estNo'
+      Required = True
+    end
+    object EstatesQryestName: TWideStringField
+      FieldName = 'estName'
+      Size = 25
+    end
+    object EstatesQryestDistrict: TWideStringField
+      FieldName = 'estDistrict'
+      Required = True
+      Visible = False
+      Size = 40
+    end
+    object EstatesQryestStreet: TWideStringField
+      FieldName = 'estStreet'
+      Required = True
+      Visible = False
+      Size = 40
+    end
+    object EstatesQryUnitsCount: TIntegerField
+      FieldName = 'UnitsCount'
+      Visible = False
+    end
+    object EstatesQryUnitsRented: TIntegerField
+      FieldName = 'UnitsRented'
+      Visible = False
+    end
+  end
+  object EstatesSrc: TUniDataSource
+    DataSet = EstatesQry
+    Left = 446
+    Top = 275
+  end
+  object UnitsQry: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM units'
+      'where isRented = False'
+      'order by ID')
+    MasterSource = EstatesSrc
+    MasterFields = 'estNo'
+    DetailFields = 'ESTID'
+    Left = 518
+    Top = 275
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'estNo'
+        ParamType = ptInput
+        Value = 33
+      end>
+    object UnitsQryUnit: TWideStringField
+      DisplayWidth = 20
+      FieldName = 'Unit'
+      Required = True
+      Size = 30
+    end
+    object UnitsQryRooms: TWideStringField
+      DisplayWidth = 40
+      FieldName = 'Rooms'
+      Size = 50
+    end
+    object UnitsQryFloor: TWideStringField
+      DisplayWidth = 20
+      FieldName = 'Floor'
+      Size = 30
+    end
+    object UnitsQryPrice1: TFloatField
+      FieldName = 'Price1'
+      Required = True
+    end
+    object UnitsQryPrice2: TFloatField
+      FieldName = 'Price2'
+    end
+    object UnitsQryPrice3: TFloatField
+      FieldName = 'Price3'
+    end
+    object UnitsQryPrice4: TFloatField
+      FieldName = 'Price4'
+    end
+    object UnitsQryNotes: TWideStringField
+      DisplayWidth = 75
+      FieldName = 'Notes'
+      Size = 250
+    end
+    object UnitsQryElectricity: TBooleanField
+      DisplayLabel = 'E'
+      FieldName = 'Electricity'
+    end
+    object UnitsQryKitchen: TBooleanField
+      DisplayLabel = 'K'
+      FieldName = 'Kitchen'
+    end
+    object UnitsQryConditions: TBooleanField
+      DisplayLabel = 'C'
+      FieldName = 'Conditions'
+    end
+    object UnitsQryisRented: TBooleanField
+      DisplayLabel = 'R'
+      FieldName = 'isRented'
+      Required = True
+    end
+    object UnitsQryESTID: TIntegerField
+      FieldName = 'ESTID'
+      Required = True
+      Visible = False
+    end
+    object UnitsQryownerID: TIntegerField
+      FieldName = 'ownerID'
+      Required = True
+      Visible = False
+    end
+    object UnitsQryID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+  end
+  object UnitsSrc: TUniDataSource
+    DataSet = UnitsQry
+    Left = 590
+    Top = 275
+  end
+  object UnitDetailsQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM units'
+      'order by ID')
+    Left = 526
+    Top = 355
+    object UnitDetailsQUnit: TWideStringField
+      FieldName = 'Unit'
+      Required = True
+      Size = 30
+    end
+    object UnitDetailsQRooms: TWideStringField
+      FieldName = 'Rooms'
+      Size = 50
+    end
+    object UnitDetailsQFloor: TWideStringField
+      FieldName = 'Floor'
+      Size = 30
+    end
+    object UnitDetailsQPrice1: TFloatField
+      FieldName = 'Price1'
+      Required = True
+    end
+    object UnitDetailsQPrice2: TFloatField
+      FieldName = 'Price2'
+    end
+    object UnitDetailsQPrice3: TFloatField
+      FieldName = 'Price3'
+    end
+    object UnitDetailsQPrice4: TFloatField
+      FieldName = 'Price4'
+    end
+    object UnitDetailsQNotes: TWideStringField
+      FieldName = 'Notes'
+      Size = 250
+    end
+    object UnitDetailsQElectricity: TBooleanField
+      FieldName = 'Electricity'
+    end
+    object UnitDetailsQKitchen: TBooleanField
+      FieldName = 'Kitchen'
+    end
+    object UnitDetailsQConditions: TBooleanField
+      FieldName = 'Conditions'
+    end
+    object UnitDetailsQESTID: TIntegerField
+      FieldName = 'ESTID'
+      Required = True
+      Visible = False
+    end
+    object UnitDetailsQownerID: TIntegerField
+      FieldName = 'ownerID'
+      Required = True
+      Visible = False
+    end
+    object UnitDetailsQisRented: TBooleanField
+      FieldName = 'isRented'
+      Required = True
+      Visible = False
+    end
+    object UnitDetailsQID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+  end
+  object UnitDetailsQsrc: TUniDataSource
+    DataSet = UnitDetailsQ
+    Left = 646
+    Top = 355
+  end
+  object PaymensQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT * FROM payments'
+      'Order By ID')
+    ReadOnly = True
+    Left = 48
+    Top = 512
+    object PaymensQID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'ID'
+      Visible = False
+    end
+    object PaymensQContractNo: TIntegerField
+      FieldName = 'ContractNo'
+      Required = True
+      Visible = False
+    end
+    object PaymensQPaymentSN: TIntegerField
+      FieldName = 'PaymentSN'
+      Required = True
+      Visible = False
+    end
+    object PaymensQPaymentDate: TDateField
+      FieldName = 'PaymentDate'
+      Required = True
+    end
+    object PaymensQPaymentValu: TFloatField
+      FieldName = 'PaymentValu'
+      Required = True
+    end
+    object PaymensQPaid: TBooleanField
+      FieldName = 'Paid'
+      Required = True
+    end
+    object PaymensQPayDate: TDateField
+      FieldName = 'PayDate'
+      Visible = False
+    end
+    object PaymensQPayType: TWideStringField
+      FieldName = 'PayType'
+      Visible = False
+      Size = 30
+    end
+    object PaymensQpmtNotes: TWideStringField
+      FieldName = 'pmtNotes'
+      Visible = False
+      Size = 60
+    end
+  end
+  object PaymensQs: TUniDataSource
+    DataSet = PaymensQ
+    Left = 40
+    Top = 568
+  end
+  object frxReport1: TfrxReport
+    Version = '6.4.17'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 43937.722511354200000000
+    ReportOptions.LastChange = 44027.937399560200000000
+    ScriptLanguage = 'PascalScript'
+    StoreInDFM = False
+    Left = 856
+    Top = 192
+  end
+end

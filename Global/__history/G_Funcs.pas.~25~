@@ -1,0 +1,456 @@
+unit G_Funcs;
+
+interface
+Uses Uni, classes, uniDBGrid,SysUtils,  uniSweetAlert, DB;
+
+
+procedure AdjustGridView(GridView: TUniDBGrid);
+procedure AdjustGridLng(GridView: TUniDBGrid);
+procedure GrdFieldsWidthSumry(Grid : TUniDBGrid);   //Get Fields Width And Is Summury or not;
+
+ //getUserPrivs(MenuItemName,UserCanAdd, UserCanModify, UserCanDelete)  PER Opend FORM.
+procedure getUserPrivs(ItemName: String; var  UsrCanAdd, UsrCanModify, UsrCanDelete , UsrCanPost, UsrCanUnPost, UsrCanPrint , UsrCanUpload,UsrCanDownload : Boolean);//13
+
+
+
+function GetCircleDiv(cName:String): String;
+
+function ShowSwA(En_Message : String; AType: Integer = 0): Boolean;
+
+//function MsgLng(E_MSG:String): String;
+
+ procedure InsertEstTrans(TableName: String );
+procedure UpdateEstTrans(TrnsType,TrnsID,EID,UID,Exp,InAmt,OutAmt,TrnsDate: String );
+procedure DelEstTrans(TrnsID:String);
+
+
+
+ function ExistEstTrans(TrnsID:String):Boolean;
+
+
+
+
+
+ function  TranslateToArabic (EnText : String) : String;
+
+
+ procedure AdjustFieldsWidth(DataSet: TUniQuery );
+
+
+
+
+
+implementation
+
+uses MainModule, SwMsg;
+
+//===================================================================
+procedure AdjustGridView(GridView: TUniDBGrid);
+var       i : integer;
+
+begin
+   If GridView.DataSource = nil then
+    Exit;
+
+
+     for i := 0 to GridView.Columns.Count-1 do begin
+       GridView.Columns[i].Visible := GridView.DataSource.DataSet.Fields[i].Visible;
+         GridView.Columns[i].Title.Alignment := taCenter;
+         GridView.Columns[i].Alignment :=  taCenter;
+             end;
+
+
+                   i := 0;
+   While i <= GridView.Columns.Count-1 do begin
+   try
+   if not GridView.Columns[i].Visible
+   then GridView.Columns[i].Free
+   else i := i + 1;
+   except
+   i := i + 1;
+   end;
+   end;
+
+
+
+end;
+
+//===================================================================
+procedure AdjustGridLng(GridView: TUniDBGrid);
+var       i : integer;
+
+begin
+   If GridView.DataSource = nil then
+    Exit;
+
+
+
+      for i := 0 to GridView.Columns.Count-1 do begin
+
+//GridView.DataSource.DataSet.Fields[i].DisplayWidth :=  GetFieldWidth(GridView.DataSource.DataSet.Fields[i].FieldName);
+
+
+
+       GridView.Columns[i].Visible := GridView.DataSource.DataSet.Fields[i].Visible;
+         GridView.Columns[i].Title.Alignment := taCenter;
+         GridView.Columns[i].Alignment :=  taCenter;
+
+
+ //RR GridView.Columns[i].Width :=  GetFieldWidth(GridView.DataSource.DataSet.Fields[i].FieldName);
+
+  if GridView.DataSource.DataSet.Fields[i] is TFloatField then
+  ( GridView.DataSource.DataSet.Fields[i] as TFloatField).DisplayFormat := '#,##0.##';
+
+             end;
+
+
+                      //Get Fields Width And Is Summury or not;
+     GrdFieldsWidthSumry(GridView);    //Get Fields Width And Is Summury or not;
+         //Get Fields Width And Is Summury or not;
+
+
+
+
+                   i := 0;
+   While i <= GridView.Columns.Count-1 do begin
+   try
+   if not GridView.Columns[i].Visible
+   then GridView.Columns[i].Free
+   else i := i + 1;
+   except
+   i := i + 1;
+   end;
+   end;
+
+
+//   for i := 0 to DataSet.FieldCount - 1 do begin
+//
+//DataSet.Fields[i].DisplayWidth :=  GetFieldWidth(DataSet.Fields[i].FieldName);
+//
+
+
+                   //   adding the translation
+  if UniMainModule.RTL then begin  //this is addition to translate columns..
+             for i := 0 to GridView.Columns.Count-1 do begin
+         GridView.Columns[i].Title.Caption := TranslateToArabic( GridView.Columns[i].Title.Caption );
+        // GridView.Columns[i].ShowSummary   :=
+             end;
+   end;
+
+
+
+
+
+
+end;
+//===================================================================
+
+
+
+
+
+
+
+procedure getUserPrivs(ItemName: String; var  UsrCanAdd, UsrCanModify, UsrCanDelete , UsrCanPost, UsrCanUnPost, UsrCanPrint , UsrCanUpload,UsrCanDownload : Boolean);
+var      TempQry: TUniQuery;
+begin
+ TempQry := TUniQuery.Create(nil);
+ TempQry.Connection := UniMainModule.MainDB;
+
+  if UniMainModule.UserID = 'SysAdmin' then begin
+   // UserCanView   := True;
+    UsrCanAdd    := True;
+    UsrCanModify := True;
+    UsrCanDelete := True;
+    UsrCanPost   := True;
+    UsrCanUnPost := True;
+    UsrCanPrint  := True;
+    UsrCanUpload  := True;
+    UsrCanDownload  := True;
+ end else begin
+    TempQry.Close;
+
+     TempQry.SQL.Clear;
+    TempQry.SQL.Add( 'Select * From UserPrivs Where UserCode = ''' + UniMainModule.UserID + ''' And MenuItem = ''' + ItemName + ''' ');
+
+ TempQry.Open;
+
+    UsrCanAdd    := TempQry.FieldByName('uAdd').AsBoolean;//    = '1';
+    UsrCanModify := TempQry.FieldByName('uEdit').AsBoolean;// = '1';
+    UsrCanDelete := TempQry.FieldByName('uDel').AsBoolean;// = '1';
+    UsrCanPost   := TempQry.FieldByName('uPost').AsBoolean;//   = '1';
+    UsrCanUnPost := TempQry.FieldByName('uUnpost').AsBoolean;// = '1';
+    UsrCanPrint  := TempQry.FieldByName('uPrint').AsBoolean;//;//  = '1';
+    UsrCanUpload := TempQry.FieldByName('uUpload').AsBoolean;// = '1';
+    UsrCanDownload  := TempQry.FieldByName('uDownload').AsBoolean;//  = '1';
+
+
+
+ end;
+
+ TempQry.Free;
+
+end;
+//===================================================================
+function GetCircleDiv(cName:String): String;
+
+begin
+  if UniMainModule.RTL then
+  Result:='<div id="'+cName+'" style="display: flex;flex-flow: row-reverse wrap;width:100%;height:100%;overflow:hidden;background-color:#ededed;"></div>'
+  else
+   Result := '<div id="'+cName+'" style="width:100%;height:100%;overflow:hidden;background-color:#ededed;"></div>';
+//             '  <div id="Prog1"   style="width:100%;height:100%;overflow:hidden;background-color:#ededed;"></div> ';
+//Result :='<div id="'+cName+'" style="width:100%;height:100%;overflow:hidden;background-color:#ededed;"></div>';
+end;
+//===================================================================
+//function MsgLng( E_MSG : String): String;
+//var  MsgINDX : Integer;
+//begin
+// MsgINDX := UniMainModule.gSysMessages.IndexOf(E_MSG);
+//
+//  if UniMainModule.RTL then
+//  Result :=  UniMainModule.gSysMessagesA.Strings[MsgINDX]
+//  else
+//  Result := E_MSG;
+//
+//end;
+//===================================================================
+function ShowSwA(En_Message : String; AType: Integer = 0): Boolean;
+var  MsgINDX  : Integer;
+begin
+ // AType : 0-Inf 1-Success 2-ERORR  3-Warning 4-Question
+ MsgINDX := UniMainModule.gSysMessages.IndexOf(En_Message);
+
+
+ SwMsgF.SweetAlert.AlertType := TAlertType(AType);
+
+ //SwMsgF.SweetAlert.confirmButtonColor:='#BDBF37';
+   SwMsgF.SweetAlert.Title:= '';
+
+  if UniMainModule.RTL then begin   // Arabic MSG.
+   SwMsgF.SweetAlert.text :=  UniMainModule.gSysMessagesA.Strings[MsgINDX];
+
+     if AType = 4 then begin
+        SwMsgF.SweetAlert.confirmButtonText := 'äÚã';
+        SwMsgF.SweetAlert.cancelButtonText :=  'áÇ';
+        SwMsgF.SweetAlert.showCancelButton := true;
+
+       SwMsgF.SweetAlert.customClass:= 'icon: ''swal2-arabic-question-mark'' ';
+     end else begin
+       SwMsgF.SweetAlert.confirmButtonText := 'ãæÇÝÞ';
+       SwMsgF.SweetAlert.cancelButtonText :=  '';
+       SwMsgF.SweetAlert.showCancelButton := False;
+
+       SwMsgF.SweetAlert.customClass:='{icon: ''''  }';
+            end;
+
+
+
+
+  end else begin          // English MSG.
+  SwMsgF.SweetAlert.text := En_Message;
+
+       if AType = 4 then begin
+         SwMsgF.SweetAlert.confirmButtonText := 'Yes';
+         SwMsgF.SweetAlert.cancelButtonText :=  'No';
+         SwMsgF.SweetAlert.showCancelButton := true;
+
+         SwMsgF.SweetAlert.customClass:= 'icon: ''''  ';
+
+       end else begin
+         SwMsgF.SweetAlert.confirmButtonText := 'OK';
+         SwMsgF.SweetAlert.cancelButtonText :=  '';
+         SwMsgF.SweetAlert.showCancelButton := False;
+
+         SwMsgF.SweetAlert.customClass:='{icon: ''''  }';
+                    end;
+
+  end;
+
+
+      SwMsgF.ShowModal();
+
+  Result :=   SwMsgF.ModalResult = 1; // mrOK
+
+end;
+//===================================================================
+procedure DelEstTrans(TrnsID:String);
+var tSQL:TUniSQL;
+begin
+ tSQL :=  TUniSQL.Create(UniMainModule);
+ tSQL.Connection := UniMainModule.MainDB;
+ tSQL.SQL.Clear;
+ tSQL.SQL.Text := 'Delete from estatebalance  where TransNo =  '''+ TrnsID +''' ';
+ tSQL.Execute;
+ tSQL.Free;
+end;
+//===================================================================
+function ExistEstTrans(TrnsID:String):Boolean;
+var TempQry:TUniQuery;
+begin
+Result := false;
+ TempQry := TUniQuery.Create(UniMainModule);
+ TempQry.Connection := UniMainModule.MainDB;
+
+ TempQry.SQL.Clear;
+ TempQry.SQL.Text := 'Select * from  estatebalance  where TransNo =  '''+ TrnsID +''' ';
+ TempQry.Open;
+
+ if TempQry.RecordCount > 0 then
+
+ Result := True;
+
+end;
+//===================================================================
+procedure UpdateEstTrans(TrnsType,TrnsID,EID,UID,Exp,InAmt,OutAmt,TrnsDate: String);
+var SQLText : String;
+   tSQL : TUniSQL;
+begin
+
+if ExistEstTrans(TrnsID) then begin  //Update
+SQLText := 'Update EstateBalance Set '
++' EstNo     =  ''' + EID + '''  , '
++' UnitNo    =  ''' + UID + '''  , '
++' EXP       =  ''' + Exp + '''  , '
++' Income    =  ''' + InAmt + '''  , '
++' Expense   =  ''' + OutAmt + '''  , '
++' TranDate  =  ''' + TrnsDate + '''  '
+
++' Where TransType  =  ''' + TrnsType + '''  AND    TransID   =     ''' + TrnsID + '''  ';
+
+
+
+
+   tSQL := TUniSQL.Create(UniMainModule);
+   tSQL.Connection := UniMainModule.MainDB;
+   tSQL.SQL.Clear;
+   tSQL.SQL.Text := SQLText;
+   tSQL.Execute;
+   tSQL.Free;
+
+end;
+
+
+
+
+
+
+//SELECT `ID`, `TransType`, `TransID`, `EstNo`, `UnitNo`, `EXP`, `Income`, `Expense`, `TranDate` FROM `estatebalance` WHERE 1
+
+
+
+end;
+
+//===================================================================
+procedure InsertEstTrans(TableName: String );
+var SQLText : String;
+     tSQL : TUniSQL;
+
+begin
+ tSQL := TUniSQL.Create(UniMainModule);
+   tSQL.Connection := UniMainModule.MainDB;
+      tSQL.SQL.Clear;
+
+
+if TableName='rvouchers' then  begin
+SQLText := 'Insert Into EstateBalance( '
++' TransType, '
++' TransNo, EstNo, UnitNo, EXP, Income, Expense, TranDate ) '
++ ' SELECT '
++'  1 , '
++ ' RecID, EstNo, UnitNo, RecExp,  RecValue   , 0 ,RecDate  from rvouchers order by RecID desc limit 1 ';
+
+//SELECT `RecID`, `EstNo`, `UnitNo`, `RecExp`, `RecValue`, `RecDate`, `ContractRef`, `PaymentSN` FROM `rvouchers` WHERE 1
+end;
+
+if TableName='unitmaint' then  begin
+SQLText := 'Insert Into EstateBalance( '
++' TransType, '
++' TransNo, EstNo, UnitNo, EXP, Income, Expense, TranDate ) '
++ ' SELECT '
++'  2 , '
++ ' ID, EstNo, UnitNo, MaintEXP,  0    , MaintValue,MaintDate  from UnitMaint order by id desc limit 1 ';
+//SELECT `ID`, `EstNo`, `UnitNo`, `MaintEXP`, `MaintValue`, `MaintDate` FROM `unitmaint` WHERE 1
+end;
+
+   tSQL.SQL.Text := SQLText;
+   tSQL.Execute;
+   tSQL.Free;
+end;
+//===================================================================
+//--
+function  TranslateToArabic(EnText : String) : String;
+begin
+  if Trim(EnText) = '' then begin
+     Result := EnText;
+  end else begin
+
+        if UniMainModule.LangQry.Locate('ENtext', EnText, [loCaseInsensitive]) then begin
+           Result := UniMainModule.LangQryARtext.AsString;
+        end else begin
+           Result := EnText;
+
+        end;
+
+  end;
+end;
+//--
+//===================================================================
+procedure GrdFieldsWidthSumry(Grid : TUniDBGrid);
+var i:Integer;
+begin
+    for i := 0 to Grid.Columns.Count-1 do begin
+
+    if UniMainModule.LangQry.Locate('ENtext', Grid.Columns[i].Title.Caption, [loCaseInsensitive])
+
+     then begin
+         Grid.Columns[i].Width :=  UniMainModule.LangQryFieldW.AsInteger ;
+         Grid.Columns[i].ShowSummary := UniMainModule.LangQryIsSummry.AsBoolean;
+          end;
+
+    end;
+
+
+
+end;
+
+//--
+//===================================================================
+
+ procedure AdjustFieldsWidth(DataSet: TUniQuery );
+ var i: integer;
+
+ begin
+//
+  for i := 0 to DataSet.FieldCount - 1 do begin
+    if (DataSet.Fields.Fields[i] is TFloatField) then
+(  DataSet.Fields.Fields[i] as TFloatField).DisplayFormat := '#,##0.##';
+// DataSet.Fields.Fields[].dis :=  GetFieldWidth(DataSet.Fields[i].FieldName);
+//
+//
+  end;
+  end;
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+//===================================================================
+end.

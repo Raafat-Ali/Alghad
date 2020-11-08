@@ -1,0 +1,120 @@
+unit PDFviewer;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  uniMultiItem, uniListBox, uniButton, uniURLFrame,ServerModule, uniFileUpload;
+
+type
+  TPDFviewerF = class(TBaseFormF)
+    UniURLFrame1: TUniURLFrame;
+    UniPanel1: TUniPanel;
+    UniButton2: TUniButton;
+    UniListBox1: TUniListBox;
+    UniContainerPanel1: TUniContainerPanel;
+    UniButton1: TUniButton;
+    UniFileUpload1: TUniFileUpload;
+    UniFileUploadButton1: TUniFileUploadButton;
+    procedure UniFormCreate(Sender: TObject);
+    procedure UniListBox1Change(Sender: TObject);
+    procedure UniButton1Click(Sender: TObject);
+    procedure UniFileUpload1Completed(Sender: TObject; AStream: TFileStream);
+    procedure UniFileUploadButton1Completed(Sender: TObject;
+      AStream: TFileStream);
+  private
+    { Private declarations }
+       FUrl : string;
+  public
+    { Public declarations }
+  end;
+
+function PDFviewerF: TPDFviewerF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function PDFviewerF: TPDFviewerF;
+begin
+  Result := TPDFviewerF(UniMainModule.GetFormInstance(TPDFviewerF));
+end;
+
+procedure TPDFviewerF.UniButton1Click(Sender: TObject);
+begin
+  inherited;
+ UniFileUpload1.Execute;
+end;
+
+procedure TPDFviewerF.UniFileUpload1Completed(Sender: TObject;
+  AStream: TFileStream);
+  var
+  DestFolder,DestName: string;
+begin
+  inherited;
+
+     DestFolder:= UniMainModule.PDFsPath; //UniServerModule.StartPath+'UploadFolder\';
+    DestName:=DestFolder+ExtractFileName(UniFileUpload1.FileName);
+   // UniLabel1.Caption:='File Name: '+UniFileUpload1.FileName;
+    CopyFile(PChar(AStream.FileName), PChar(DestName), False);
+   // ShowMessage('File: '+UniFileUpload1.FileName+' Uploaded to folder: '+DestFolder);
+ // end;
+  UniListBox1.Refresh;
+end;
+
+procedure TPDFviewerF.UniFileUploadButton1Completed(Sender: TObject;
+  AStream: TFileStream);
+ var
+  DestFolder,DestName: string;
+begin
+  inherited;
+
+//      DestFolder:= UniMainModule.PDFsPath; //UniServerModule.StartPath+'UploadFolder\';
+//    DestName:=DestFolder+ExtractFileName(UniFileUploadButton1.FileName );
+
+   // CopyFile(PChar(AStream.FileName), PChar(DestName), False);
+
+      CopyFile(PChar(AStream.FileName), PChar(UniMainModule.PDFsPath+UniFileUploadButton1.FileName), False);
+
+  UniListBox1.Refresh;
+end;
+
+procedure TPDFviewerF.UniFormCreate(Sender: TObject);
+var
+  FFolder: string;
+
+  Sr : TSearchRec;
+begin
+  inherited;
+  UniListBox1.Items.Clear;
+  FFolder := UniServerModule.FilesFolderPath+'PDFs\';
+  FUrl := UniServerModule.FilesFolderURL+'PDFs/';
+  if SysUtils.FindFirst(FFolder+'*.pdf', faAnyFile, Sr) = 0 then
+  begin
+    repeat
+      if Sr.Attr and faDirectory = 0 then
+        UniListBox1.Items.Add(Sr.Name);
+    until SysUtils.FindNext(sr) <> 0;
+    SysUtils.FindClose(sr);
+  end;
+
+  if UniListBox1.Items.Count>0 then
+  begin
+    UniListBox1.ItemIndex := 0;
+    UniURLFrame1.URL := FUrl+UniListBox1.Items[0];
+  end;
+end;
+
+procedure TPDFviewerF.UniListBox1Change(Sender: TObject);
+begin
+  inherited;
+  if UniListBox1.ItemIndex > -1 then
+    UniURLFrame1.URL := FUrl+UniListBox1.Items[UniListBox1.ItemIndex];
+end;
+
+end.

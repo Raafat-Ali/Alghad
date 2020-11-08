@@ -1,0 +1,138 @@
+AqarAlghad.exe: 00001240: 00:11:50 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001240: 00:11:50 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001240: 00:11:50 [TUniServerModule]:Global Cache Folder Erased. <71> Files deleted.
+AqarAlghad.exe: 00001240: 00:11:51 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001240: 00:11:51 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002C98: 00:12:34 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002C98: 00:12:34 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002C98: 00:12:34 [TUniServerModule]:Global Cache Folder Erased. <65> Files deleted.
+AqarAlghad.exe: 00002C98: 00:12:34 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002C98: 00:12:34 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 000023CC: 00:13:04 [Access violation at address 0000000000000000 in module 'AqarAlghad.exe'. Execution of address 0000000000000000-127.0.0.1]:EAccessViolation : Access violation at address 0000000000000000 in module 'AqarAlghad.exe'. Execution of address 0000000000000000 : Addr: $0000000000000000
+AqarAlghad.exe: 00002708: 00:13:40 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002708: 00:13:40 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002708: 00:13:40 [TUniServerModule]:Global Cache Folder Erased. <68> Files deleted.
+AqarAlghad.exe: 00002708: 00:13:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002708: 00:13:40 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00002C04: 00:14:18 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002C04: 00:14:18 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002C04: 00:14:18 [TUniServerModule]:Global Cache Folder Erased. <68> Files deleted.
+AqarAlghad.exe: 00002C04: 00:14:18 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002C04: 00:14:18 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000FF8: 21:37:54 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000FF8: 21:37:54 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000FF8: 21:37:54 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00000FF8: 21:37:55 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000FF8: 21:37:55 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000A94: 21:42:04 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000A94: 21:42:04 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000A94: 21:42:04 [TUniServerModule]:Global Cache Folder Erased. <66> Files deleted.
+AqarAlghad.exe: 00000A94: 21:42:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000A94: 21:42:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000BDC: 21:43:50 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000BDC: 21:43:50 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000BDC: 21:43:50 [TUniServerModule]:Global Cache Folder Erased. <73> Files deleted.
+AqarAlghad.exe: 00000BDC: 21:43:50 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000BDC: 21:43:50 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001AF0: 21:44:34 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 0000157C: 21:47:52 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000157C: 21:47:52 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000157C: 21:47:52 [TUniServerModule]:Global Cache Folder Erased. <68> Files deleted.
+AqarAlghad.exe: 0000157C: 21:47:52 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000157C: 21:47:52 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000890: 21:49:03 [HandleFileRequest[127.0.0.1]]:File not found: C:\Program Files (x86)\FMSoft\Framework\unigui\unipackages-7.2.0\themes\ext-theme-uni_ubuntu\resources\images\button\arrow-rtl.png
+AqarAlghad.exe: 00001698: 21:57:35 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001698: 21:57:35 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001698: 21:57:35 [TUniServerModule]:Global Cache Folder Erased. <64> Files deleted.
+AqarAlghad.exe: 00001698: 21:57:35 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001698: 21:57:35 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001AA4: 21:57:35 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:35 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:35 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:39 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:39 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:39 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001F68: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001F68: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001F68: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001F68: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001F68: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001F68: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 0000190C: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 000001B8: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001AA4: 21:57:40 [127.0.0.1]:EUniSessionException : Invalid session or session Timeout. (Session not found: GdXYPRpkko1066A3646 ) : Addr: $00000000009DBE27
+AqarAlghad.exe: 00001EBC: 22:13:20 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001EBC: 22:13:20 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001EBC: 22:13:20 [TUniServerModule]:Global Cache Folder Erased. <63> Files deleted.
+AqarAlghad.exe: 00001EBC: 22:13:20 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001EBC: 22:13:20 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001EBC: 22:14:26 [TUniServerModule]:Shutting Down Server.
+AqarAlghad.exe: 00001EBC: 22:14:26 [TUniServerModule]:Stopping HTTP Server.
+AqarAlghad.exe: 00001EBC: 22:14:27 [TUniServerModule]:HTTP Server Stopped.
+AqarAlghad.exe: 00001EBC: 22:14:27 [TUniGUISessionManager]:Terminating Session manager.
+AqarAlghad.exe: 00001EBC: 22:14:27 [TUniGUISessionManager]:Stopping Cache Eraser...
+AqarAlghad.exe: 00001EBC: 22:14:27 [TUniGUISessionManager]:Cache Eraser Stopped.
+AqarAlghad.exe: 00001EBC: 22:14:27 [TUniGUISessionManager]:Destroying Worker Threads.
+AqarAlghad.exe: 00001EBC: 22:14:27 [TUniGUISessionManager]:Session manager terminated.
+AqarAlghad.exe: 00001EBC: 22:14:27 [TUniServerModule]:Server Shutdown Completed.
+AqarAlghad.exe: 00001EBC: 22:14:27 []:<-------------------------------------------------------------->
+AqarAlghad.exe: 00001EBC: 22:14:27 [Terminated]:Exit Code: 0
+AqarAlghad.exe: 000021D4: 22:38:24 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 000021D4: 22:38:24 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 000021D4: 22:38:24 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 000021D4: 22:38:24 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 0000083C: 22:39:39 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 0000083C: 22:39:39 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 0000083C: 22:39:39 [TUniServerModule]:Global Cache Folder Erased. <64> Files deleted.
+AqarAlghad.exe: 0000083C: 22:39:39 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 0000083C: 22:39:39 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00001FF0: 22:45:04 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00001FF0: 22:45:04 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00001FF0: 22:45:04 [TUniServerModule]:Global Cache Folder Erased. <62> Files deleted.
+AqarAlghad.exe: 00001FF0: 22:45:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00001FF0: 22:45:04 [TUniServerModule]:HTTP Server Started on Port: 8077
+AqarAlghad.exe: 00000A3C: 23:17:39 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00000A3C: 23:17:40 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00000A3C: 23:17:40 [TUniServerModule]:Global Cache Folder Erased. <68> Files deleted.
+AqarAlghad.exe: 00000A3C: 23:17:40 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00000A3C: 23:17:43 [InitWebServer]:EIdCouldNotBindSocket : Could not bind socket. Address and port are already in use. : Addr: $00000000008EAA7E
+AqarAlghad.exe: 00002E3C: 23:18:04 []:>--------------------------------------------------------------<
+AqarAlghad.exe: 00002E3C: 23:18:04 [TUniServerModule]:Server First Init.
+AqarAlghad.exe: 00002E3C: 23:18:04 [TUniServerModule]:Global Cache Folder Erased. <1> Files deleted.
+AqarAlghad.exe: 00002E3C: 23:18:04 [TUniServerModule]:Starting HTTP Server on Port: 8077...
+AqarAlghad.exe: 00002E3C: 23:18:04 [TUniServerModule]:HTTP Server Started on Port: 8077

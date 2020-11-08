@@ -1,0 +1,40 @@
+object ShowReportF: TShowReportF
+  Left = 0
+  Top = 0
+  ClientHeight = 661
+  ClientWidth = 984
+  Caption = 'ShowReportF'
+  OldCreateOrder = False
+  MonitoredKeys.Keys = <>
+  OnBeforeShow = UniFormBeforeShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object UniURLFrame1: TUniURLFrame
+    Left = 0
+    Top = 0
+    Width = 984
+    Height = 661
+    Hint = ''
+    Align = alClient
+    TabOrder = 0
+    ParentColor = False
+    Color = clBtnFace
+    ExplicitLeft = -16
+    ExplicitTop = -39
+    ExplicitWidth = 1000
+    ExplicitHeight = 700
+    object UniButton1: TUniButton
+      Left = 0
+      Top = 636
+      Width = 984
+      Height = 25
+      Hint = ''
+      Caption = 'Close'
+      Align = alBottom
+      TabOrder = 1
+      OnClick = UniButton1Click
+      ExplicitTop = 675
+      ExplicitWidth = 1000
+    end
+  end
+end

@@ -1,0 +1,303 @@
+Data saved successfully
+Error saving data
+Data deleted successfully
+Error deleting data
+Code field can not be blank
+System will be closed, would you like to continue ?
+Are you sure you want to delete ?
+Are you sure you want to cancel updates?
+Do you want to close without saving?
+Company that has data can not be deleted
+Invalid User Id or  Password
+Branch that has data can not be deleted
+Login company must be selected first
+Do you want to change to the selected company and branch?
+Do you want to change to the selected  branch?
+Group must be selected to continue
+Type must be selected to continue
+All Accounts must be assigned to continue
+Invalid password
+Transaction unposted successfully
+All opened forms will be closed, continue?
+Class must be selected to continue
+Parent account can not be deleted
+Account no. width can not be longer than 20 digits
+Warehouset code width can not be longer than 20 digits
+Group that contains users can not be deleted
+You have entered invalid password, Please try again
+There is a difference between your new password and its confirmation
+Password has been changed successfully
+Financial year can not be saved without periods
+Start date must be defined first
+Please enter no. of periods to be generated
+Please enter length of your custom period to be generated
+Acoounting period has been opened successfully
+Error openning priod
+Acoounting period has been closed successfully
+Error closing period
+Transaction can not be saved without details
+Unbalanced transaction can not be saved
+Transaction can not be saved, Its date does not exist in open period
+Transaction date can not exceed system current date
+Are you sure, you want to void the selected transaction ?
+Warehouse that contain locations can not be deleted
+Division and department must be selected first
+Vendor must be selected to continue
+Customer must be selected to continue
+Invoice must be selected to create a returrn
+Project must be selected to continue
+Item\Service and unit must be selected first
+Project\ Program must be selected first
+Quantity  can not be zero
+Price can not be zero
+Requester information must be completed
+Purpose and priority must be selected first
+Warehouse must be selected first
+Warehouse and target warehouse must be different
+Action type must be selected to continue
+Cost can not be zero
+Date range must be defined to continue
+Period range must be defined to continue
+There is no selected transaction to be approved
+Transaction approved successfully
+Error approving transactions, please try again
+Order must be selected to create a returrn
+No. of serial numbers must be equal to the quantity
+Sales person must be selected to continue
+Payment information must be defined first
+Cash\ Bank Account must be selected first
+Payment amount can not be less than zero
+Document no. must be defined first
+Document balance can not be negative
+Transaction number already exist
+Code already exist
+Due date must be defined to continue
+Employee must be selected first
+Stock is not enough to post transaction
+Job must be defined first
+division must be defined first
+Last pursuit date is not available
+Used data can not be deleted
+Discount can not be more than item max. discount
+Price can not be less than cost
+Invoice must be posted before printing
+Customer credit limit will be exceeded, Continue ?
+Customer credit limit can not be exceeded
+Customer and vendor currencies must be the same
+Currency can not be modified, related trxs. are there
+Unit could not be modified, related transactions are there
+Can not insert double salaries for the same employee
+Photo Path is not defined, please contact administrator
+No Branch have been defined
+No Company have been defined
+All relatives will be deleted, Would you like to continue ?
+Please selectc nation before modifying visa
+Please select Visa before modifying job
+Please enter Asset ID
+Can not insert duplicate Asset ID
+Can not replicate the same Asset ID
+Please Select Target Warehouse
+There is no data matching your selections
+One or more Assets have been changed, Can not continue
+All details will be deleted, Continue ?
+Zero Depreciation is not allowed
+Source and destination warehouses must be different
+Source and destination Account must be different
+There is open period
+Profit and loss account is not defined for this company
+Please enter Account code
+Barcode is already exists, Please enter new barcode
+Barcode could not be recognized
+Sales person commission not defined
+Please enter Currency
+Please enter Exchange Rate
+Please enter Opening Balance
+Please enter depreciation period
+Invalid Month
+The requested report file does not exist
+Please enter voucher holder
+Please enter expense term
+Please enter Location
+Please select year and month
+Please, Adjust count settings
+The Transaction Number is less than the defined start counting number
+The entered transaction number is already used, Please enter another one
+Please define Trans Value
+Can not Unpost this transaction, related transactions exist
+Can not delete essencial data
+Please define search range
+Account Does Not Exist
+Payment should not exceed loan balance
+Can not post transaction, please review loans
+No data to print
+Transaction Date is not valid
+Can not close this period, Please Post all transactions before proceeding
+Can not insert into detail account
+Connection with this file failed
+Data Transfer Finished successfully
+The required table does not exist in the defined file
+Backup has been finished successfully
+Failed to finish backup
+Can not delete financial year, there is related transactions
+Invalis date, Please enter date again
+Please select Cash
+Please select Bank
+Persons Count is not correct
+Please, Define Benificiary
+Please, Define Date
+Please, Define Amount
+Employee digit count should be specified
+Transaction can not be Unposted, Its date does not exist in open period
+The entered value is not accepted
+Please Select Cost Center
+Please enter serial number
+Quantities in source invoice is not enough
+This version is not valid with this database
+Please, Define purchase account for this branch
+Please, Define inventory account for this branch
+Please, Define goods in trans account for this branch
+Please, Define Vendor account
+Please, Define cash account
+Please, Define bank account
+Please, Define recieved discount account for this branch
+Please, Define Assets Account for this group of asset
+Please, Define purchase return account for this branch
+Please, Define Customer account
+Please, Define Sales account for this branch
+Please, Define Bank Charges account for this branch
+Please, Define allowable discount account for this branch
+Please, Define cost of sales account for this branch
+Please, Define sales return account for this branch
+Please, Define stock adjustment account for this branch
+Please, Define cash / bank account
+Please, Define employee loans account
+Please, Define employee petty cash account
+Please, Define employee cost center
+Please, Define salaries account
+Please, Define accrued salaries account
+Please, Define insurance account
+Please, Define accrued insurance account
+Please, Define depreciation account for this asset groups
+Please, Define accumulative depreciation account for this asset groups
+Please, Define fixed asset profit and loss account for this branch
+Please, Define inventory depreciation account for this branch
+Please, Define LC account
+Please, Define LC notice payable account
+The payments made for this LC does not cover the goods recieved
+Cannot UnPost this transaction, because it is converted to purchase invoice
+LC must be selected to continue
+The LC is not finished, can not close it
+Can not Unpost this transaction, because its related with other transaction
+Can not Unpost this transaction, because th LC is Closed
+The used code is a system variable, please use another code
+Please, Define project account
+Please, Define project cost center
+The entered account code does not exist, Please enter another one
+The entered currency code does not exist, Please enter another one
+The entered cost center code does not exist, Please enter another one
+The entered item code does not exist, Please enter another one
+The entered attribute code does not exist, Please enter another one
+The entered warehouse code does not exist, Please enter another one
+Please, Define rounding account for this branch
+Discount exceeds invoice amount, Add discount will be made zero
+Salesman credit limit will be exceeded, Continue ?
+Salesman credit limit can not be exceeded
+Please Define Account Name
+Please select account type
+Please select account side
+Please select report type
+Please select cost center type
+Data Export Finished Successfully
+Data Export Failed
+Data Import Finished Successfully
+Data Import Failed
+Sub Items should be deleted to proceed
+Please define server name
+Transactions reciept from remote server have been finished
+Data transfer have been finished
+Unit must be selected to continue
+Lisencing failed, Please enter the correct lisence number
+Trial transactions have finished, Please register your copy
+Sum of assigned days does not equal employee working days
+Please define airline company
+Please define travel line
+Please define ticket degree
+Avarage cost is not defined for this item
+Quantity balance is not suitable to proceed in this transaction
+Please, Define inventory transfers account for this branch
+Please, Define cash transfers account for this branch
+Please select POS
+Please select operator
+Please Select shift
+Holded quantity is not enouph to proceed in this transaction
+Sum of assigned days does not equal asset depreciation days
+Sum of checks amount must equal voucher value
+Please enter transaction number
+You do not have access right to this screen
+Please enter the name
+Please select payment method
+Payment is less than invoice amount, Please re enter payment
+Transaction already approved
+Transaction already Unposted
+No data available to be pasted
+Are you sure you want to proceed in this transaction
+Please, Define Bank Guarrantees account for this branch
+Please, Define Account for this Production Order
+Please, Define Under Production Inventory Account
+Please, Define Raw Items Inventory Account
+Please, Define Production Inventory Account
+Please, Select Real Estate
+Please, Enter Batch No and Expiry Date
+Please, Define Account for this item
+Employee is not active, Do you want to continue ?
+Can not proceed in transaction posting, Because there is previouse active transactions
+Can not proceed in transaction posting, Because there is subsequent posted transactions
+Master data could not be found
+Do you want to load new master data
+Please, Close opened screens
+Sorry, Could not connect to archive server, Please adjust connection settings
+Please, Enter Doc No
+Please, Enter Doc Desc
+No storage area defined for the cabinet of this document
+All storage areas are full
+Some files could not be loaded, Please review Imaging Server settings and storage areas
+Please, Enter Text to search
+Please, Define Field Name
+Please, enter required data
+The specified data will be inherited to all childrens, Are you sure you want to continue ?
+The selected item will change to root item, Are you sure you want to continue ?
+The selected item parent will be changed, Are you sure you want to continue ?
+This field could not be inherited
+The specified data will be inherited from parent item, Are you sure you want to continue ?
+Please, Select loan
+Total of cost centers must equal account value
+Total of sub ledger must equal account value
+Please, Make database backup before proceeding with this transaction
+Please, Select asset holder
+Please, Select pricing policy
+Total of Allocation Ratio should Equal 100
+Total of Details Amount should Equal Asset Value
+All details will be changed, Are you sure you want to continue ?
+Asset value should not be less than zero
+Asset accumolated depreciation should not be more than asset value
+All details should be deleted before you can proceed with this transaction !!!
+Item price should not be less than the minimum selling price
+Item price should not be greater than the maximum selling price
+Code should not be equal to parent code
+The entered customer code does not exist, Please enter another one
+The entered sales person code does not exist, Please enter another one
+The entered sales policy code does not exist, Please enter another one
+The entered project code does not exist, Please enter another one
+The entered vendor code does not exist, Please enter another one
+The entered cash / bank code does not exist, Please enter another one
+It is not allowed to use cost center with this account, please remove it 
+The requested quantity is less than the available quantity i stock, Please be carefull
+Item price is not defined
+Pleasenot that item price = zero 
+This code already exists, please enter another one
+You do not has enough permissions to modify this record, Please check with system administrator
+You do not has enough permissions to delete this record, Please check with system administrator
+You do not has enough permissions to post this record, Please check with system administrator
+Please, Define tax account for this branch
+Are you sure you want to post all visible transactions ??
+Are you sure you want to unpost all visible transactions ??

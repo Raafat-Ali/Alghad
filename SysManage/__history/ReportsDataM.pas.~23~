@@ -1,0 +1,299 @@
+unit ReportsDataM;
+
+interface
+
+uses
+  SysUtils, Classes, frxClass, frxExportBaseDialog, frxExportPDF, frxDBSet,
+  Data.DB, MemDS, DBAccess, Uni, frxGradient, siComp, frxRich,
+  TypInfo;
+
+type
+  TReportsDM = class(TDataModule)
+    RepLng: TUniQuery;
+    RepLngrptObj: TWideStringField;
+    RepLngobjEN: TWideStringField;
+    RepLngobjAR: TWideStringField;
+    RepParams: TUniQuery;
+    RepParamsrptObj: TWideStringField;
+    RepParamsrptParam: TWideStringField;
+    frxReport1: TfrxReport;
+    frxPDFExport1: TfrxPDFExport;
+    frxGradientObject1: TfrxGradientObject;
+    frxDBDataset1: TfrxDBDataset;
+    frxRichObject1: TfrxRichObject;
+    EstQry: TUniQuery;
+    EstQryTransNo: TIntegerField;
+    EstQryEstNo: TIntegerField;
+    EstQryUnit: TWideStringField;
+    EstQryEXP: TWideStringField;
+    EstQryIncome: TFloatField;
+    EstQryExpense: TFloatField;
+    EstQryTranDate: TDateField;
+    EstQryUnitNo: TIntegerField;
+    EstQryID: TIntegerField;
+    EstQryTransType: TIntegerField;
+    procedure frxReport1BeforePrint(Sender: TfrxReportComponent);
+  private
+    { Private declarations }
+  //   procedure CloseDS;
+ //    procedure OpenDS(RepName, Id: string; ReportQDS: TUniDataSource);
+
+
+
+    ReportNameTxt, RepParamTxt, Fdate,Tdate:String;
+
+
+  public
+    { Public declarations }
+    function GenReportPDF(const RepName,ReportTxt ,RepParam, Fdate,Tdate : string; ReportQDS: TUniDataSource ): String;
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses MainModule, ServerModule, rRegister;
+
+//---------------------------------------
+//---------------------------------------
+//-----------------------------------------====================================
+//---------------------------------------
+
+
+
+
+//---------------------------------------
+
+//---------------------------------------
+
+//---------------------------------------
+//procedure TReportsDM.OpenDS(RepName, Id: string; ReportQDS: TUniDataSource);
+//begin
+//////  UniMainModule.ADOQuery2.Close;
+//////  UniMainModule.ADOQuery2.SQL.Clear;
+//////
+//////  UniMainModule.ADOQuery2.SQL.Add('SELECT * FROM '+RepName+'s' + ' WHERE '+RepName+'ID=:ID ');
+//////  UniMainModule.ADOQuery2.Parameters.ParamByName('ID').Value := ID;
+//////  UniMainModule.ADOQuery2.Open;
+////
+////// UniMainModule.ReportQuery.Close;
+//////// UniMainModule.ReportQuery.SQL.Clear;
+//////
+////// if RepName = 'Contract' then  begin
+//////  UniMainModule.ReportQuery.SQL.Text :=''
+//////    + 'SELECT * From  '+RepName+'s_RV'+ '  WHERE '+RepName+'ID=:ID  ' ;
+//////
+//////  UniMainModule.ReportQuery.ParamByName('ID').Value := ID;
+////// end;
+////
+//// if RepName = 'EstFinancial' then  begin
+////
+//// frxDBDataset1.DataSource:= ReportQDS;
+////// frxDBDataset1.FieldAliases.u
+////  // UniMainModule.ReportQuery.SQL.Text := SQLTxt;
+//// end;
+////
+////
+////
+//// //UniMainModule.ReportQuery.Open;
+//
+//end;
+////---------------------------------------
+procedure TReportsDM.frxReport1BeforePrint(Sender: TfrxReportComponent);
+
+begin
+
+
+      if Sender.Name = 'RpTypTxt' then
+      (sender as TfrxMemoView).Memo.Text := ReportNameTxt;
+        if Sender.Name = 'RpParTxt' then
+      (sender as TfrxMemoView).Memo.Text := RepParamTxt;
+
+              if Sender.Name = 'MemFdat' then
+      (sender as TfrxMemoView).Memo.Text := Fdate;
+
+              if Sender.Name = 'MemTdat' then
+      (sender as TfrxMemoView).Memo.Text := Tdate;
+
+
+
+
+
+//       if sender is TfrxMemoView then  begin          /////WOrking;
+//
+//        mMemo := sender as TfrxMemoView;
+//       EnCap:= mMemo.Text;
+//
+//
+////
+// TempQry.SQL.Clear;
+// TempQry.SQL.Text := 'Select * from ReportLng where objEn = ''+Income+'' ';// '''+mMemo.Text+''' ';
+// TempQry.Open;
+// ArCap := TempQry.FieldByName('objAR').AsString;
+//
+////  PaymentsVQ.FilterSQL := 'PaymentDate Between  ''' + YearCB.Text + '-' + MnthCB.Text + '-01'' '
+////     +'  And ''' + YearCB.Text + '-' + MnthCB.Text + '-30'' '
+////
+//
+//
+////   (sender as TfrxMemoView).Memo.Text :=   StringReplace(  (sender as TfrxMemoView).Memo.Text, 'Income', '«·«Ì—«œ', [rfReplaceAll]);
+//
+//        mMemo.Text :=
+//        StringReplace(   mMemo.Text , mMemo.Text, ArCap, [rfReplaceAll]);
+//
+//
+//       end;
+
+
+
+
+       //       if UniMainModule.RTL then
+//         ReportLang;
+
+//      fProp := GetPropInfo(Sender.ClassInfo, 'Memo.Text');
+//           if Assigned(fProp) then begin
+//          // fProp1:=GetPropInfo(Sender., 'Memo.Text');
+//              EnCap := GetPropValue(Sender.ClassInfo, 'Memo.Text');
+//              UniMainModule.testTXT:= EnCap;
+//           end;
+
+//           if sender.ClassName = 'TfrxMemoView'  then begin
+//         if (Sender is TfrxMemoView) then begin
+//
+//
+//
+//            EnCap :=   (sender as TfrxMemoView).Memo.Text;
+//       //   (sender as TfrxMemoView).Memo.Text :=  TranslateToArabic(EnCap)
+//
+//     //   if RepLng.Locate('rptObj', EnCap, [loCaseInsensitive]) then begin
+//           RepLng.Locate('rptObj', EnCap, [loCaseInsensitive]);
+//
+//           UniMainModule.testTXT:= RepLng.FieldByName('objAR').AsString;
+////        end else begin
+////           UniMainModule.testTXT:= EnCap;
+////
+////        end;
+//
+////      EnCap :=TranslateToArabic(EnCap);
+////         UniMainModule.testTXT:=  RepLngobjAR.AsString;
+//           end;
+
+          //UniMainModule.testTXT:=  (sender as TfrxMemoView).Memo.Text;
+
+
+  //   TfrxMemoView(frxReport1.FindObject(Sender)).Text:= 'MyFirstString';
+//  frxReport1.Components[2].
+
+   //   UniMainModule.testTXT:=   TfrxMemoView(frxReport1.FindObject(Sender)).Text;
+//     end;
+
+
+
+ //-----------------------
+//       if (Sender is TfrxMemoView) then  begin
+//
+//               EnCap := GetPropValue(Sender, 'Text');
+//
+//             for I := 0 to RepLng.RecordCount do begin
+//
+//            if RepLng['rptObj'] = EnCap  then  begin
+//              (Sender as TfrxMemoView).Memo.Text := RepLng['objAR'];
+//
+//             end ;
+//
+//              RepLng.Next;
+//             end;
+////
+////
+//        end ;
+
+
+
+//         for I := 0 to RepLng.RecordCount do begin
+//         t := TfrxMemoView(frxReport1.FindObject( RepLng['rptObj'])) ;
+//          if t <> nil then begin
+//            t.Memo.Text :=   RepLng['objAR'];
+//          end;
+//
+//
+//             RepLng.Next;
+//         end;
+//
+//       end;
+//
+//
+//   RepParams.First;
+//    for I := 0 to RepParams.RecordCount do begin
+//    t := TfrxMemoView(frxReport1.FindObject( RepParams['rptObj'])) ;
+//               if t <> nil then begin
+//            t.Memo.Text :=   RepParams['rptParam'];
+//          end;
+//          RepParams.Next;
+//    end;
+//
+
+
+
+// if (Sender is TfrxMemoView) then  begin
+//for I := 0 to frxReport1.ComponentCount do
+//
+//        if  ((Sender as TfrxMemoView).Name ) = RepParams['rptObj'] then  begin
+//            (Sender as TfrxMemoView).Memo.Text := RepParams['rptParam'];
+//         end ;
+//         RepParams.Next;
+//     end ;
+//
+//  t := TfrxMemoView(frxReport1.FindObject('Memo15'));
+//  if t <> nil then
+//t.Memo.Text := 'FastReport';
+// or this:
+//if t <> nil then
+//t.Prop['Memo'] := 'FastReport';
+//end;
+end;
+
+function  TReportsDM.GenReportPDF(const RepName, ReportTxt,RepParam, Fdate,Tdate :String ; ReportQDS  : TUniDataSource): string;
+begin
+
+   ReportNameTxt:=ReportTxt;
+   RepParamTxt := RepParam ;
+   Fdate := Fdate ;
+   Tdate := Tdate ;
+
+
+  frxDBDataset1.DataSource:= ReportQDS;
+
+
+   try
+   frxReport1.PrintOptions.ShowDialog := False;
+    frxReport1.ShowProgress := false;
+
+
+    frxReport1.EngineOptions.SilentMode := True;
+    frxReport1.EngineOptions.EnableThreadSafe := True;
+    frxReport1.EngineOptions.DestroyForms := False;
+    frxReport1.EngineOptions.UseGlobalDataSetList := False;
+
+    frxReport1.LoadFromFile(UniMainModule.ReportsPath + RepName + '.fr3');
+
+
+
+    frxPDFExport1.Background := True;
+    frxPDFExport1.ShowProgress := False;
+    frxPDFExport1.ShowDialog := False;
+    frxPDFExport1.FileName := UniServerModule.NewCacheFileUrl(False, 'pdf', '', '', Result, True);
+    frxPDFExport1.DefaultPath := '';
+
+    frxReport1.PreviewOptions.AllowEdit := False;
+    frxReport1.PrepareReport;
+
+   // frxReport1.ShowPreparedReport; Arabic Language is fine
+     //frxReport1.Print;
+    frxReport1.Export(frxPDFExport1);
+   finally
+  //   CloseDS;
+   end;
+end;
+
+
+end.

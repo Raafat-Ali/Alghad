@@ -1,0 +1,477 @@
+unit rRegister;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  uniMultiItem, uniComboBox, uniDBComboBox, uniDBLookupComboBox, uniDBEdit,
+  uniEdit, uniFieldSet, Data.DB, DBAccess, Uni, MemDS, uniBasicGrid, uniDBGrid,
+  uniToolBar, uniButton, uniCheckBox, uniDBCheckBox, uniDBNavigator, uniBitBtn,
+  uniSpeedButton, uniGroupBox, Vcl.DBActns, System.Actions, Vcl.ActnList,
+  uniLabel, uniDBVerticalGrid, uniSweetAlert;
+
+type
+  TrRegisterF = class(TBaseFormF)
+    UnitsGridCont: TUniContainerPanel;
+    OwnersQry: TUniQuery;
+    OwnersSrc: TUniDataSource;
+    UniContainerPanel8: TUniContainerPanel;
+    contOwners: TUniContainerPanel;
+    DBLookupComboEMP: TUniDBLookupComboBox;
+    grdOwners: TUniDBGrid;
+    contEstates: TUniContainerPanel;
+    grdEstates: TUniDBGrid;
+    contUnits: TUniContainerPanel;
+    UniDBLookupComboBox2: TUniDBLookupComboBox;
+    grdUnitsL: TUniDBGrid;
+    EstatesQry: TUniQuery;
+    EstatesSrc: TUniDataSource;
+    UnitsQry: TUniQuery;
+    UnitsSrc: TUniDataSource;
+    OwnerBox: TUniGroupBox;
+    UniToolBar2: TUniToolBar;
+    UniToolButton16: TUniToolButton;
+    TBfirst: TUniToolButton;
+    UniToolButton18: TUniToolButton;
+    TBprior: TUniToolButton;
+    UniToolButton20: TUniToolButton;
+    UniToolButton21: TUniToolButton;
+    edOname: TUniDBEdit;
+    UniToolButton22: TUniToolButton;
+    TBnext: TUniToolButton;
+    UniToolButton24: TUniToolButton;
+    TBlast: TUniToolButton;
+    UniToolButton26: TUniToolButton;
+    edOmail: TUniDBEdit;
+    btn1: TUniContainerPanel;
+    UniSpeedButton4: TUniSpeedButton;
+    UniSpeedButton3: TUniSpeedButton;
+    UniSpeedButton2: TUniSpeedButton;
+    UniSpeedButton1: TUniSpeedButton;
+    UniSpeedButton5: TUniSpeedButton;
+    UniSpeedButton6: TUniSpeedButton;
+    EstateBox: TUniGroupBox;
+    UniToolBar3: TUniToolBar;
+    UniToolButton2: TUniToolButton;
+    UniToolButton8: TUniToolButton;
+    UniToolButton10: TUniToolButton;
+    UniToolButton12: TUniToolButton;
+    UniToolButton14: TUniToolButton;
+    UniToolButton15: TUniToolButton;
+    UniToolButton17: TUniToolButton;
+    UniToolButton19: TUniToolButton;
+    UniToolButton23: TUniToolButton;
+    UniToolButton25: TUniToolButton;
+    UniToolButton27: TUniToolButton;
+    edESno: TUniDBEdit;
+    UniContainerPanel10: TUniContainerPanel;
+    edESname: TUniDBEdit;
+    edESdistrict: TUniDBEdit;
+    edESstreet: TUniDBEdit;
+    UnitsBox: TUniGroupBox;
+    UniContainerPanel5: TUniContainerPanel;
+    UniContainerPanel2: TUniContainerPanel;
+    edUnit: TUniDBEdit;
+    edRooms: TUniDBEdit;
+    edFloor: TUniDBEdit;
+    UniContainerPanel3: TUniContainerPanel;
+    UniFieldContainer1: TUniFieldContainer;
+    edPrice1: TUniDBNumberEdit;
+    UniFieldContainer5: TUniFieldContainer;
+    edPrice2: TUniDBNumberEdit;
+    UniFieldContainer6: TUniFieldContainer;
+    edPrice3: TUniDBNumberEdit;
+    UniFieldContainer7: TUniFieldContainer;
+    edPrice4: TUniDBNumberEdit;
+    UniContainerPanel4: TUniContainerPanel;
+    edNotes: TUniDBEdit;
+    UniContainerPanel6: TUniContainerPanel;
+    UniDBCheckBox1: TUniDBCheckBox;
+    UniDBCheckBox3: TUniDBCheckBox;
+    UniDBCheckBox2: TUniDBCheckBox;
+    UniContainerPanel12: TUniContainerPanel;
+    UniSpeedButton19: TUniSpeedButton;
+    UniSpeedButton20: TUniSpeedButton;
+    UniSpeedButton21: TUniSpeedButton;
+    UniContainerPanel13: TUniContainerPanel;
+    UniSpeedButton22: TUniSpeedButton;
+    UniSpeedButton23: TUniSpeedButton;
+    UniSpeedButton24: TUniSpeedButton;
+    ActionList1: TActionList;
+    oFirst1: TDataSetFirst;
+    oPrior1: TDataSetPrior;
+    oNext1: TDataSetNext;
+    oLast1: TDataSetLast;
+    eFirst1: TDataSetFirst;
+    ePrior1: TDataSetPrior;
+    eNext1: TDataSetNext;
+    eLast1: TDataSetLast;
+    UniContainerPanel1: TUniContainerPanel;
+    edUnitsCnt: TUniDBEdit;
+    UniContainerPanel9: TUniContainerPanel;
+    UniSpeedButton7: TUniSpeedButton;
+    UniSpeedButton8: TUniSpeedButton;
+    UniSpeedButton9: TUniSpeedButton;
+    UniSpeedButton10: TUniSpeedButton;
+    UniSpeedButton11: TUniSpeedButton;
+    UniSpeedButton12: TUniSpeedButton;
+    edRented: TUniDBEdit;
+    OwnersQryID: TIntegerField;
+    OwnersQryName: TWideStringField;
+    OwnersQryphone1: TWideStringField;
+    OwnersQryphone2: TWideStringField;
+    OwnersQryeMail: TWideStringField;
+    OwnersQrypersonType: TWideStringField;
+    EstatesQryID: TIntegerField;
+    EstatesQryownerID: TIntegerField;
+    EstatesQryestNo: TIntegerField;
+    EstatesQryestName: TWideStringField;
+    EstatesQryestDistrict: TWideStringField;
+    EstatesQryestStreet: TWideStringField;
+    EstatesQryUnitsCount: TIntegerField;
+    EstatesQryUnitsRented: TIntegerField;
+    grdUnits: TUniDBGrid;
+    UnitsQryID: TIntegerField;
+    UnitsQryUnit: TWideStringField;
+    UnitsQryRooms: TWideStringField;
+    UnitsQryFloor: TWideStringField;
+    UnitsQryPrice1: TFloatField;
+    UnitsQryPrice2: TFloatField;
+    UnitsQryPrice3: TFloatField;
+    UnitsQryPrice4: TFloatField;
+    UnitsQryNotes: TWideStringField;
+    UnitsQryElectricity: TBooleanField;
+    UnitsQryKitchen: TBooleanField;
+    UnitsQryConditions: TBooleanField;
+    UnitsQryESTID: TIntegerField;
+    UnitsQryownerID: TIntegerField;
+    UnitsQryisRented: TBooleanField;
+    oInsert1: TDataSetInsert;
+    oDelete1: TDataSetDelete;
+    oEdit1: TDataSetEdit;
+    oPost1: TDataSetPost;
+    oCancel1: TDataSetCancel;
+    oRefresh1: TDataSetRefresh;
+    eInsert1: TDataSetInsert;
+    eDelete1: TDataSetDelete;
+    eEdit1: TDataSetEdit;
+    ePost1: TDataSetPost;
+    eCancel1: TDataSetCancel;
+    eRefresh1: TDataSetRefresh;
+    uInsert1: TDataSetInsert;
+    uDelete1: TDataSetDelete;
+    uEdit1: TDataSetEdit;
+    uPost1: TDataSetPost;
+    uCancel1: TDataSetCancel;
+    uRefresh1: TDataSetRefresh;
+    UniLabel1: TUniLabel;
+    UniFieldContainer2: TUniFieldContainer;
+    edOph1: TUniDBEdit;
+    edOph2: TUniDBEdit;
+    procedure UniFormCreate(Sender: TObject);
+    procedure UniFormShow(Sender: TObject);
+    procedure tbPrintClick(Sender: TObject);
+    procedure oDelete1Execute(Sender: TObject);
+    procedure OwnersQryBeforePost(DataSet: TDataSet);
+    procedure OwnersSrcStateChange(Sender: TObject);
+    procedure UnitsQryNewRecord(DataSet: TDataSet);
+    procedure UnitsQryAfterPost(DataSet: TDataSet);
+    procedure EstatesSrcStateChange(Sender: TObject);
+    procedure eDelete1Execute(Sender: TObject);
+    procedure uDelete1Execute(Sender: TObject);
+    procedure OwnersQryAfterCancel(DataSet: TDataSet);
+    procedure EstatesQryAfterCancel(DataSet: TDataSet);
+    procedure UnitsQryAfterCancel(DataSet: TDataSet);
+    procedure OwnersQryAfterPost(DataSet: TDataSet);
+  private
+    { Private declarations }
+    procedure UIchange();
+  public
+    { Public declarations }
+  end;
+
+function rRegisterF: TrRegisterF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication, G_Funcs, ShowReport;
+
+function rRegisterF: TrRegisterF;
+begin
+  Result := TrRegisterF(UniMainModule.GetFormInstance(TrRegisterF));
+end;
+//==============================================================================
+procedure TrRegisterF.UIchange;
+begin
+
+case OwnersQry.State of
+ // dsInactive: ;
+   dsBrowse:begin
+            EstatesQry.Active  := OwnersQry.RecordCount >0 ;
+            UnitsQry.Active  := EstatesQry.RecordCount >0 ;
+            end;
+
+  dsEdit, dsInsert:begin
+                  EstatesQry.Active  := false;
+                  UnitsQry.Active  := false;
+                  end;
+//  dsSetKey: ;
+//  dsCalcFields: ;
+//  dsFilter: ;
+//  dsNewValue: ;
+//  dsOldValue: ;
+//  dsCurValue: ;
+//  dsBlockRead: ;
+//  dsInternalCalc: ;
+//  dsOpening: ;
+end;
+
+ //*******************************************************************
+case EstatesQry.State of       /// ESTATE Status changed
+ // dsInactive: ;
+   dsBrowse:begin
+          //  EstatesQry.Active  := OwnersQry.RecordCount >0 ;
+
+            UnitsQry.Active  := EstatesQry.RecordCount >0 ;
+            end;
+
+  {dsEdit,} dsInsert:begin
+
+                  UnitsQry.Active  := false;
+                  end;
+end;
+
+
+
+//
+//                    end;
+//    SM_Edit:  begin ESTQry.DisableControls;
+//    tbEDIT.Enabled := false;
+//
+//    tbSAVE.Enabled := true;
+//     tbCANCEL.Enabled := true ;
+//
+//      UnitsQ.DisableControls;
+//        btUedt.Enabled := false;
+//       btUsav.Enabled := true;
+//
+//    end;
+//    SM_Insert:begin ESTQry.DisableControls;
+//
+//       tbEDIT.Enabled := false;
+//        tbSAVE.Enabled := true;
+//     tbCANCEL.Enabled := true ;
+//
+//     UnitsQ.DisableControls;
+//      btUedt.Enabled := false;
+//                      btUsav.Enabled := true;
+//
+//     end;
+//   // SM_Search:begin end;
+//  end;
+//
+// tbDEL.Enabled := ESTQry.RecordCount > 0;
+//  btUdel.Enabled := UnitsQ.RecordCount > 0;
+
+end;
+
+
+
+
+procedure TrRegisterF.eDelete1Execute(Sender: TObject);
+begin
+  inherited;
+
+if UnitsQry.RecordCount > 0 then  begin
+  ShowMessage(MsgLng('First Delete Related Units'));
+  exit;
+end else begin
+   MessageDlg(MsgLng('Are you sure you want to delete ?'), mtConfirmation, mbYesNo,
+    procedure(Sender: TComponent; Res: Integer)
+    begin
+      case Res of
+        mrYes :begin EstatesQry.Delete;  ShowMessage(MsgLng('Data deleted successfully'));end;//  Msg_Cancel.Execute;         // UniMemo1.Lines.Add('DResult: YES');
+        mrNo : exit ;                    ////UniMemo1.Lines.Add('DResult: NO');
+      end;
+    end
+  );
+end;
+
+end;
+
+procedure TrRegisterF.EstatesQryAfterCancel(DataSet: TDataSet);
+begin
+  inherited;
+ EstatesQry.Refresh
+end;
+
+procedure TrRegisterF.EstatesSrcStateChange(Sender: TObject);
+begin
+  inherited;
+UIchange;
+end;
+
+procedure TrRegisterF.oDelete1Execute(Sender: TObject);
+
+begin
+  inherited;
+
+if EstatesQry.RecordCount > 0 then  begin
+  ShowMessage(MsgLng('First Delete Related Estates'));
+  exit;
+end else begin
+   MessageDlg( MsgLng('Are you sure you want to delete ?') , mtConfirmation, mbYesNo,
+    procedure(Sender: TComponent; Res: Integer)
+    begin
+      case Res of
+        mrYes :begin  OwnersQry.Delete; ShowMessage(MsgLng('Data deleted successfully'));    end;//  Msg_Cancel.Execute;         // UniMemo1.Lines.Add('DResult: YES');
+        mrNo : exit ;                    ////UniMemo1.Lines.Add('DResult: NO');
+      end;
+    end
+  );
+end;
+
+
+end;
+
+procedure TrRegisterF.OwnersQryAfterCancel(DataSet: TDataSet);
+begin
+  inherited;
+OwnersQry.Refresh;
+end;
+
+procedure TrRegisterF.OwnersQryAfterPost(DataSet: TDataSet);
+begin
+  inherited;
+//
+//  SweetAlert.Title:= MsgLng('Data saved successfully');
+//SweetAlert.Show;
+end;
+
+procedure TrRegisterF.OwnersQryBeforePost(DataSet: TDataSet);
+begin
+  inherited;
+OwnersQrypersonType.Value := 'landlord';
+end;
+
+procedure TrRegisterF.OwnersSrcStateChange(Sender: TObject);
+begin
+  inherited;
+UIchange;
+end;
+
+procedure TrRegisterF.tbPrintClick(Sender: TObject);
+begin
+  inherited;
+//     ShowReportF.ReportName := 'RealEstates';
+//   ShowReportF.Show();
+end;
+
+procedure TrRegisterF.uDelete1Execute(Sender: TObject);
+var TempQry:TUniQuery;
+begin
+  inherited;
+TempQry := TUniQuery.Create(self);
+TempQry.Connection := UniMainModule.MainDB;
+
+TempQry.SQL.Text := 'SELECT * FROM contracts where unitNo = '''+ UnitsQryID.AsString+''' ';
+TempQry.Open;
+
+if TempQry.RecordCount > 0 then  begin
+  ShowMessage(MsgLng('Used data can not be deleted'));
+  exit;
+end else begin
+   MessageDlg( MsgLng('Are you sure you want to delete ?'), mtConfirmation, mbYesNo,
+    procedure(Sender: TComponent; Res: Integer)
+    begin
+      case Res of
+        mrYes :begin UnitsQry.Delete; ShowMessage(MsgLng('Data deleted successfully'));    end;///  Msg_Cancel.Execute;         // UniMemo1.Lines.Add('DResult: YES');
+        mrNo : exit ;                    ////UniMemo1.Lines.Add('DResult: NO');
+      end;
+    end
+  );
+end;
+end;
+
+procedure TrRegisterF.UniFormCreate(Sender: TObject);
+begin
+  inherited;
+   FormName := 'aRegistration';
+//   ScreenMode := SM_Browse;
+
+//
+
+OwnersQry.Open;
+EstatesQry.Open;
+UnitsQry.Open;
+
+     UIchange;
+//
+ AdjustGridView(grdOwners);
+ AdjustGridView(grdEstates);
+ AdjustGridView(grdUnits);
+// AdjustGridView(grdUnitsL);
+
+end;
+
+procedure TrRegisterF.UniFormShow(Sender: TObject);
+begin
+  inherited;
+//Apply User Privs.
+//ESTQry.ReadOnly   := not( UsrCanAdd And  UsrCanModify);
+//UnitsQ.ReadOnly   := not( UsrCanAdd And  UsrCanModify);
+//
+//tbADD.Enabled := UsrCanAdd;
+//tbDEL.Enabled := UsrCanDelete;
+//
+//tbEDIT.Enabled := UsrCanAdd;
+//tbSAVE .Enabled := UsrCanAdd;
+//
+//tbUPLOAD.Enabled := UsrCanUpload;
+// tbPrint.Enabled := UsrCanPrint;
+//
+//
+// MessageDlg('Are you sure you want to Delete updates?', mtConfirmation, mbYesNo,
+//    procedure(Sender: TComponent; Res: Integer)
+//    begin
+//      case Res of
+//        mrYes : UnitsQ.Delete;//  Msg_Cancel.Execute;         // UniMemo1.Lines.Add('DResult: YES');
+//        mrNo : exit ;                    ////UniMemo1.Lines.Add('DResult: NO');
+//      end;
+//    end
+//  );
+//
+
+
+end;
+
+procedure TrRegisterF.UnitsQryAfterCancel(DataSet: TDataSet);
+begin
+  inherited;
+ UnitsQry.Refresh
+end;
+
+procedure TrRegisterF.UnitsQryAfterPost(DataSet: TDataSet);
+begin
+  inherited;
+EstatesQry.Edit;
+EstatesQryUnitsCount.AsInteger := UnitsQry.RecordCount;
+EstatesQry.Post;
+
+EstatesQry.Refresh;
+
+ShowMessage(IntToStr( UnitsQry.RecordCount));
+end;
+
+procedure TrRegisterF.UnitsQryNewRecord(DataSet: TDataSet);
+begin
+  inherited;
+UnitsQryisRented.Value := False;
+end;
+
+end.

@@ -1,0 +1,37 @@
+unit Arch;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  uniButton, uniBasicGrid, uniDBGrid, Data.DB, DBAccess, Uni, MemDS;
+
+type
+  TArchF = class(TBaseFormF)
+    ArchQ: TUniQuery;
+    ArchSrc: TUniDataSource;
+    UniDBGrid1: TUniDBGrid;
+    UniButton1: TUniButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function ArchF: TArchF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function ArchF: TArchF;
+begin
+  Result := TArchF(UniMainModule.GetFormInstance(TArchF));
+end;
+
+end.

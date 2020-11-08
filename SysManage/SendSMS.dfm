@@ -1,0 +1,304 @@
+inherited SendSMSForm: TSendSMSForm
+  ClientHeight = 672
+  ClientWidth = 916
+  Caption = 'SendSMSForm'
+  BorderStyle = bsNone
+  ExplicitWidth = 916
+  ExplicitHeight = 672
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlBaseContainer: TUniContainerPanel
+    Left = 8
+    Top = 8
+    Width = 900
+    Height = 656
+    Layout = 'vbox'
+    LayoutAttribs.Align = 'center'
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 900
+    ExplicitHeight = 656
+    object pnlHead: TUniContainerPanel
+      Left = 184
+      Top = 32
+      Width = 457
+      Height = 89
+      Hint = ''
+      ParentColor = False
+      TabOrder = 1
+      Layout = 'hbox'
+      LayoutAttribs.Align = 'middle'
+      LayoutAttribs.Pack = 'center'
+      LayoutConfig.Width = '80%'
+      object btnRefresh: TUniButton
+        Left = 32
+        Top = 32
+        Width = 100
+        Height = 25
+        Hint = ''
+        Caption = 'Refresh'
+        TabOrder = 1
+        LayoutConfig.Margin = '0 5 0 5'
+        OnClick = btnRefreshClick
+      end
+      object PhoneCB: TUniDBLookupComboBox
+        Left = 153
+        Top = 32
+        Width = 145
+        Height = 26
+        Hint = ''
+        ListField = 'Phone1'
+        ListSource = PaymentsVQsrc
+        KeyField = 'ID'
+        ListFieldIndex = 0
+        ClearButton = True
+        AnyMatch = True
+        EmptyText = 'look for phone'
+        TabOrder = 3
+        Color = clWindow
+        LayoutConfig.Width = '50%'
+        LayoutConfig.Margin = '0 5 0 5'
+        Style = csDropDown
+      end
+      object SendBtn: TUniButton
+        Left = 304
+        Top = 32
+        Width = 100
+        Height = 25
+        Hint = ''
+        Caption = 'SendBtn'
+        TabOrder = 2
+        IconCls = 'reply'
+        LayoutConfig.Margin = '0 5 0 5'
+        OnClick = SendBtnClick
+      end
+    end
+    object pnlDetail: TUniContainerPanel
+      Left = 92
+      Top = 176
+      Width = 520
+      Height = 313
+      Hint = ''
+      ParentColor = False
+      TabOrder = 2
+      Layout = 'fit'
+      LayoutConfig.Flex = 1
+      LayoutConfig.Width = '80%'
+      object dd: TUniDBGrid
+        Left = -3
+        Top = 16
+        Width = 520
+        Height = 361
+        Hint = ''
+        HeaderTitle = #1575#1604#1583#1601#1593#1575#1578' '#1575#1604#1605#1587#1578#1581#1602#1577' '#1604#1578#1575#1585#1610#1582' '#1575#1604#1610#1608#1605
+        HeaderTitleAlign = taCenter
+        DataSource = PaymentsVQsrc
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgCheckSelect, dgConfirmDelete, dgMultiSelect, dgDontShowSelected]
+        LoadMask.Message = 'Loading data...'
+        ForceFit = True
+        TabOrder = 1
+      end
+    end
+    object UniURLFrame1: TUniURLFrame
+      Left = 115
+      Top = 535
+      Width = 341
+      Height = 108
+      Hint = ''
+      Visible = False
+      ScreenMask.ShowMessage = False
+      TabOrder = 3
+      TabStop = False
+      ParentColor = False
+      Color = clMoneyGreen
+    end
+  end
+  inherited siLang1: TsiLang
+    TranslationData = {
+      73007400430061007000740069006F006E0073005F0055006E00690063006F00
+      640065000D000A005400530065006E00640053004D00530046006F0072006D00
+      0100530065006E00640053004D00530046006F0072006D000100310633062706
+      26064406200053004D00530001000D000A00620074006E005200650066007200
+      6500730068000100520065006600720065007300680001002A062D062F064A06
+      2B062000270644064206270626064506290601000D000A00530065006E006400
+      420074006E000100530065006E006400420074006E0001002706310633064406
+      2000270644063106330627064406290601000D000A0073007400480069006E00
+      740073005F0055006E00690063006F00640065000D000A007300740044006900
+      730070006C00610079004C006100620065006C0073005F0055006E0069006300
+      6F00640065000D000A005000610079006D0065006E0074007300560051006500
+      730074004E006F0001006500730074004E006F00010001000D000A0050006100
+      79006D0065006E00740073005600510043006F006E0074007200610063007400
+      4E006F00010043006F006E00740072006100630074004E006F00010001000D00
+      0A005000610079006D0065006E007400730056005100500068006F006E006500
+      31000100500068006F006E0065003100010001000D000A005000610079006D00
+      65006E00740073005600510055006E0069007400010055006E00690074000100
+      01000D000A005000610079006D0065006E007400730056005100500061007900
+      6D0065006E00740053004E0001005000610079006D0065006E00740053004E00
+      010001000D000A005000610079006D0065006E00740073005600510050006100
+      79006D0065006E007400440061007400650001005000610079006D0065006E00
+      74004400610074006500010001000D000A005000610079006D0065006E007400
+      7300560051005000610079006D0065006E007400560061006C00750001005000
+      610079006D0065006E007400560061006C007500010001000D000A0050006100
+      79006D0065006E00740073005600510050006100690064000100500061006900
+      6400010001000D000A005000610079006D0065006E0074007300560051005000
+      6100790044006100740065000100500061007900440061007400650001000100
+      0D000A005000610079006D0065006E0074007300560051005000610079005400
+      79007000650001005000610079005400790070006500010001000D000A005000
+      610079006D0065006E007400730056005100740065006E0061006E0074004900
+      44000100740065006E0061006E00740049004400010001000D000A0050006100
+      79006D0065006E00740073005600510055006E00690074004E006F0001005500
+      6E00690074004E006F00010001000D000A005000610079006D0065006E007400
+      73005600510049004400010049004400010001000D000A007300740046006F00
+      6E00740073005F0055006E00690063006F00640065000D000A00730074004D00
+      75006C00740069004C0069006E00650073005F0055006E00690063006F006400
+      65000D000A007300740044006C0067007300430061007000740069006F006E00
+      73005F0055006E00690063006F00640065000D000A005700610072006E006900
+      6E00670001005700610072006E0069006E006700010001000D000A0045007200
+      72006F00720001004500720072006F007200010001000D000A0049006E006600
+      6F0072006D006100740069006F006E00010049006E0066006F0072006D006100
+      740069006F006E00010001000D000A0043006F006E006600690072006D000100
+      43006F006E006600690072006D00010001000D000A0059006500730001002600
+      590065007300010001000D000A004E006F00010026004E006F00010001000D00
+      0A004F004B0001004F004B00010001000D000A00430061006E00630065006C00
+      0100430061006E00630065006C00010001000D000A00410062006F0072007400
+      01002600410062006F0072007400010001000D000A0052006500740072007900
+      0100260052006500740072007900010001000D000A00490067006E006F007200
+      650001002600490067006E006F0072006500010001000D000A0041006C006C00
+      0100260041006C006C00010001000D000A004E006F00200054006F0020004100
+      6C006C0001004E0026006F00200074006F00200041006C006C00010001000D00
+      0A00590065007300200054006F00200041006C006C0001005900650073002000
+      74006F002000260041006C006C00010001000D000A00480065006C0070000100
+      2600480065006C007000010001000D000A007300740053007400720069006E00
+      670073005F0055006E00690063006F00640065000D000A00730074004F007400
+      68006500720053007400720069006E00670073005F0055006E00690063006F00
+      640065000D000A005400530065006E00640053004D00530046006F0072006D00
+      2E004C00610079006F00750074000100660069007400010001000D000A007000
+      6E006C00420061007300650043006F006E007400610069006E00650072002E00
+      4C00610079006F00750074000100760062006F007800010001000D000A007000
+      6E006C0048006500610064002E004C00610079006F0075007400010061006200
+      73006F006C00750074006500010001000D000A0070006E006C00440065007400
+      610069006C002E004C00610079006F0075007400010066006900740001000100
+      0D000A00530065006E006400420074006E002E00490063006F006E0043006C00
+      730001007200650070006C007900010001000D000A00640064002E0048006500
+      61006400650072005400690074006C0065000100270644062F06410639062706
+      2A06200027064406450633062A062D0642062906200044062A06270631064A06
+      2E062000270644064A0648064506010001000D000A00730074004C006F006300
+      61006C00650073005F0055006E00690063006F00640065000D000A0073007400
+      43006F006C006C0065006300740069006F006E0073005F0055006E0069006300
+      6F00640065000D000A0073007400430068006100720053006500740073005F00
+      55006E00690063006F00640065000D000A00}
+  end
+  object PaymentsVQ: TUniQuery
+    Connection = UniMainModule.MainDB
+    SQL.Strings = (
+      'SELECT Pmt.*  , P.Name ,P.Phone1, U.Unit'
+      ''
+      ' FROM  payments_view as Pmt'
+      ''
+      'inner join  persons P   on Pmt.tenantID = P.ID'
+      ''
+      'inner join  estates E   on Pmt.EstNo  =  E.EstNo'
+      ''
+      'inner join   units U    on Pmt.UnitNo = U.ID '
+      ''
+      'where'
+      'Pmt.ContractNo in '
+      '(Select ContractID from Contracts where Active = True  )'
+      ''
+      'AND'
+      ' Pmt.Paid= False And PaymentDate < CURDATE()'
+      ''
+      'Order By PaymentDate,PaymentSN,EstNo'
+      ''
+      ' ')
+    ReadOnly = True
+    Left = 640
+    Top = 304
+    object PaymentsVQestNo: TIntegerField
+      DisplayWidth = 5
+      FieldName = 'estNo'
+      Required = True
+    end
+    object PaymentsVQContractNo: TIntegerField
+      DisplayWidth = 5
+      FieldName = 'ContractNo'
+      Required = True
+    end
+    object PaymentsVQName: TWideStringField
+      DisplayWidth = 30
+      FieldName = 'Name'
+      ReadOnly = True
+      Required = True
+      Size = 50
+    end
+    object PaymentsVQPhone1: TWideStringField
+      FieldName = 'Phone1'
+      ReadOnly = True
+      Required = True
+      Size = 15
+    end
+    object PaymentsVQUnit: TWideStringField
+      DisplayWidth = 10
+      FieldName = 'Unit'
+      ReadOnly = True
+      Required = True
+      Size = 30
+    end
+    object PaymentsVQPaymentSN: TIntegerField
+      DisplayWidth = 1
+      FieldName = 'PaymentSN'
+      Required = True
+    end
+    object PaymentsVQPaymentDate: TDateField
+      DisplayWidth = 10
+      FieldName = 'PaymentDate'
+      Required = True
+      DisplayFormat = 'yyyy-mm-dd'
+    end
+    object PaymentsVQPaymentValu: TFloatField
+      DisplayWidth = 6
+      FieldName = 'PaymentValu'
+      Required = True
+      DisplayFormat = '#,##0.##'
+    end
+    object PaymentsVQPaid: TBooleanField
+      DisplayWidth = 5
+      FieldName = 'Paid'
+      Required = True
+    end
+    object PaymentsVQPayDate: TDateField
+      DisplayWidth = 4
+      FieldName = 'PayDate'
+      Visible = False
+    end
+    object PaymentsVQPayType: TWideStringField
+      DisplayWidth = 6
+      FieldName = 'PayType'
+      Visible = False
+      Size = 30
+    end
+    object PaymentsVQtenantID: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'tenantID'
+      Required = True
+      Visible = False
+    end
+    object PaymentsVQUnitNo: TIntegerField
+      DisplayWidth = 10
+      FieldName = 'UnitNo'
+      Required = True
+      Visible = False
+    end
+    object PaymentsVQID: TIntegerField
+      AutoGenerateValue = arAutoInc
+      DisplayWidth = 10
+      FieldName = 'ID'
+      Visible = False
+    end
+  end
+  object PaymentsVQsrc: TUniDataSource
+    DataSet = PaymentsVQ
+    Left = 760
+    Top = 304
+  end
+end

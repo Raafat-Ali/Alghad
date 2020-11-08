@@ -1,0 +1,72 @@
+unit Settings;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics,
+  Controls, Forms, uniGUITypes, uniGUIAbstractClasses,
+  uniGUIClasses, uniGUIForm, BaseForm, siComp, uniGUIBaseClasses, uniPanel,
+  Data.DB, DBAccess, Uni, MemDS, uniDBNavigator, uniBasicGrid, uniDBGrid;
+
+type
+  TSettingsF = class(TBaseFormF)
+    pnlSections: TUniContainerPanel;
+    pnlSubSections: TUniContainerPanel;
+    UniDBGrid1: TUniDBGrid;
+    UniDBGrid2: TUniDBGrid;
+    UniDBNavigator1: TUniDBNavigator;
+    SecQry: TUniQuery;
+    SubSecQry: TUniQuery;
+    SubSecQryS: TUniDataSource;
+    SecQryS: TUniDataSource;
+    SecQryID: TIntegerField;
+    SecQrySection: TWideStringField;
+    SecQryPSection: TWideStringField;
+    SubSecQryID: TIntegerField;
+    SubSecQrySection: TWideStringField;
+    SubSecQryPSection: TWideStringField;
+    UniDBNavigator2: TUniDBNavigator;
+    procedure UniFormCreate(Sender: TObject);
+    procedure SecQryAfterDelete(DataSet: TDataSet);
+    procedure SecQryBeforePost(DataSet: TDataSet);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+function SettingsF: TSettingsF;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  MainModule, uniGUIApplication;
+
+function SettingsF: TSettingsF;
+begin
+  Result := TSettingsF(UniMainModule.GetFormInstance(TSettingsF));
+end;
+
+procedure TSettingsF.SecQryAfterDelete(DataSet: TDataSet);
+begin
+  inherited;
+SubSecQry.Active :=  SecQry.RecordCount > 0;
+end;
+
+procedure TSettingsF.SecQryBeforePost(DataSet: TDataSet);
+begin
+  inherited;
+SubSecQry.Active :=  SecQry.RecordCount > 0;
+end;
+
+procedure TSettingsF.UniFormCreate(Sender: TObject);
+begin
+  inherited;
+SecQry.Open;
+SubSecQry.Open;
+SubSecQry.Active :=  SecQry.RecordCount > 0;
+end;
+
+end.
